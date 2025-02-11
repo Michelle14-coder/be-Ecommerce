@@ -59,10 +59,6 @@ public class Utente {
 	private String indirizzoDiFatturazione;
 	
 	
-	 @OneToOne
-	 @JoinColumn(name = "id_carrello")
-	 private Carrello carrello;
-	
 	@OneToMany(mappedBy="utente",   //colegamento con utente
  		   fetch = FetchType.EAGER,  //strategy di caricamento oggetto-> tutti oggetti sono caricati
  		   cascade= CascadeType.REMOVE) //remove all utenti in caso di delete
@@ -137,14 +133,6 @@ public class Utente {
 		this.indirizzoDiFatturazione = indirizzoDiFatturazione;
 	}
 
-
-	public Carrello getCarrello() {
-		return carrello;
-	}
-
-	public void setCarrello(Carrello carrello) {
-		this.carrello = carrello;
-	}
 
 	public List<Ordine> getOrdini() {
 		return ordini;

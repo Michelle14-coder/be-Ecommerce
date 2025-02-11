@@ -39,7 +39,7 @@ public class ProdottoImpl implements ProdottoServices{
 		Optional<Prodotto> c = proR.findByNome(req.getNome().trim());
 		
 		if(c.isPresent())
-			throw new Exception("Prodotto già presente");
+			throw new Exception(msgS.getMessaggio("find-prodotto"));
 		
 		if (req.getMarca() == null)
 			throw new Exception(msgS.getMessaggio("no-marca"));

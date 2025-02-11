@@ -12,7 +12,7 @@ public interface UtenteServices {
 
 	void create(UtenteReq req) throws Exception;
 
-	void update(UtenteReq req);
+	void update(UtenteReq req) throws Exception;
 
 	void remove(UtenteReq req);
 

@@ -1,6 +1,4 @@
 package com.betacom.bec.dto;
-
-import java.sql.Timestamp;
 import java.util.List;
 
 import com.betacom.bec.models.Prodotto;

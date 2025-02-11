@@ -51,8 +51,9 @@ public class UtenteImpl implements UtenteServices{
                 u.getEmail(),
                 u.getPsw(),
                 u.getRuolo().toString(), 
-                (u.getCarrello()==null)? null: new CarrelloDTO(
-                        u.getCarrello().getId()),
+                u.getNumeroTelefono(),
+                u.getIndirizzoDiFatturazione(),
+                u.getIndirizzoDiSpedizione(),
                 buildOrdineDTO(u.getOrdini()),
                 buildRecensioneDTO(u.getRecensioni())
         )).collect(Collectors.toList());
@@ -105,19 +106,41 @@ public class UtenteImpl implements UtenteServices{
 	    Carrello carrello = new Carrello();
 	    carrello.setQuantita(0);
 	    carrello.setPrezzo(0.0);
-	    carrello.setUtente(utente);
-	    
-	    utente.setCarrello(carrello.getId());
+	    carrello.setUtente(utente);	    
 	    
 	    caR.save(carrello);
 		
 	}
 
 	@Override
-	public void update(UtenteReq req) {
-		// TODO Auto-generated method stub
-		
-	}
+    public void update(UtenteReq req) throws Exception {
+		log.debug("Update: "+ req);
+        // //controllo se già esiste
+        List<Utente> existingUtentes = utR.findAll();
+        boolean nameExists = existingUtentes.stream().anyMatch(s ->
+                s.getNome().equalsIgnoreCase(req.getNome()) &&
+                !s.getId().equals(req.getId()));
+
+//        if (nameExists) {
+//            throw new Exception(msgS.getMessaggio("find-utente"));
+//        }
+
+        Optional<Utente> optUtente = utR.findById(req.getId());
+        if (optUtente.isEmpty()) {
+            throw new Exception(msgS.getMessaggio("no-utente"));
+        }
+
+        Utente u = optUtente.get();
+        u.setCognome(req.getCognome());
+        u.setEmail(req.getEmail());
+        u.setPsw(req.getPassword());
+        u.setNumeroTelefono(req.getNumeroTelefono());
+        u.setIndirizzoDiSpedizione(req.getIndirizzoDiSpedizione());
+        u.setIndirizzoDiFatturazione(req.getIndirizzoDiFatturazione());
+        
+
+        utR.save(u);
+    }
 
 	@Override
 	public void remove(UtenteReq req) {

@@ -24,23 +24,6 @@ public class ProdottoController {
 	@Autowired
 	org.slf4j.Logger log;
 	
-//	@GetMapping("/list")
-//	public ResponseList<PrdoDTO> list(Integer id,String nome,String cognome,String attivita) {
-//		log.debug("List " + id + "/" + nome + "/" + cognome + "/" + attivita);
-//		ResponseList<SocioDTO> r = new ResponseList<SocioDTO>();
-//		r.setRc(true);
-//		List<SocioDTO> resp = null;
-//		try {
-//			r.setDati (socioS.list(id, nome, cognome, attivita));
-//		} catch (Exception e) {
-//			log.debug(e.getMessage());
-//			r.setMsg(e.getMessage());
-//			r.setRc(false);
-//		}
-//		return r;
-//		
-//	}
-//	
 
 	
 	@PostMapping("/create")

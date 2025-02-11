@@ -1,5 +1,7 @@
 package com.betacom.bec.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.betacom.bec.services.interfaces.ProdottoServices;
 import com.betacom.bec.services.interfaces.UtenteServices;
 import com.betacom.bec.dto.ProdottoDTO;
+import com.betacom.bec.dto.UtenteDTO;
 import com.betacom.bec.request.ProdottoReq;
 import com.betacom.bec.request.UtenteReq;
 import com.betacom.bec.response.ResponseBase;
@@ -26,23 +29,23 @@ public class UtenteController {
 	@Autowired
 	org.slf4j.Logger log;
 	
-//	@GetMapping("/list")
-//	public ResponseList<PrdoDTO> list(Integer id,String nome,String cognome,String attivita) {
-//		log.debug("List " + id + "/" + nome + "/" + cognome + "/" + attivita);
-//		ResponseList<SocioDTO> r = new ResponseList<SocioDTO>();
-//		r.setRc(true);
-//		List<SocioDTO> resp = null;
-//		try {
-//			r.setDati (socioS.list(id, nome, cognome, attivita));
-//		} catch (Exception e) {
-//			log.debug(e.getMessage());
-//			r.setMsg(e.getMessage());
-//			r.setRc(false);
-//		}
-//		return r;
-//		
-//	}
-//	
+	@GetMapping("/list")
+	public ResponseList<UtenteDTO> list() {
+
+		ResponseList<UtenteDTO> r = new ResponseList<UtenteDTO>();
+		r.setRc(true);
+		List<UtenteDTO> resp = null;
+		try {
+			r.setDati (utenteS.listAll());
+		} catch (Exception e) {
+			log.debug(e.getMessage());
+			r.setMsg(e.getMessage());
+			r.setRc(false);
+		}
+		return r;
+		
+	}
+	
 
 	
 	@PostMapping("/create")

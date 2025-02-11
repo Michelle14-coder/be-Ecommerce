@@ -11,12 +11,44 @@ public class UtenteDTO {
 	 private String email;
 	 private String password;
 	 private String ruolo;
-	 private CarrelloDTO carrello;
-	 private List<OrdineDTO> ordini;
+	 private String numeroTelefono;
+	 private String indirizzoDiSpedizione;
+	 private String indirizzoDiFatturazione;
+	 
+	 
+	 public String getNumeroTelefono() {
+		return numeroTelefono;
+	}
+
+	public void setNumeroTelefono(String numeroTelefono) {
+		this.numeroTelefono = numeroTelefono;
+	}
+
+	public String getIndirizzoDiSpedizione() {
+		return indirizzoDiSpedizione;
+	}
+
+	public void setIndirizzoDiSpedizione(String indirizzoDiSpedizione) {
+		this.indirizzoDiSpedizione = indirizzoDiSpedizione;
+	}
+
+	public String getIndirizzoDiFatturazione() {
+		return indirizzoDiFatturazione;
+	}
+
+	public void setIndirizzoDiFatturazione(String indirizzoDiFatturazione) {
+		this.indirizzoDiFatturazione = indirizzoDiFatturazione;
+	}
+
+	private List<OrdineDTO> ordini;
 	 private List<RecensioneDTO> recensioni;
 	 
+
+
+
 	public UtenteDTO(Integer id, String nome, String cognome, String email, String password, String ruolo,
-			CarrelloDTO carrello, List<OrdineDTO> ordini, List<RecensioneDTO> recensioni) {
+			String numeroTelefono, String indirizzoDiSpedizione, String indirizzoDiFatturazione, List<OrdineDTO> ordini,
+			List<RecensioneDTO> recensioni) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -24,7 +56,9 @@ public class UtenteDTO {
 		this.email = email;
 		this.password = password;
 		this.ruolo = ruolo;
-		this.carrello = carrello;
+		this.numeroTelefono = numeroTelefono;
+		this.indirizzoDiSpedizione = indirizzoDiSpedizione;
+		this.indirizzoDiFatturazione = indirizzoDiFatturazione;
 		this.ordini = ordini;
 		this.recensioni = recensioni;
 	}
@@ -33,10 +67,20 @@ public class UtenteDTO {
 		super();
 	}
 
+
+
+	public UtenteDTO(Integer id, String nome, String cognome) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.cognome = cognome;
+	}
+
 	@Override
 	public String toString() {
 		return "UtenteDTO [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", email=" + email + ", password="
-				+ password + ", ruolo=" + ruolo + carrello + ", ordini=" + ordini
+				+ password + ", ruolo=" + ruolo + ", numeroTelefono=" + numeroTelefono + ", indirizzoDiSpedizione="
+				+ indirizzoDiSpedizione + ", indirizzoDiFatturazione=" + indirizzoDiFatturazione + ", ordini=" + ordini
 				+ ", recensioni=" + recensioni + "]";
 	}
 
@@ -88,13 +132,6 @@ public class UtenteDTO {
 		this.ruolo = ruolo;
 	}
 
-	public CarrelloDTO getCarrello() {
-		return carrello;
-	}
-
-	public void setCarrello(CarrelloDTO carrello) {
-		this.carrello = carrello;
-	}
 
 	public List<OrdineDTO> getOrdini() {
 		return ordini;

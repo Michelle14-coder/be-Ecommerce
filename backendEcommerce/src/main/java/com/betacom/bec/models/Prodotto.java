@@ -3,6 +3,10 @@ package com.betacom.bec.models;
 import java.sql.Timestamp;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,60 +15,34 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
-@Entity //tutti i db e tabelle sono entity
-@Table (name="prodotti")
+@Entity
+@Table(name="prodotti")
 public class Prodotto {
 
-	@Id
+    @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-	private Integer id;
-	
-	@Column(length=100,
-    		nullable=false)
-	private String marca;
-	
-	@Column(length=100,
-    		nullable=false)
-	private String nome;
-	
-	@Column(length=100,
-    		nullable=false)
-	private String categoria;
-	
-	@Column(length=100,
-    		nullable=false)
-	private String descrizione;
-	
-	@Column(length=100,
-    		nullable=false)
-	private Double prezzo;
-	
-	@Column(name="quantita_disponibile",
-			length=100,
-    		nullable=false)
-	private Integer quantitaDisponibile;
-	
-	@Column(name="url_immagine",
-			length=100,
-    		nullable=false)
-	private String urlImg;
-	
-	@Column(length=100,
-    		nullable=false)
-	private String size;
-	
-	@Column(length=100,
-    		nullable=false)
-	private String colore;	
-	
-	@OneToMany(mappedBy = "prodotto")
-	private List<Carrello> carrelli;
+    private Integer id;
 
-	@OneToMany(mappedBy = "prodotto")
-	private List<Ordine> ordini;
+    private String marca;
+    private String nome;
+    private String categoria;
+    private String descrizione;
+    private Double prezzo;
+    private Integer quantitaDisponibile;
+    private String urlImg;
+    private String size;
+    private String colore;
 
-	@OneToMany(mappedBy = "prodotto")
-	private List<Recensione> recensioni;
+    @OneToMany(mappedBy = "prodotto", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
+    private List<CarrelloProdotto> carrelloProdotti;
+
+
+    @OneToMany(mappedBy = "prodotto")
+    private List<Ordine> ordini;
+
+    @OneToMany(mappedBy = "prodotto")
+    private List<Recensione> recensioni;
 
 	public Integer getId() {
 		return id;
@@ -147,12 +125,13 @@ public class Prodotto {
 	}
 
 
-	public List<Carrello> getCarrelli() {
-		return carrelli;
+
+	public List<CarrelloProdotto> getCarrelloProdotti() {
+		return carrelloProdotti;
 	}
 
-	public void setCarrelli(List<Carrello> carrelli) {
-		this.carrelli = carrelli;
+	public void setCarrelloProdotti(List<CarrelloProdotto> carrelloProdotti) {
+		this.carrelloProdotti = carrelloProdotti;
 	}
 
 	public List<Ordine> getOrdini() {
@@ -170,7 +149,7 @@ public class Prodotto {
 	public void setRecensioni(List<Recensione> recensioni) {
 		this.recensioni = recensioni;
 	}
-	
-	
 
+    
 }
+

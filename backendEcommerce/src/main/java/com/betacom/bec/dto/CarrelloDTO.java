@@ -1,50 +1,45 @@
 package com.betacom.bec.dto;
 
-import java.sql.Timestamp;
-//gjm,u
+import java.util.List;
 
+import com.betacom.bec.models.CarrelloProdotto;
+import com.betacom.bec.models.Prodotto;
 
 public class CarrelloDTO {
 
 	private Integer id;
-    private Timestamp dataCreazione;
-    private Timestamp dataUltimoAggiornamento;
-    private String stato;
     private Integer idProdotto;
     private Integer quantita;
     private Double prezzo;
     private UtenteDTO utente;
+    private List<CarrelloProdotto> carrelloProdotti;
+    private Prodotto prodotto;
     
-	public CarrelloDTO(Integer id, Timestamp dataCreazione, Timestamp dataUltimoAggiornamento,
-			String stato, Integer idProdotto, Integer quantita, Double prezzo, UtenteDTO utente) {
+	public CarrelloDTO(Integer id, Integer idProdotto, Integer quantita, Double prezzo, UtenteDTO utente,
+			List<CarrelloProdotto> carrelloProdotti, Prodotto prodotto) {
 		super();
 		this.id = id;
-		this.dataCreazione = dataCreazione;
-		this.dataUltimoAggiornamento = dataUltimoAggiornamento;
-		this.stato = stato;
 		this.idProdotto = idProdotto;
 		this.quantita = quantita;
 		this.prezzo = prezzo;
 		this.utente = utente;
+		this.carrelloProdotti = carrelloProdotti;
+		this.prodotto = prodotto;
 	}
 
 	public CarrelloDTO() {
 		super();
 	}
-	
-	
 
-	public CarrelloDTO(Integer id, Timestamp dataCreazione) {
-		super();
-		this.id = id;
-		this.dataCreazione = dataCreazione;
+	public CarrelloDTO(Integer id2, Double prezzo2, Integer quantita2, Object object,
+			List<CarrelloProdottoDTO> carrelloProdottoDTO) {
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public String toString() {
-		return "CarrelloDTO [id=" + id  + ", dataCreazione=" + dataCreazione
-				+ ", dataUltimoAggiornamento=" + dataUltimoAggiornamento + ", stato=" + stato + ", idProdotto="
-				+ idProdotto + ", quantita=" + quantita + ", prezzo=" + prezzo + ", utente=" + utente + "]";
+		return "CarrelloDTO [id=" + id + ", idProdotto=" + idProdotto + ", quantita=" + quantita + ", prezzo=" + prezzo
+				+ ", utente=" + utente + ", carrelloProdotti=" + carrelloProdotti + ", prodotto=" + prodotto + "]";
 	}
 
 	public Integer getId() {
@@ -53,30 +48,6 @@ public class CarrelloDTO {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public Timestamp getDataCreazione() {
-		return dataCreazione;
-	}
-
-	public void setDataCreazione(Timestamp dataCreazione) {
-		this.dataCreazione = dataCreazione;
-	}
-
-	public Timestamp getDataUltimoAggiornamento() {
-		return dataUltimoAggiornamento;
-	}
-
-	public void setDataUltimoAggiornamento(Timestamp dataUltimoAggiornamento) {
-		this.dataUltimoAggiornamento = dataUltimoAggiornamento;
-	}
-
-	public String getStato() {
-		return stato;
-	}
-
-	public void setStato(String stato) {
-		this.stato = stato;
 	}
 
 	public Integer getIdProdotto() {
@@ -110,6 +81,25 @@ public class CarrelloDTO {
 	public void setUtente(UtenteDTO utente) {
 		this.utente = utente;
 	}
+
+	public List<CarrelloProdotto> getCarrelloProdotti() {
+		return carrelloProdotti;
+	}
+
+	public void setCarrelloProdotti(List<CarrelloProdotto> carrelloProdotti) {
+		this.carrelloProdotti = carrelloProdotti;
+	}
+
+	public Prodotto getProdotto() {
+		return prodotto;
+	}
+
+	public void setProdotto(Prodotto prodotto) {
+		this.prodotto = prodotto;
+	}
+    
+    
+	
     
 	
     
