@@ -14,6 +14,8 @@ public class UtenteDTO {
 	 private String numeroTelefono;
 	 private String indirizzoDiSpedizione;
 	 private String indirizzoDiFatturazione;
+	private List<OrdineDTO> ordini;
+	private List<RecensioneDTO> recensioni;
 	 
 	 
 	 public String getNumeroTelefono() {
@@ -40,11 +42,15 @@ public class UtenteDTO {
 		this.indirizzoDiFatturazione = indirizzoDiFatturazione;
 	}
 
-	private List<OrdineDTO> ordini;
-	 private List<RecensioneDTO> recensioni;
+
 	 
 
-
+		public UtenteDTO(Integer id, String nome, String cognome) {
+			super();
+			this.id = id;
+			this.nome = nome;
+			this.cognome = cognome;
+		}
 
 	public UtenteDTO(Integer id, String nome, String cognome, String email, String password, String ruolo,
 			String numeroTelefono, String indirizzoDiSpedizione, String indirizzoDiFatturazione, List<OrdineDTO> ordini,
@@ -68,13 +74,6 @@ public class UtenteDTO {
 	}
 
 
-
-	public UtenteDTO(Integer id, String nome, String cognome) {
-		super();
-		this.id = id;
-		this.nome = nome;
-		this.cognome = cognome;
-	}
 
 	@Override
 	public String toString() {

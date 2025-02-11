@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.betacom.bec.dto.CarrelloDTO;
+import com.betacom.bec.dto.CarrelloProdottoDTO;
 import com.betacom.bec.dto.UtenteDTO;
 import com.betacom.bec.models.Carrello;
 import com.betacom.bec.models.CarrelloProdotto;
@@ -121,34 +122,14 @@ public class CarrelloImpl implements CarrelloServices{
 
 	@Override
 	public List<CarrelloDTO> ottieniCarrello(int utenteId) {
-	    // Recupero la lista di carrelli associati all'utente
-	    List<Carrello> carrelli = carrelloRepository.getByUtenteId(utenteId);
-
-	    if (carrelli.isEmpty()) {
-	        System.out.println("Nessun carrello trovato per utenteId: " + utenteId);
-	    } else {
-	        carrelli.forEach(c -> {
-	            System.out.println("Carrello trovato con id: " + c.getId());
-	            System.out.println("Numero di prodotti nel carrello: " + c.getCarrelloProdotti().size());
-	        });
-	    }
-
-	    // Trasformazione in una lista di DTO
-	    return carrelli.stream()
-	            .map(c -> new CarrelloDTO(
-	                    c.getId(),
-	                    c.getPrezzo(),
-	                    c.getQuantita(),
-	                    (c.getUtente() != null) ? new UtenteDTO(
-	                            c.getUtente().getId(),
-	                            c.getUtente().getNome(),
-	                            c.getUtente().getCognome()) : null,
-	                    buildCarrelloProdottoDTO(c.getCarrelloProdotti())
-	            ))
-	            .collect(Collectors.toList());
+		List<Carrello> lU = carrelloRepository.findAll();
+		return lU.stream()
+				.map(u -> new CarrelloDTO(u.getId(),
+						u.getQuantita(),
+						u.getPrezzo(),
+						buildCarrelloProdottoDTO(u.getCarrelloProdotti())))
+				.collect(Collectors.toList());
 	}
-
-
-    
+ 
 	
 }
