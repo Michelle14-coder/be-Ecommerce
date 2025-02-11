@@ -8,39 +8,40 @@ import com.betacom.bec.models.Prodotto;
 public class CarrelloDTO {
 
 	private Integer id;
-    private Integer idProdotto;
     private Integer quantita;
     private Double prezzo;
     private UtenteDTO utente;
     private List<CarrelloProdotto> carrelloProdotti;
-    private Prodotto prodotto;
     
-	public CarrelloDTO(Integer id, Integer idProdotto, Integer quantita, Double prezzo, UtenteDTO utente,
-			List<CarrelloProdotto> carrelloProdotti, Prodotto prodotto) {
+
+
+
+
+	public CarrelloDTO(Integer id, Integer quantita, Double prezzo, UtenteDTO utente,
+			List<CarrelloProdotto> carrelloProdotti) {
 		super();
 		this.id = id;
-		this.idProdotto = idProdotto;
 		this.quantita = quantita;
 		this.prezzo = prezzo;
 		this.utente = utente;
 		this.carrelloProdotti = carrelloProdotti;
-		this.prodotto = prodotto;
 	}
+
+
 
 	public CarrelloDTO() {
 		super();
 	}
 
-	public CarrelloDTO(Integer id2, Double prezzo2, Integer quantita2, Object object,
-			List<CarrelloProdottoDTO> carrelloProdottoDTO) {
-		// TODO Auto-generated constructor stub
-	}
+
 
 	@Override
 	public String toString() {
-		return "CarrelloDTO [id=" + id + ", idProdotto=" + idProdotto + ", quantita=" + quantita + ", prezzo=" + prezzo
-				+ ", utente=" + utente + ", carrelloProdotti=" + carrelloProdotti + ", prodotto=" + prodotto + "]";
+		return "CarrelloDTO [id=" + id + ", quantita=" + quantita + ", prezzo=" + prezzo + ", utente=" + utente
+				+ ", carrelloProdotti=" + carrelloProdotti + "]";
 	}
+
+
 
 	public Integer getId() {
 		return id;
@@ -50,13 +51,6 @@ public class CarrelloDTO {
 		this.id = id;
 	}
 
-	public Integer getIdProdotto() {
-		return idProdotto;
-	}
-
-	public void setIdProdotto(Integer idProdotto) {
-		this.idProdotto = idProdotto;
-	}
 
 	public Integer getQuantita() {
 		return quantita;
@@ -90,19 +84,6 @@ public class CarrelloDTO {
 		this.carrelloProdotti = carrelloProdotti;
 	}
 
-	public Prodotto getProdotto() {
-		return prodotto;
-	}
-
-	public void setProdotto(Prodotto prodotto) {
-		this.prodotto = prodotto;
-	}
-    
-    
-	
-    
-	
-    
-    
+ 
 
 }
