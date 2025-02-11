@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import com.betacom.bec.models.Carrello;
+import com.betacom.bec.models.Utente;
 
 public interface CarrelloRepository extends JpaRepository<Carrello, Integer> {
 	
@@ -26,6 +27,8 @@ public interface CarrelloRepository extends JpaRepository<Carrello, Integer> {
     List<Carrello> getByUtenteId(@Param("utenteId") Integer utenteId);
 
 	List<Carrello> getByUtenteId(int utenteId);
+
+	Optional<Carrello> findByUtente(Utente utente);
     
 
 

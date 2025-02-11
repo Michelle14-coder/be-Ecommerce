@@ -4,17 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.betacom.bec.services.interfaces.ProdottoServices;
 import com.betacom.bec.services.interfaces.UtenteServices;
-import com.betacom.bec.dto.ProdottoDTO;
 import com.betacom.bec.dto.UtenteDTO;
-import com.betacom.bec.request.ProdottoReq;
 import com.betacom.bec.request.UtenteReq;
 import com.betacom.bec.response.ResponseBase;
 import com.betacom.bec.response.ResponseList;
@@ -36,7 +32,7 @@ public class UtenteController {
 		r.setRc(true);
 		List<UtenteDTO> resp = null;
 		try {
-			r.setDati (utenteS.listAll());
+			r.setDati (utenteS.list());
 		} catch (Exception e) {
 			log.debug(e.getMessage());
 			r.setMsg(e.getMessage());
@@ -67,7 +63,7 @@ public class UtenteController {
 		log.debug("update: " + req);
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
-		try {			
+		try {
 			utenteS.update(req);
 		} catch (Exception e) {
 			r.setMsg(e.getMessage());
@@ -75,12 +71,10 @@ public class UtenteController {
 		}
 		return r;
 	}
-
-
 	
 	@PostMapping("/remove")
 	public ResponseBase remove(@RequestBody (required = true) UtenteReq req) {
-		log.debug("delete: " + req);
+		log.debug("remove: " + req);
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
 		try {
@@ -91,4 +85,6 @@ public class UtenteController {
 		}
 		return r;
 	}
+	
+
 }
