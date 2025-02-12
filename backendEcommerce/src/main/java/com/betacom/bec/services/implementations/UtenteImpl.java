@@ -139,10 +139,22 @@ public class UtenteImpl implements UtenteServices{
 
 	@Override
 	public void remove(UtenteReq req) throws Exception {
-		Optional<Utente> u = utR.findById(req.getId());
-		if (u.isEmpty())
-			throw new Exception("Username inesistente");
-		utR.delete(u.get());
+	    Optional<Utente> u = utR.findById(req.getId());
+	    
+	    if (u.isEmpty()) {
+	        throw new Exception("Username inesistente");
+	    }
+	    
+	    Utente utente = u.get();
+	    
+	    // Elimina il carrello associato all'utente, se esiste
+	    Optional<Carrello> carrelloOpt = caR.findByUtente(utente);
+	    carrelloOpt.ifPresent(caR::delete);
+
+	    // Elimina l'utente
+	    utR.delete(utente);
+	    
+	    System.out.println("Utente e carrello eliminati con successo");
 	}
 	
 	

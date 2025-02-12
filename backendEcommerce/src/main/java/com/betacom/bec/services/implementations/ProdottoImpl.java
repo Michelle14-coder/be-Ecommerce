@@ -8,7 +8,9 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.betacom.bec.dto.ProdottoDTO;
+import com.betacom.bec.models.CarrelloProdotto;
 import com.betacom.bec.models.Prodotto;
+import com.betacom.bec.repositories.CarrelloProdottoRepository;
 import com.betacom.bec.repositories.ProdottoRepository;
 import com.betacom.bec.request.ProdottoReq;
 import com.betacom.bec.services.interfaces.MessaggioServices;
@@ -19,6 +21,9 @@ public class ProdottoImpl implements ProdottoServices{
 
 	@Autowired
 	ProdottoRepository proR;
+	
+	@Autowired
+	CarrelloProdottoRepository cpR;
 	
 	
 	@Autowired
@@ -112,11 +117,12 @@ public class ProdottoImpl implements ProdottoServices{
 	public void removeProdotto(ProdottoReq req) throws Exception {
 		Optional<Prodotto> pr = proR.findById(req.getId());
 		if (pr.isEmpty())
-			throw new Exception(msgS.getMessaggio("no-prodotto"));
+			throw new Exception(msgS.getMessaggio("no-prodotto"));		
+						
+		Optional<CarrelloProdotto> cp = cpR.findById(req.getId());
 		
-//		if (!pr.get().getAttivitas().isEmpty())
-//			throw new Exception("Abbonamento con attività. Cancella attività prima");
-		
+		if (!cp.isEmpty())			
+			throw new Exception("Prodotto presente nel carrello " + cp.get().getCarrello().getId());
 		proR.delete(pr.get());
 		
 	} 

@@ -106,7 +106,9 @@ public class CarrelloImpl implements CarrelloServices{
 	        carrelloProdottoRepository.save(carrelloProdotto);
 	    } else {
 	        // SE LA QUANTITÀ SCENDE A 0, RIMUOVE IL PRODOTTO DAL CARRELLO
+	        carrello.getCarrelloProdotti().remove(carrelloProdotto);  // 🔥 RIMUOVE IL PRODOTTO DALLA LISTA DEL CARRELLO
 	        carrelloProdottoRepository.delete(carrelloProdotto);
+	        carrelloProdottoRepository.flush(); // 🔥 FORZA L'ELIMINAZIONE DAL DB
 	    }
 
 	    // AGGIORNA AUTOMATICAMENTE I TOTALI DEL CARRELLO USANDO LE QUERY
@@ -118,6 +120,7 @@ public class CarrelloImpl implements CarrelloServices{
 
 	    return carrelloRepository.save(carrello);
 	}
+
 
 
 	@Override
