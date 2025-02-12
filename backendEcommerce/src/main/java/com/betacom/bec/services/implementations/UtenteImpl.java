@@ -17,8 +17,7 @@ import com.betacom.bec.services.interfaces.MessaggioServices;
 import com.betacom.bec.services.interfaces.UtenteServices;
 import com.betacom.bec.utils.Roles;
 
-import static com.betacom.bec.utils.Utilities.buildOrdineDTO;
-import static com.betacom.bec.utils.Utilities.buildRecensioneDTO;;
+import static com.betacom.bec.utils.Utilities.buildOrdineDTO;;
 @Service
 public class UtenteImpl implements UtenteServices{
 
@@ -49,8 +48,7 @@ public class UtenteImpl implements UtenteServices{
                 u.getNumeroTelefono(),
                 u.getIndirizzoDiFatturazione(),
                 u.getIndirizzoDiSpedizione(),
-                buildOrdineDTO(u.getOrdini()),
-                buildRecensioneDTO(u.getRecensioni())
+                buildOrdineDTO(u.getOrdini())
         )).collect(Collectors.toList());
     }
 	

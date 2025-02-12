@@ -33,11 +33,6 @@ public class Utilities {
 		return formatter.format(data);
 	}
 	
-     public static List<RecensioneDTO> buildRecensioneDTO(List<Recensione> a) {
-    	    return a.stream()
-    	            .map(r -> new RecensioneDTO(r.getId(), r.getValutazione(), r.getCommento(), r.getDataRecensione()))
-    	            .collect(Collectors.toList());
-    }
      
      public static List<OrdineDTO> buildOrdineDTO(List<Ordine> a) {
  	    return a.stream()

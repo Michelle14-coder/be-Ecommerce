@@ -64,7 +64,7 @@
         id_prodotto integer,
         id_utente integer,
         valutazione integer not null,
-        data_recensione datetime(6) not null,
+        data_recensione TIMESTAMP DEFAULT CURRENT_TIMESTAMP null,
         commento varchar(100) not null,
         primary key (id)
     ) engine=InnoDB;

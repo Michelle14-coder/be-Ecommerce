@@ -58,6 +58,19 @@ public class ProdottoDTO {
 
 
 
+	public ProdottoDTO(String marca, String nome, String categoria, String descrizione, Double prezzo, String urlImg,
+			String colore) {
+		super();
+		this.marca = marca;
+		this.nome = nome;
+		this.categoria = categoria;
+		this.descrizione = descrizione;
+		this.prezzo = prezzo;
+		this.urlImg = urlImg;
+		this.colore = colore;
+	}
+
+
 	@Override
 	public String toString() {
 		return "ProdottoDTO [id=" + id + ", marca=" + marca + ", nome=" + nome + ", categoria=" + categoria
