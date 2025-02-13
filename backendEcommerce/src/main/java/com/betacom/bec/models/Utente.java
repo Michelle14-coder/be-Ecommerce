@@ -59,10 +59,6 @@ public class Utente {
 	private String indirizzoDiFatturazione;
 	
 	
-	@OneToMany(mappedBy="utente",   //colegamento con utente
- 		   fetch = FetchType.EAGER,  //strategy di caricamento oggetto-> tutti oggetti sono caricati
- 		   cascade= CascadeType.REMOVE) //remove all utenti in caso di delete
-    private List<Ordine> ordini;
 	
 	@OneToMany(mappedBy="utente",   //colegamento con utente
  		   fetch = FetchType.EAGER,  //strategy di caricamento oggetto-> tutti oggetti sono caricati
@@ -133,14 +129,6 @@ public class Utente {
 		this.indirizzoDiFatturazione = indirizzoDiFatturazione;
 	}
 
-
-	public List<Ordine> getOrdini() {
-		return ordini;
-	}
-
-	public void setOrdini(List<Ordine> ordini) {
-		this.ordini = ordini;
-	}
 
 	public List<Recensione> getRecensioni() {
 		return recensioni;

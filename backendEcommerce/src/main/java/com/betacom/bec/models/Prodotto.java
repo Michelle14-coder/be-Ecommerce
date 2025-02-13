@@ -1,13 +1,9 @@
 package com.betacom.bec.models;
 
-import java.sql.Timestamp;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -37,9 +33,6 @@ public class Prodotto {
     @JsonIgnore
     private List<CarrelloProdotto> carrelloProdotti;
 
-
-    @OneToMany(mappedBy = "prodotto")
-    private List<Ordine> ordini;
 
     @OneToMany(mappedBy = "prodotto")
     private List<Recensione> recensioni;
@@ -134,13 +127,6 @@ public class Prodotto {
 		this.carrelloProdotti = carrelloProdotti;
 	}
 
-	public List<Ordine> getOrdini() {
-		return ordini;
-	}
-
-	public void setOrdini(List<Ordine> ordini) {
-		this.ordini = ordini;
-	}
 
 	public List<Recensione> getRecensioni() {
 		return recensioni;

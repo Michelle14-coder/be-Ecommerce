@@ -2,9 +2,6 @@ package com.betacom.bec.dto;
 
 import java.util.Date;
 
-import com.betacom.bec.models.Prodotto;
-import com.betacom.bec.models.Utente;
-
 public class RecensioneDTO {
 
 	private Integer id;

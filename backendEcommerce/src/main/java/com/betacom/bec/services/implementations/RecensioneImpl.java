@@ -12,15 +12,12 @@ import org.springframework.stereotype.Service;
 import com.betacom.bec.dto.ProdottoDTO;
 import com.betacom.bec.dto.RecensioneDTO;
 import com.betacom.bec.dto.UtenteDTO;
-import com.betacom.bec.models.Prodotto;
 import com.betacom.bec.models.Recensione;
-import com.betacom.bec.models.Utente;
 import com.betacom.bec.repositories.RecensioneRepository;
 import com.betacom.bec.request.RecensioneReq;
 import com.betacom.bec.services.interfaces.MessaggioServices;
 import com.betacom.bec.services.interfaces.RecensioneServices;
 
-import static com.betacom.bec.utils.Utilities.buildOrdineDTO;
 import static com.betacom.bec.utils.Utilities.convertStringToDate;
 
 @Service

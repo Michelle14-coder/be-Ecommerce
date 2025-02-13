@@ -34,12 +34,6 @@ public class Utilities {
 	}
 	
      
-     public static List<OrdineDTO> buildOrdineDTO(List<Ordine> a) {
- 	    return a.stream()
- 	            .map(r -> new OrdineDTO(r.getId(), r.getPrezzoTotale(), r.getIndirizzoDiSpedizione(), r.getCap(), r.getDataOrdine(), r.getQuantità(), r.getStato()))
- 	            .collect(Collectors.toList());
- }
-     
      public static List<CarrelloProdottoDTO> buildCarrelloProdottoDTO(List<CarrelloProdotto> a) {
   	    return a.stream()
   	            .map(r -> new CarrelloProdottoDTO(r.getId(),r.getProdotto()))

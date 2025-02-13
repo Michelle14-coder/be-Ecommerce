@@ -15,31 +15,14 @@ public class CarrelloDTO {
     private List<CarrelloProdottoDTO> carrelloProdottiDTO;
     
 
-
-	public CarrelloDTO(Integer id, Integer quantita, Double prezzo, UtenteDTO utente,
-			List<CarrelloProdottoDTO> carrelloProdottiDTO) {
-		super();
-		this.id = id;
-		this.quantita = quantita;
-		this.prezzo = prezzo;
-		//this.utente = utente;
-		this.carrelloProdottiDTO = carrelloProdottiDTO;
-	}
-
-
-
 	public CarrelloDTO(Integer id, Integer quantita, Double prezzo,
 			List<CarrelloProdottoDTO> carrelloProdottiDTO) {
 		super();
 		this.id = id;
 		this.quantita = quantita;
 		this.prezzo = prezzo;
-
 		this.carrelloProdottiDTO = carrelloProdottiDTO;
 	}
-
-
-
 
 
 

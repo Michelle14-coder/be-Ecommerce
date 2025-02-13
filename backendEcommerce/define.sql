@@ -23,15 +23,12 @@
     ) engine=InnoDB;
 
     create table ordini (
-        cap integer not null,
         id integer not null auto_increment,
-        id_prodotto integer,
-        id_utente integer,
-        prezzo_totale float(53) not null,
-        quantità integer not null,
-        data_ordine datetime(6) not null,
+        id_carrello integer,
+        data_ordine TIMESTAMP DEFAULT CURRENT_TIMESTAMP null,
+        cap varchar(100) not null,
+        citta varchar(100) not null,
         indirizzo_spedizione varchar(100) not null,
-        stato varchar(100) not null,
         primary key (id)
     ) engine=InnoDB;
 
@@ -101,14 +98,9 @@
        references prodotti (id);
 
     alter table ordini 
-       add constraint FKstu4ffvdir0e3p3xg8se2a4un 
-       foreign key (id_prodotto) 
-       references prodotti (id);
-
-    alter table ordini 
-       add constraint FKqj5n4mdh5tc9qkj7hx54mvgi4 
-       foreign key (id_utente) 
-       references utenti (id);
+       add constraint FK5nvsun8bktrdr3ir2cvw0ktil 
+       foreign key (id_carrello) 
+       references carrello (id);
 
     alter table pagamenti 
        add constraint FKb19bn6ntprd4pcu61w9fpyqin 

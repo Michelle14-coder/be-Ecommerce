@@ -14,9 +14,8 @@ public class UtenteDTO {
 	 private String numeroTelefono;
 	 private String indirizzoDiSpedizione;
 	 private String indirizzoDiFatturazione;
-	private List<OrdineDTO> ordini;
 
-	 
+	
 	 
 	 public String getNumeroTelefono() {
 		return numeroTelefono;
@@ -54,9 +53,9 @@ public class UtenteDTO {
 
 
 
+
 	public UtenteDTO(Integer id, String nome, String cognome, String email, String password, String ruolo,
-				String numeroTelefono, String indirizzoDiSpedizione, String indirizzoDiFatturazione,
-				List<OrdineDTO> ordini) {
+				String numeroTelefono, String indirizzoDiSpedizione, String indirizzoDiFatturazione) {
 			super();
 			this.id = id;
 			this.nome = nome;
@@ -67,7 +66,6 @@ public class UtenteDTO {
 			this.numeroTelefono = numeroTelefono;
 			this.indirizzoDiSpedizione = indirizzoDiSpedizione;
 			this.indirizzoDiFatturazione = indirizzoDiFatturazione;
-			this.ordini = ordini;
 		}
 
 	public UtenteDTO() {
@@ -76,13 +74,11 @@ public class UtenteDTO {
 
 
 
-
 	@Override
 	public String toString() {
 		return "UtenteDTO [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", email=" + email + ", password="
 				+ password + ", ruolo=" + ruolo + ", numeroTelefono=" + numeroTelefono + ", indirizzoDiSpedizione="
-				+ indirizzoDiSpedizione + ", indirizzoDiFatturazione=" + indirizzoDiFatturazione + ", ordini=" + ordini
-				+ "]";
+				+ indirizzoDiSpedizione + ", indirizzoDiFatturazione=" + indirizzoDiFatturazione + "]";
 	}
 
 	public Integer getId() {
@@ -133,14 +129,6 @@ public class UtenteDTO {
 		this.ruolo = ruolo;
 	}
 
-
-	public List<OrdineDTO> getOrdini() {
-		return ordini;
-	}
-
-	public void setOrdini(List<OrdineDTO> ordini) {
-		this.ordini = ordini;
-	}
 
 	 
 
