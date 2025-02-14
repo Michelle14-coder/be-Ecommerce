@@ -33,12 +33,12 @@
     ) engine=InnoDB;
 
     create table pagamenti (
+        cvv integer not null,
         id integer not null auto_increment,
-        id_ordine integer,
-        importo float(53) not null,
-        data_pagamento datetime(6) not null,
+        id_utente integer,
+        data_scadenza datetime(6) not null,
+        numero_carta varchar(19) not null,
         metodo_pagamento varchar(100) not null,
-        stato_pagamento varchar(100) not null,
         primary key (id)
     ) engine=InnoDB;
 
@@ -103,9 +103,9 @@
        references carrello (id);
 
     alter table pagamenti 
-       add constraint FKb19bn6ntprd4pcu61w9fpyqin 
-       foreign key (id_ordine) 
-       references ordini (id);
+       add constraint FKkgi08br0yi2u29py759ivmeq3 
+       foreign key (id_utente) 
+       references utenti (id);
 
     alter table recensioni 
        add constraint FK5wtirys8opmifrpgxxe3lla6q 

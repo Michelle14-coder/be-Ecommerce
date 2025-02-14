@@ -21,10 +21,17 @@ import com.betacom.bec.models.Recensione;
 public class Utilities {
 
 	private final static String PATTERN_DATE="dd/MM/yyyy";
+	private final static String PATTERN_DATE_CARTA="MM/yyyy";
 	
 	public static Date convertStringToDate(String dataString) throws ParseException {
 		
 		SimpleDateFormat formatter= new SimpleDateFormat(PATTERN_DATE, Locale.ITALY);
+		return formatter.parse(dataString);
+	}
+	
+	public static Date convertStringToDateCarta(String dataString) throws ParseException {
+		
+		SimpleDateFormat formatter= new SimpleDateFormat(PATTERN_DATE_CARTA, Locale.ITALY);
 		return formatter.parse(dataString);
 	}
 	

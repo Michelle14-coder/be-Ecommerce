@@ -1,6 +1,5 @@
 package com.betacom.bec.models;
-
-import java.sql.Timestamp;
+import java.util.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,7 +10,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
-@Entity //tutti i db e tabelle sono entity
+@Entity
 @Table (name="pagamenti")
 public class Pagamento {
 	
@@ -22,26 +21,30 @@ public class Pagamento {
 	@Column(name="metodo_pagamento",
 			length=100,
     		nullable=false)
-	private String metodoDiPagamento;
+	private String metodoDiPagamento; // scegliere tra mastercard ecc...
 	
-	@Column(name="stato_pagamento",
+	@Column(name="numero_carta",
+			length=19,
+    		nullable=false)
+	private String numeroCarta;
+	
+	
+	@Column(name="data_scadenza", // da cambiare in mese/anno -> 00/00
 			length=100,
     		nullable=false)
-	private String statoPagamento;
+	private Date dataScadenza;
 	
-	@Column(length=100,
+	@Column(name="cvv",
+			length=3,
     		nullable=false)
-	private Double importo;
+	private Integer cvv;
 	
-	@Column(name="data_pagamento",
-			length=100,
-    		nullable=false)
-	private Timestamp dataPagamento;
-	
-	@ManyToOne
-    @JoinColumn(name = "id_ordine")
-    private Ordine ordine;
 
+	@ManyToOne
+    @JoinColumn(name = "id_utente") 
+    private Utente utente;
+
+	
 	public Integer getId() {
 		return id;
 	}
@@ -58,39 +61,39 @@ public class Pagamento {
 		this.metodoDiPagamento = metodoDiPagamento;
 	}
 
-	public String getStatoPagamento() {
-		return statoPagamento;
+
+	public Date getDataScadenza() {
+		return dataScadenza;
 	}
 
-	public void setStatoPagamento(String statoPagamento) {
-		this.statoPagamento = statoPagamento;
+	public void setDataScadenza(Date dataScadenza) {
+		this.dataScadenza = dataScadenza;
 	}
 
-	public Double getImporto() {
-		return importo;
+	public Integer getCvv() {
+		return cvv;
 	}
 
-	public void setImporto(Double importo) {
-		this.importo = importo;
+	public void setCvv(Integer cvv) {
+		this.cvv = cvv;
 	}
 
-	public Timestamp getDataPagamento() {
-		return dataPagamento;
+	public Utente getUtente() {
+		return utente;
 	}
 
-	public void setDataPagamento(Timestamp dataPagamento) {
-		this.dataPagamento = dataPagamento;
+	public void setUtente(Utente utente) {
+		this.utente = utente;
 	}
 
-	public Ordine getOrdine() {
-		return ordine;
-	}
-
-	public void setOrdine(Ordine ordine) {
-		this.ordine = ordine;
-	}
 	
-	
+	public String getNumeroCarta() {
+		return numeroCarta;
+	}
+
+	public void setNumeroCarta(String numeroCarta) {
+		this.numeroCarta = numeroCarta;
+	}
 
 
 }
