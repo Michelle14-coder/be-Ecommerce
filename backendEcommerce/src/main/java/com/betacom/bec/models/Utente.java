@@ -167,6 +167,5 @@ public class Utente {
 	public void setOrdini(List<Ordine> ordini) {
 		this.ordini = ordini;
 	}
-
 	
 }
