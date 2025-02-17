@@ -13,7 +13,7 @@
 
     alter table ordini 
        drop 
-       foreign key FKstu4ffvdir0e3p3xg8se2a4un;
+       foreign key FK5nvsun8bktrdr3ir2cvw0ktil;
 
     alter table ordini 
        drop 
@@ -21,7 +21,7 @@
 
     alter table pagamenti 
        drop 
-       foreign key FKb19bn6ntprd4pcu61w9fpyqin;
+       foreign key FKkgi08br0yi2u29py759ivmeq3;
 
     alter table recensioni 
        drop 
