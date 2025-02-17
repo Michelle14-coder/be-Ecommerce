@@ -8,13 +8,15 @@ public class OrdineReq {
 	private String citta;
 	private String dataOrdine;
 	private Integer carrelloId;
+	private Integer utenteId;
+
 
 
 
 
 
 	public OrdineReq(Integer id, String indirizzoDiSpedizione, String cap, String citta, String dataOrdine,
-			Integer carrelloId) {
+			Integer carrelloId, Integer utenteId) {
 		super();
 		this.id = id;
 		this.indirizzoDiSpedizione = indirizzoDiSpedizione;
@@ -22,6 +24,7 @@ public class OrdineReq {
 		this.citta = citta;
 		this.dataOrdine = dataOrdine;
 		this.carrelloId = carrelloId;
+		this.utenteId = utenteId;
 	}
 
 	public Integer getId() {
@@ -73,6 +76,14 @@ public class OrdineReq {
 
 	public void setCarrelloId(Integer carrelloId) {
 		this.carrelloId = carrelloId;
+	}
+
+	public Integer getUtenteId() {
+		return utenteId;
+	}
+
+	public void setUtenteId(Integer utenteId) {
+		this.utenteId = utenteId;
 	}
 
 

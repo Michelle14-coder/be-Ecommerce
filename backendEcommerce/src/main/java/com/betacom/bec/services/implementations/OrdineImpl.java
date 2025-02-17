@@ -17,8 +17,10 @@ import com.betacom.bec.dto.CarrelloDTO;
 import com.betacom.bec.dto.OrdineDTO;
 import com.betacom.bec.models.Carrello;
 import com.betacom.bec.models.Ordine;
+import com.betacom.bec.models.Utente;
 import com.betacom.bec.repositories.CarrelloRepository;
 import com.betacom.bec.repositories.OrdineRepository;
+import com.betacom.bec.repositories.UtenteRepository;
 import com.betacom.bec.request.OrdineReq;
 import com.betacom.bec.services.interfaces.MessaggioServices;
 import com.betacom.bec.services.interfaces.OrdineServices;
@@ -32,6 +34,9 @@ public class OrdineImpl implements OrdineServices{
 	
 	@Autowired
 	CarrelloRepository carR;
+	
+	@Autowired
+	UtenteRepository utR;
 	
 	
 	@Autowired
@@ -48,6 +53,7 @@ public class OrdineImpl implements OrdineServices{
 	        throw new Exception(msgS.getMessaggio("no-cap"));
 	    if (req.getCitta() == null)
 	        throw new Exception(msgS.getMessaggio("no-citta"));
+	    
 
 	    Ordine ordine = new Ordine();
 	    ordine.setIndirizzoDiSpedizione(req.getIndirizzoDiSpedizione());
@@ -61,6 +67,12 @@ public class OrdineImpl implements OrdineServices{
 	        Carrello carrello = carR.findById(req.getCarrelloId())
 	                .orElseThrow(() -> new Exception("Carrello non trovato"));
 	        ordine.setCarrello(carrello);
+	    }
+	    
+	    if (req.getUtenteId() != null) {
+	        Utente utente = utR.findById(req.getUtenteId())
+	                .orElseThrow(() -> new Exception("Utente non trovato"));
+	        ordine.setUtente(utente);
 	    }
 
 	    orR.save(ordine);

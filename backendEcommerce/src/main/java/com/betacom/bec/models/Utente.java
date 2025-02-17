@@ -57,12 +57,16 @@ public class Utente {
 			length=100,
     		nullable=false)
 	private String indirizzoDiFatturazione;
+		
+	@OneToMany(mappedBy="utente", 
+	 		   fetch = FetchType.EAGER, 
+	 		   cascade= CascadeType.REMOVE) 
+    private List<Ordine> ordini;
 	
-	
-	
-	@OneToMany(mappedBy="utente",   //colegamento con utente
- 		   fetch = FetchType.EAGER,  //strategy di caricamento oggetto-> tutti oggetti sono caricati
- 		   cascade= CascadeType.REMOVE) //remove all tenti in caso di delete
+
+	@OneToMany(mappedBy="utente", 
+ 		   fetch = FetchType.EAGER, 
+ 		   cascade= CascadeType.REMOVE) 
     private List<Recensione> recensioni;
 
 	public Integer getId() {
@@ -144,6 +148,14 @@ public class Utente {
 
 	public void setRuolo(Roles ruolo) {
 		this.ruolo = ruolo;
+	}
+	
+	public List<Ordine> getOrdini() {
+		return ordini;
+	}
+
+	public void setOrdini(List<Ordine> ordini) {
+		this.ordini = ordini;
 	}
 
 	

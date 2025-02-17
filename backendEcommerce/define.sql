@@ -25,6 +25,7 @@
     create table ordini (
         id integer not null auto_increment,
         id_carrello integer,
+        id_utente integer,
         data_ordine TIMESTAMP DEFAULT CURRENT_TIMESTAMP null,
         cap varchar(100) not null,
         citta varchar(100) not null,
@@ -101,6 +102,11 @@
        add constraint FK5nvsun8bktrdr3ir2cvw0ktil 
        foreign key (id_carrello) 
        references carrello (id);
+
+    alter table ordini 
+       add constraint FKqj5n4mdh5tc9qkj7hx54mvgi4 
+       foreign key (id_utente) 
+       references utenti (id);
 
     alter table pagamenti 
        add constraint FKkgi08br0yi2u29py759ivmeq3 

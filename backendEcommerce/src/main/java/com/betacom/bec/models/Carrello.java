@@ -24,6 +24,7 @@ public class Carrello {
     private Integer id;
 
     private Integer quantita;
+    
     private Double prezzo;
 
     @OneToOne

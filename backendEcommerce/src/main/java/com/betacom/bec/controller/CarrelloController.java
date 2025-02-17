@@ -65,7 +65,6 @@ public class CarrelloController {
         response.setRc(true);
         try {
             Carrello carrello = carrelloS.aggiungiProdottoAlCarrello(utenteId, prodottoId, quantita);
-            log.debug("1");
             
             response.setDati(carrello);
 

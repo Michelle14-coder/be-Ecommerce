@@ -21,6 +21,13 @@ public class Ordine {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
 	private Integer id;
 
+	@ManyToOne
+    @JoinColumn(name = "id_utente")
+    private Utente utente;
+	
+    @ManyToOne
+    @JoinColumn(name = "id_carrello")
+    private Carrello carrello;
 	
 	@Column(name="indirizzo_spedizione",
 			length=100,
@@ -39,10 +46,6 @@ public class Ordine {
 	@Column(name = "data_ordine", updatable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dataOrdine;
-	
-    @ManyToOne
-    @JoinColumn(name = "id_carrello")
-    private Carrello carrello;
 	
 
 	public Integer getId() {
@@ -93,6 +96,14 @@ public class Ordine {
 
 	public void setCarrello(Carrello carrello) {
 		this.carrello = carrello;
+	}
+
+	public Utente getUtente() {
+		return utente;
+	}
+
+	public void setUtente(Utente utente) {
+		this.utente = utente;
 	}
 
 }

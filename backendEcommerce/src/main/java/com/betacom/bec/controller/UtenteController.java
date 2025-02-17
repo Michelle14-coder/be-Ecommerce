@@ -33,6 +33,7 @@ public class UtenteController {
 		List<UtenteDTO> resp = null;
 		try {
 			r.setDati (utenteS.list());
+			
 		} catch (Exception e) {
 			log.debug(e.getMessage());
 			r.setMsg(e.getMessage());
