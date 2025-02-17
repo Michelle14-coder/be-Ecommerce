@@ -36,6 +36,10 @@ public class Utente {
     		nullable=false)
 	private String email;
 	
+	@Column(length=100,
+    		nullable=false)
+	private String userName;
+	
 	@Column(name="hash_password",
 			length=100,
     		nullable=false)
@@ -127,6 +131,14 @@ public class Utente {
 
 	public String getIndirizzoDiFatturazione() {
 		return indirizzoDiFatturazione;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public void setIndirizzoDiFatturazione(String indirizzoDiFatturazione) {

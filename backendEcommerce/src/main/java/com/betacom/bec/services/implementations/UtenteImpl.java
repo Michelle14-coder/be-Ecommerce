@@ -41,6 +41,7 @@ public class UtenteImpl implements UtenteServices{
                 u.getNome(),
                 u.getCognome(),
                 u.getEmail(),
+                u.getUserName(),
                 u.getPsw(),
                 u.getRuolo().toString(), 
                 u.getNumeroTelefono(),
@@ -66,6 +67,8 @@ public class UtenteImpl implements UtenteServices{
 			throw new Exception(msgS.getMessaggio("no-cognome"));
 		if (req.getEmail() == null)
 			throw new Exception(msgS.getMessaggio("no-email"));
+		if (req.getUserName() == null)
+			throw new Exception(msgS.getMessaggio("no-username"));
 		if (req.getPassword() == null)
 			throw new Exception(msgS.getMessaggio("no-psw"));
 		if (req.getRuolo() == null)
@@ -83,6 +86,7 @@ public class UtenteImpl implements UtenteServices{
 		utente.setNome(req.getNome());
 		utente.setCognome(req.getCognome());
 		utente.setEmail(req.getEmail());
+		utente.setUserName(req.getUserName());
 		utente.setPsw(req.getPassword());
 		utente.setRuolo(Roles.valueOf(req.getRuolo()));
 		utente.setNumeroTelefono(req.getNumeroTelefono());
@@ -117,6 +121,8 @@ public class UtenteImpl implements UtenteServices{
 			u.get().setCognome(req.getCognome());
 		if (req.getEmail() != null)
 			u.get().setEmail(req.getEmail());
+		if (req.getUserName() != null)
+			u.get().setUserName(req.getUserName());
 		if (req.getPassword() != null)
 			u.get().setPsw(req.getPassword());		
 		if (req.getRuolo() != null)

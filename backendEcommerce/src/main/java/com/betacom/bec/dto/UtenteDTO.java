@@ -9,6 +9,7 @@ public class UtenteDTO {
 	 private String nome;
 	 private String cognome;
 	 private String email;
+	 private String userName;
 	 private String password;
 	 private String ruolo;
 	 private String numeroTelefono;
@@ -54,13 +55,16 @@ public class UtenteDTO {
 
 
 
-	public UtenteDTO(Integer id, String nome, String cognome, String email, String password, String ruolo,
-				String numeroTelefono, String indirizzoDiSpedizione, String indirizzoDiFatturazione) {
+
+
+	public UtenteDTO(Integer id, String nome, String cognome, String email, String userName, String password,
+				String ruolo, String numeroTelefono, String indirizzoDiSpedizione, String indirizzoDiFatturazione) {
 			super();
 			this.id = id;
 			this.nome = nome;
 			this.cognome = cognome;
 			this.email = email;
+			this.userName = userName;
 			this.password = password;
 			this.ruolo = ruolo;
 			this.numeroTelefono = numeroTelefono;
@@ -74,11 +78,14 @@ public class UtenteDTO {
 
 
 
+
+
 	@Override
 	public String toString() {
-		return "UtenteDTO [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", email=" + email + ", password="
-				+ password + ", ruolo=" + ruolo + ", numeroTelefono=" + numeroTelefono + ", indirizzoDiSpedizione="
-				+ indirizzoDiSpedizione + ", indirizzoDiFatturazione=" + indirizzoDiFatturazione + "]";
+		return "UtenteDTO [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", email=" + email + ", userName="
+				+ userName + ", password=" + password + ", ruolo=" + ruolo + ", numeroTelefono=" + numeroTelefono
+				+ ", indirizzoDiSpedizione=" + indirizzoDiSpedizione + ", indirizzoDiFatturazione="
+				+ indirizzoDiFatturazione + "]";
 	}
 
 	public Integer getId() {
@@ -130,6 +137,12 @@ public class UtenteDTO {
 	}
 
 
-	 
+	 public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 
 }
