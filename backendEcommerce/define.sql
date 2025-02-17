@@ -77,6 +77,7 @@
         indirizzo_spedizione varchar(100) not null,
         nome varchar(100) not null,
         numero_telefono varchar(100) not null,
+        user_name varchar(100) not null,
         primary key (id)
     ) engine=InnoDB;
 
