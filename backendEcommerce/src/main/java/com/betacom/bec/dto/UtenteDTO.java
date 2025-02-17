@@ -1,7 +1,5 @@
 package com.betacom.bec.dto;
 
-import java.util.List;
-
 
 public class UtenteDTO {
 

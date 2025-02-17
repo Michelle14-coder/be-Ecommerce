@@ -15,7 +15,7 @@ import com.betacom.bec.repositories.UtenteRepository;
 import com.betacom.bec.request.UtenteReq;
 import com.betacom.bec.services.interfaces.MessaggioServices;
 import com.betacom.bec.services.interfaces.UtenteServices;
-import com.betacom.bec.utils.Roles;;
+import com.betacom.bec.utils.Roles;
 @Service
 public class UtenteImpl implements UtenteServices{
 

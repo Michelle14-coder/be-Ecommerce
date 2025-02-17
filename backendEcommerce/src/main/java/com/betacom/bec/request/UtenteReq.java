@@ -16,8 +16,6 @@ public class UtenteReq {
 
 
 
-
-
 	public UtenteReq(Integer id, String nome, String cognome, String email, String userName, String password,
 			String ruolo, String numeroTelefono, String indirizzoDiSpedizione, String indirizzoDiFatturazione) {
 		super();
