@@ -71,6 +71,30 @@ public class ProdottoDTO {
 	}
 
 
+	public ProdottoDTO(Integer id,String nome, String descrizione, Double prezzo, String urlImg) {
+		this.id = id;
+		this.nome = nome;
+		this.descrizione = descrizione;
+		this.prezzo = prezzo;
+		this.urlImg = urlImg;
+	}
+	
+	public ProdottoDTO(Integer id, String marca, String nome, String categoria, String descrizione, Double prezzo,
+            Integer quantitaDisponibile, String urlImg, String size, String colore, List<RecensioneDTO> recensioni) {
+        this.id = id;
+        this.marca = marca;
+        this.nome = nome;
+        this.categoria = categoria;
+        this.descrizione = descrizione;
+        this.prezzo = prezzo;
+        this.quantitaDisponibile = quantitaDisponibile;
+        this.urlImg = urlImg;
+        this.size = size;
+        this.colore = colore;
+        this.recensioni = recensioni;
+    }
+
+
 	@Override
 	public String toString() {
 		return "ProdottoDTO [id=" + id + ", marca=" + marca + ", nome=" + nome + ", categoria=" + categoria
