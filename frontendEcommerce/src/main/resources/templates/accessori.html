@@ -24,7 +24,7 @@
 
             <div th:each="prodotto : ${listProdotti.dati}" class="col-3 mb-10">
             <p style="margin-bottom:50px"></p>
-            <a th:href="@{/home}" style="text-decoration:none;color:black">
+            <a th:href="@{/listById(id=${prodotto.id})}" style="text-decoration:none;color:black">
                 <div class="card">
                     <img th:src="@{${prodotto.urlImg}}" class="card-img-top" alt="Immagine prodotto">
                     <div class="card-body">
