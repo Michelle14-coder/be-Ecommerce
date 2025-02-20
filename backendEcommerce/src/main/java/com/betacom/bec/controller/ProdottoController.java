@@ -1,11 +1,14 @@
 package com.betacom.bec.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.betacom.bec.services.interfaces.ProdottoServices;
@@ -84,28 +87,24 @@ public class ProdottoController {
 		}
 		return r;
 	}
+
 	
-	@GetMapping("/{id}")
-	public ResponseObject<ProdottoDTO> getProdottoById(@PathVariable Integer id) {
-	    
-	    log.debug("Inizio getProdottoById per il prodotto con ID: " + id);
-	    
-	    ResponseObject<ProdottoDTO> r = new ResponseObject<>();
-	    
-	    try {
-	        
-	        ProdottoDTO prodotto = prodottoS.findById(id);
-	        
-	        r.setRc(true);
-	        r.setDati(prodotto);
-	        
-	    } catch (Exception e) {
-	        log.error("Errore durante il recupero del prodotto con ID: " + id, e);
-	        r.setRc(false);
-	        r.setMsg("Si è verificato un errore durante il recupero del prodotto: " + e.getMessage());
-	    }
-	    
-	    return r;
+	
+	@GetMapping("/listById")
+	public ResponseObject<ProdottoDTO> listById(@RequestParam("id") Integer id) {
+		log.debug("List " + id);
+		ResponseObject<ProdottoDTO> r = new ResponseObject<ProdottoDTO>();
+		r.setRc(true);
+		List<ProdottoDTO> resp = null;
+		try {
+			r.setDati (prodottoS.findById(id));
+		} catch (Exception e) {
+			log.debug(e.getMessage());
+			r.setMsg(e.getMessage());
+			r.setRc(false);
+		}
+		return r;
+		
 	}
 
 
