@@ -19,6 +19,6 @@ public class LoginLogoutController {
 	private String logout(HttpSession session) {
 		session.invalidate();
 		
-		return "redirect:/home";
+		return "redirect:/login";
 	}
 }
