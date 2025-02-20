@@ -8,7 +8,8 @@ import com.betacom.bec.models.Utente;
 
 public interface UtenteRepository extends JpaRepository<Utente, Integer>{
 	
-	Optional<Utente> findByNome(String trim);
+	Optional<Utente> findByUserName(String userName);
+
 
 	Optional<Utente> findById(Utente utenteId);
 

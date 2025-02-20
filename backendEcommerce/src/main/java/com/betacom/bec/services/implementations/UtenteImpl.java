@@ -52,18 +52,15 @@ public class UtenteImpl implements UtenteServices{
     }
 	
 	
-	
-	
 	@Override
 	public void create(UtenteReq req) throws Exception {
 		
 		System.out.println("Create : " + req);
 		
-		Optional<Utente> c = utR.findByNome(req.getUserName().trim());
+		Optional<Utente> c = utR.findByUserName(req.getUserName().trim());
 		
 		if(c.isPresent())
-			throw new Exception(msgS.getMessaggio("find-utente"));
-		
+			throw new Exception(msgS.getMessaggio("find-utente"));		
 		if (req.getNome() == null)
 			throw new Exception(msgS.getMessaggio("no-nome"));
 		if (req.getCognome() == null)
