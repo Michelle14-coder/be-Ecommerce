@@ -27,13 +27,11 @@ public class UtenteController {
 	
 	@GetMapping("/list")
 	public ResponseList<UtenteDTO> list() {
-
+		log.debug("List ");
 		ResponseList<UtenteDTO> r = new ResponseList<UtenteDTO>();
 		r.setRc(true);
-		List<UtenteDTO> resp = null;
 		try {
 			r.setDati (utenteS.list());
-			
 		} catch (Exception e) {
 			log.debug(e.getMessage());
 			r.setMsg(e.getMessage());
@@ -43,6 +41,12 @@ public class UtenteController {
 		
 	}
 	
+	@GetMapping("/listSecurity")
+	public List<UtenteDTO> listSecurity() {
+		log.debug("listSecurity ");
+		return utenteS.list();
+		
+	}
 
 	
 	@PostMapping("/create")
