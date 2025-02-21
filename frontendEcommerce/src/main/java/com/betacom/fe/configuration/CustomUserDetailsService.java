@@ -46,9 +46,9 @@ public class CustomUserDetailsService {
 			log.debug("loadUsers....." + it.get("userName"));
 			
 			userDetailsList.add(
-
 					User.withUsername(it.get("userName").toString())
 					.password(getPasswordEncoder.encode(it.get("password").toString()))
+					.roles(it.get("ruolo").toString())
 					.build()
 					);
 			
