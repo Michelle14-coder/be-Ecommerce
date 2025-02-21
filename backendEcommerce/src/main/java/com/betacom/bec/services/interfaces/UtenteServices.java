@@ -17,4 +17,6 @@ public interface UtenteServices {
 	void remove(UtenteReq req) throws Exception;
 
 	void update(UtenteReq req) throws Exception;
+
+	UtenteDTO findById(Integer id) throws Exception;
 }

@@ -7,13 +7,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.betacom.bec.services.interfaces.UtenteServices;
+import com.betacom.bec.dto.ProdottoDTO;
 import com.betacom.bec.dto.UtenteDTO;
 import com.betacom.bec.request.UtenteReq;
 import com.betacom.bec.response.ResponseBase;
 import com.betacom.bec.response.ResponseList;
+import com.betacom.bec.response.ResponseObject;
 
 @RestController
 @RequestMapping("/rest/utente")
@@ -32,6 +35,23 @@ public class UtenteController {
 		r.setRc(true);
 		try {
 			r.setDati (utenteS.list());
+		} catch (Exception e) {
+			log.debug(e.getMessage());
+			r.setMsg(e.getMessage());
+			r.setRc(false);
+		}
+		return r;
+		
+	}
+	
+	@GetMapping("/listById")
+	public ResponseObject<UtenteDTO> listById(@RequestParam("id") Integer id) {
+		log.debug("List " + id);
+		ResponseObject<UtenteDTO> r = new ResponseObject<UtenteDTO>();
+		r.setRc(true);
+		List<UtenteDTO> resp = null;
+		try {
+			r.setDati (utenteS.findById(id));
 		} catch (Exception e) {
 			log.debug(e.getMessage());
 			r.setMsg(e.getMessage());

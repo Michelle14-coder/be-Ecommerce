@@ -157,6 +157,24 @@ public class UtenteImpl implements UtenteServices{
 	    
 	    System.out.println("Utente e carrello eliminati con successo");
 	}
+
+
+	@Override
+	public UtenteDTO findById(Integer id) throws Exception {
+		Optional<Utente> u = utR.findById(id);
+		if (u.isEmpty())
+			throw new Exception("Username inesistente");
+		return new UtenteDTO(u.get().getId(),
+				u.get().getNome(),
+				u.get().getCognome(),
+				u.get().getEmail(),
+				u.get().getUserName(), 
+				u.get().getPsw(), 
+				u.get().getRuolo().toString(),
+				u.get().getNumeroTelefono(),
+				u.get().getIndirizzoDiFatturazione(),
+				u.get().getIndirizzoDiSpedizione());
+	}
 	
 	
 }

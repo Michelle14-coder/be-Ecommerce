@@ -11,24 +11,36 @@
 	<nav th:insert="~{fragments/navigation :: block-navigation('Elenco Utenti')}"></nav>
 	
 	<div align="center">
-		<a th:href="@{/admin/createUtente}" class="btn btn-primary mb-3">Create Utente</a>
+		<a th:href="@{/create}" class="btn btn-primary m-3">Create Utente</a>
 	</div>
 
 	<div align="center" class="container">
 		<table class="table table-success table-striped">
 			<thead>
 				<tr align="center">
+					<th>Nome</th>
+					<th>Cognome</th>
+					<th>Email</th>
 					<th>Username</th>
-					<th>Role</th>
+					<th>Ruolo</th>
+					<th>Indirizzo di fatturazione</th>
+					<th>Indirizzo di spedizione</th>
+					<th>Numero di telefono</th>
 					<th>Azione</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr th:each=" ut : ${utente.dati}">
+					<td th:text="${ut.nome}" align="center"></td>
+					<td th:text="${ut.cognome}" align="center"></td>
+					<td th:text="${ut.email}" align="center"></td>
 					<td th:text="${ut.userName}" align="center"></td>
-					<td th:text="${ut.role}" align="center"></td>
+					<td th:text="${ut.ruolo}" align="center"></td>
+					<td th:text="${ut.indirizzoDiSpedizione}" align="center"></td>
+					<td th:text="${ut.indirizzoDiFatturazione}" align="center"></td>
+					<td th:text="${ut.numeroTelefono}" align="center"></td>
 					<td align="center">
-						<a th:href="@{/admin/updateUtente(id=${ut.id})}" class="btn btn-success">Update utente</a> 
+						<a th:href="@{/update(id=${ut.id})}" class="btn btn-success">Update utente</a> 
  						<a th:href="@{/admin/deleteUtente(id=${ut.id}, userName=${ut.userName})}" class="btn btn-danger">Elimina Utente</a>
 					</td>
 				</tr>
