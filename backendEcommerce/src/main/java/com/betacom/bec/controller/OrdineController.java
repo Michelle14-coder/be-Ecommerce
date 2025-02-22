@@ -8,11 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.betacom.bec.services.interfaces.OrdineServices;
 import com.betacom.bec.dto.OrdineDTO;
+import com.betacom.bec.dto.ProdottoDTO;
 import com.betacom.bec.request.OrdineReq;
 import com.betacom.bec.response.ResponseBase;
 import com.betacom.bec.response.ResponseList;
+import com.betacom.bec.services.interfaces.OrdineServices;
 
 @RestController
 @RequestMapping("/rest/ordine")
@@ -26,10 +27,8 @@ public class OrdineController {
 	
 	@GetMapping("/listByUtente")
 	public ResponseList<OrdineDTO> listByUtente(@RequestParam("id") Integer idUtente) {
-
 		ResponseList<OrdineDTO> r = new ResponseList<OrdineDTO>();
 		r.setRc(true);
-
 		try {
 			r.setDati(ordineS.listByUtente(idUtente));
 		} catch (Exception e) {
@@ -41,7 +40,6 @@ public class OrdineController {
 		
 	}
 	
-
 	
 	@PostMapping("/create")
 	public ResponseBase create(@RequestBody (required = true) OrdineReq req) {
@@ -57,6 +55,22 @@ public class OrdineController {
 		return r;
 	}
 	
-	
+	@GetMapping("/list")
+	public ResponseList<OrdineDTO> list() {
+	    log.debug("List ordini");
+	    ResponseList<OrdineDTO> response = new ResponseList<>();
+	    try {
+	        // Imposta la risposta con successo e i dati
+	        response.setRc(true);
+	        response.setDati(ordineS.listOrdiniConUtente());
+	    } catch (Exception e) {
+	        // Log dell'errore completo (traccia dello stack)
+	        log.error("Errore durante il recupero degli ordini: {}", e.getMessage(), e);
+	        response.setRc(false);
+	        response.setMsg("Errore durante il recupero degli ordini: " + e.getMessage());
+	    }
+	    return response;
+	}
 
+	
 }

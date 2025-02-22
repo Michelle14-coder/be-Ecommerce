@@ -16,6 +16,8 @@ public interface ProdottoServices {
 	void removeProdotto(ProdottoReq req) throws Exception;
 	
 	ProdottoDTO findById(Integer idprodotto) throws Exception;
+
+	List<ProdottoDTO> list();
 	
 
 }

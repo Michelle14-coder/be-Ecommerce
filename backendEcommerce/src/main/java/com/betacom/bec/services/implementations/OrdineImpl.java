@@ -4,6 +4,7 @@ import static com.betacom.bec.utils.Utilities.buildCarrelloProdottoDTO;
 import static com.betacom.bec.utils.Utilities.convertStringToDate;
 
 import java.util.Date;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -78,17 +79,40 @@ public class OrdineImpl implements OrdineServices{
 	    orR.save(ordine);
 	}
 
+	@Override
+	public List<OrdineDTO> listOrdiniConUtente() {
+	    List<Ordine> ordini = orR.findAll(); // Recupera tutti gli ordini
+
+	    return ordini.stream().map(ordine -> {
+	        // Recupera l'utente associato all'ordine
+	        Utente utente = ordine.getUtente();
+	        return new OrdineDTO(
+	            ordine.getId(),
+	            ordine.getIndirizzoDiSpedizione(),
+	            ordine.getCap(),
+	            ordine.getCitta(),
+	            ordine.getDataOrdine(),
+	            utente != null ? utente.getNome() + " " + utente.getCognome() : "Utente non trovato"
+	        );
+	    }).collect(Collectors.toList());
+	}
 	
 	@Override
 	public List<OrdineDTO> listByUtente(Integer idUtente) {
-	    Optional<Carrello> carrelloOpt = carR.findByUtenteId(idUtente);
+	    // Recupera i carrelli dell'utente
+	    List<Carrello> carrelli = carR.findByUtenteId(idUtente);
 
-	    if (carrelloOpt.isEmpty()) {
-	        return Collections.emptyList();
+	    if (carrelli.isEmpty()) {
+	        return Collections.emptyList(); // Se non ci sono carrelli, ritorna una lista vuota
 	    }
 
-	    List<Ordine> ordini = orR.findByCarrelloId(carrelloOpt.get().getId());
+	    // Recupera tutti gli ordini associati ai carrelli dell'utente
+	    List<Ordine> ordini = new ArrayList<>();
+	    for (Carrello carrello : carrelli) {
+	        ordini.addAll(orR.findByCarrelloId(carrello.getId())); // Aggiungi gli ordini associati al carrello
+	    }
 
+	    // Restituisci gli ordini mappati in OrdineDTO
 	    return ordini.stream().map(o -> new OrdineDTO(
 	            o.getId(),
 	            o.getIndirizzoDiSpedizione(),
@@ -103,6 +127,7 @@ public class OrdineImpl implements OrdineServices{
 	            )
 	    )).collect(Collectors.toList());
 	}
+
 
 
 

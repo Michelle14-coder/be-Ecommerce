@@ -42,10 +42,15 @@ public class Utilities {
 	
      
      public static List<CarrelloProdottoDTO> buildCarrelloProdottoDTO(List<CarrelloProdotto> a) {
-  	    return a.stream()
-  	            .map(r -> new CarrelloProdottoDTO(r.getId(),r.getProdotto()))
-  	            .collect(Collectors.toList());
-  }
+    	    return a.stream()
+    	            .map(r -> new CarrelloProdottoDTO(
+    	                    r.getId(),
+    	                    r.getProdotto(), 
+    	                    r.getQuantita()  // Assicurati che quantita venga presa dal CarrelloProdotto
+    	            ))
+    	            .collect(Collectors.toList());
+    	}
+
 
 	
 }

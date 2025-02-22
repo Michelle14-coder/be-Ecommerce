@@ -15,6 +15,7 @@ import com.betacom.bec.dto.RecensioneDTO;
 import com.betacom.bec.dto.UtenteDTO;
 import com.betacom.bec.models.CarrelloProdotto;
 import com.betacom.bec.models.Prodotto;
+import com.betacom.bec.models.Utente;
 import com.betacom.bec.repositories.CarrelloProdottoRepository;
 import com.betacom.bec.repositories.ProdottoRepository;
 import com.betacom.bec.request.ProdottoReq;
@@ -180,6 +181,25 @@ public class ProdottoImpl implements ProdottoServices{
 
 	    return prodottoDTO;
 	}
+
+	
+	@Override
+    public List<ProdottoDTO> list() {
+        List<Prodotto> prodotto = proR.findAll();
+
+        return prodotto.stream().map(u -> new ProdottoDTO(
+                u.getId(),
+                u.getMarca(),
+                u.getNome(),
+                u.getCategoria(),
+                u.getDescrizione(),
+                u.getPrezzo(),
+                u.getQuantitaDisponibile(), 
+                u.getUrlImg(),
+                u.getSize(),
+                u.getColore()
+        )).collect(Collectors.toList());
+    }
 
 
 	

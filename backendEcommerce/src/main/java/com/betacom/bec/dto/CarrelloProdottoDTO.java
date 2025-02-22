@@ -39,10 +39,9 @@ public class CarrelloProdottoDTO {
 		return "CarrelloProdottoDTO [id=" + id + ", carrello=" + carrello + ", prodotto=" + prodotto + ", quantita="
 				+ quantita + "]";
 	}
-	public CarrelloProdottoDTO(Integer id, Carrello carrello, Prodotto prodotto, Integer quantita) {
+	public CarrelloProdottoDTO(Integer id, Prodotto prodotto,Integer quantita) {
 		super();
 		this.id = id;
-		this.carrello = carrello;
 		this.prodotto = prodotto;
 		this.quantita = quantita;
 	}
@@ -50,6 +49,7 @@ public class CarrelloProdottoDTO {
 		this.id = id;
 		this.prodotto = prodotto;
 	}
+
 	   
 	   
 

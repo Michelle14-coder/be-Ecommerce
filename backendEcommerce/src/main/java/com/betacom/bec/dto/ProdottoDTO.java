@@ -41,6 +41,26 @@ public class ProdottoDTO {
 		this.ordini = ordini;
 		this.recensioni = recensioni;
 	}
+	
+
+
+	public ProdottoDTO(Integer id, String marca, String nome, String categoria, String descrizione, Double prezzo,
+			Integer quantitaDisponibile, String urlImg, String size, String colore) {
+		super();
+		this.id = id;
+		this.marca = marca;
+		this.nome = nome;
+		this.categoria = categoria;
+		this.descrizione = descrizione;
+		this.prezzo = prezzo;
+		this.quantitaDisponibile = quantitaDisponibile;
+		this.urlImg = urlImg;
+		this.size = size;
+		this.colore = colore;
+	}
+
+
+
 
 
 	public ProdottoDTO() {

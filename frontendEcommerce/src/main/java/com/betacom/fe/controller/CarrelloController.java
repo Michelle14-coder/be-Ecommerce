@@ -56,8 +56,11 @@ public class CarrelloController {
 	                .build().toUri();
 
 	        log.debug("URI: " + uri);
+	        
 
 	        ResponseList<CarrelloDTO> responseList = rest.getForObject(uri, ResponseList.class);
+	        log.debug("Carrelli: " + responseList.getDati());
+
 
 	        if (responseList != null && responseList.getRc()) {
 	            carrelloPage.addObject("listCarrelli", responseList.getDati());

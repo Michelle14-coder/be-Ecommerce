@@ -106,6 +106,22 @@ public class ProdottoController {
 		return r;
 		
 	}
+	
+	@GetMapping("/list")
+	public ResponseList<ProdottoDTO> list() {
+		log.debug("List ");
+		ResponseList<ProdottoDTO> r = new ResponseList<ProdottoDTO>();
+		r.setRc(true);
+		try {
+			r.setDati (prodottoS.list());
+		} catch (Exception e) {
+			log.debug(e.getMessage());
+			r.setMsg(e.getMessage());
+			r.setRc(false);
+		}
+		return r;
+		
+	}
 
 
 

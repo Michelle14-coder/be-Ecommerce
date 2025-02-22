@@ -15,6 +15,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 
 import com.betacom.fe.configuration.UtenteService;
+import com.betacom.fe.request.ProdottoReq;
 import com.betacom.fe.request.UtenteReq;
 import com.betacom.fe.response.ResponseBase;
 import com.betacom.fe.response.ResponseList;
@@ -52,6 +53,23 @@ public class AdminController {
 		return mav;
 	}
 	
+	@GetMapping("/listProdotti")
+	public ModelAndView listProdotto() {
+		ModelAndView mav = new ModelAndView("admin/listProdotti");
+		
+		URI uri = UriComponentsBuilder
+				.fromUriString(backend + "prodotto/list")
+				.buildAndExpand().toUri();
+		
+		log.debug("URI: " + uri);
+		
+		ResponseList<?> lUt= rest.getForEntity(uri, ResponseList.class).getBody();
+		
+		mav.addObject("prodotto", lUt);
+		
+		return mav;
+	}
+	
 	
 	@GetMapping("/deleteUtente")
 	public Object deleteUtente(@RequestParam Integer id,@RequestParam String userName) {
@@ -79,6 +97,28 @@ public class AdminController {
 		}
 
 	    return "redirect:/admin/listUtente";
+	}
+	
+	@GetMapping("/deleteProdotto")
+	public Object removeProdotto(@RequestParam Integer id) {
+	    // Crea un oggetto ProdottoReq con l'ID del prodotto
+	    ProdottoReq req = new ProdottoReq();
+	    req.setId(id);
+	    
+	    // Costruisci la URI per l'endpoint del server di rimozione prodotto
+	    URI uri = UriComponentsBuilder.fromUriString(backend + "prodotto/remove").build().toUri();
+	    
+	    // Invia l'oggetto ProdottoReq come corpo della richiesta
+	    ResponseBase rc = rest.postForEntity(uri, req, ResponseBase.class).getBody();
+	    
+	    if (!rc.getRc()) {
+	        ModelAndView mav = new ModelAndView("createProdotto");
+	        mav.addObject("req", new ProdottoReq());
+	        mav.addObject("errorMessage", rc.getMsg());
+	        return mav;
+	    }
+	    
+	    return "redirect:/admin/listProdotti";
 	}
 
 }
