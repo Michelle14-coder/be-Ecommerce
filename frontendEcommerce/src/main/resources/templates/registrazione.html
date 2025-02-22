@@ -78,11 +78,11 @@
                         <input type="text" th:field="*{indirizzoDiFatturazione}" class="form-control" placeholder="Indirizzo di fatturazione"/>
                     </div>
                 </div>
-                <div class="mb-3" sec:authorize = "hasRole('ROLE_ADMIN')">
+                <div class="mb-3">
                     <label for="ruolo">Ruolo</label>
                     <select th:field="*{ruolo}" class="form-control" id="ruolo">
                         <option value="USER">USER</option>
-                        <option value="ADMIN">ADMIN</option>
+                        <option value="ADMIN" sec:authorize = "hasRole('ROLE_ADMIN')">ADMIN</option>
                     </select>
                 </div>
 

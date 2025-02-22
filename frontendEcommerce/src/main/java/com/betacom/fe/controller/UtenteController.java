@@ -44,6 +44,39 @@ public class UtenteController {
         return mav;
     }
     
+    @GetMapping("/profilo") 
+    public ModelAndView profilo(@RequestParam String userName) {
+        ModelAndView mav = new ModelAndView("profilo");
+        
+        URI uri = UriComponentsBuilder
+                .fromUriString(backend + "utente/listByUsername") 
+                .queryParam("userName", userName)
+                .buildAndExpand().toUri();
+        
+        log.debug("URI: " + uri);
+        
+        ResponseObject<?> utRest = rest.getForEntity(uri, ResponseObject.class).getBody();
+        UtenteDTO ut = (UtenteDTO) convertInObject(utRest.getDati(), UtenteDTO.class);
+        
+        UtenteReq u = new UtenteReq(
+                ut.getId(),
+                ut.getNome(),
+                ut.getCognome(),
+                ut.getEmail(),
+                ut.getUserName(),
+                ut.getPassword(),
+                ut.getRuolo(),
+                ut.getNumeroTelefono(),
+                ut.getIndirizzoDiSpedizione(),
+                ut.getIndirizzoDiFatturazione()
+        );
+
+        mav.addObject("utente", u);
+        return mav;
+    }
+    
+    
+    
     @PostMapping("/save")
     public Object saveUtente(@ModelAttribute UtenteReq req) {
         log.debug("saveUtente " + req);
@@ -68,6 +101,32 @@ public class UtenteController {
         utenteService.updateUtente(req);
         
         return "redirect:/login";
+    }
+    
+    @PostMapping("/saveUtente")
+    public Object save(@ModelAttribute UtenteReq req) {
+        log.debug("saveUtente " + req);
+        
+        String operation = (req.getId() == null) ? "create" : "update";
+        
+        URI uri = UriComponentsBuilder
+                .fromUriString(backend + "utente/" + operation)
+                .buildAndExpand().toUri();
+        
+        log.debug("URI: " + uri);
+        
+        ResponseBase r = rest.postForEntity(uri, req, ResponseBase.class).getBody();
+        log.debug("rc: " + r.getRc());
+        
+        if (!r.getRc()) {
+            ModelAndView mav = new ModelAndView("profilo");
+            mav.addObject("utente", req);
+            mav.addObject("errorMsg", r.getMsg());
+            return mav;            
+        }
+        utenteService.updateUtente(req);
+        
+        return "redirect:/profilo?userName=" + req.getUserName();
     }
     
     @GetMapping("/update") 

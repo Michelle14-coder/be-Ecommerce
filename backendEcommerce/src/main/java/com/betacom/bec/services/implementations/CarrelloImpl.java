@@ -38,12 +38,13 @@ public class CarrelloImpl implements CarrelloServices{
 	Logger log;
 	
 	@Override
-	public Carrello aggiungiProdottoAlCarrello(Integer utenteId, Integer prodottoId, Integer quantita) {
-	    Optional<Carrello> carrelloOptional = carrelloRepository.findByUtenteId(utenteId);
+	public Carrello aggiungiProdottoAlCarrello(Integer utenteId, Integer carrelloId, Integer prodottoId, Integer quantita) {
+	    // Trova il carrello specifico per l'utente
+	    Optional<Carrello> carrelloOptional = carrelloRepository.findById(carrelloId);
 	    Optional<Prodotto> prodottoOptional = prodottoRepository.findById(prodottoId);
 
 	    if (!carrelloOptional.isPresent()) {
-	        throw new RuntimeException("Carrello non trovato per l'utente " + utenteId);
+	        throw new RuntimeException("Carrello non trovato per l'utente con ID " + utenteId);
 	    }
 	    if (!prodottoOptional.isPresent()) {
 	        throw new RuntimeException("Prodotto con ID " + prodottoId + " non trovato.");
@@ -52,10 +53,12 @@ public class CarrelloImpl implements CarrelloServices{
 	    Carrello carrello = carrelloOptional.get();
 	    Prodotto prodotto = prodottoOptional.get();
 
+	    // Se il carrello non ha ancora prodotti, inizializzalo
 	    if (carrello.getCarrelloProdotti() == null) {
 	        carrello.setCarrelloProdotti(new ArrayList<>());
 	    }
 
+	    // Verifica se il prodotto è già presente nel carrello, altrimenti creane uno nuovo
 	    Optional<CarrelloProdotto> optionalCarrelloProdotto = carrelloProdottoRepository.findByCarrelloAndProdotto(carrello, prodotto);
 	    CarrelloProdotto carrelloProdotto = optionalCarrelloProdotto.orElseGet(() -> {
 	        CarrelloProdotto nuovoCarrelloProdotto = new CarrelloProdotto();
@@ -66,18 +69,21 @@ public class CarrelloImpl implements CarrelloServices{
 	        return nuovoCarrelloProdotto;
 	    });
 
+	    // Aggiungi la quantità richiesta
 	    carrelloProdotto.setQuantita(carrelloProdotto.getQuantita() + quantita);
 	    carrelloProdottoRepository.save(carrelloProdotto);
 
-	    // AGGIORNAMENTO AUTOMATICO DEL CARRELLO
+	    // Aggiorna i totali del carrello
 	    carrello.aggiornaTotali();
 	    return carrelloRepository.save(carrello);
 	}
+
     
 
 	@Override
-	public Carrello rimuoviProdotto(Integer utenteId, Integer prodottoId, Integer quantitaDaRimuovere) {
-	    Optional<Carrello> carrelloOptional = carrelloRepository.findByUtenteId(utenteId);
+	public Carrello rimuoviProdotto(Integer utenteId, Integer carrelloId, Integer prodottoId, Integer quantitaDaRimuovere) {
+	    // Trova il carrello specifico per l'utente
+	    Optional<Carrello> carrelloOptional = carrelloRepository.findById(carrelloId);
 	    Optional<Prodotto> prodottoOptional = prodottoRepository.findById(prodottoId);
 
 	    if (!carrelloOptional.isPresent()) {
@@ -90,6 +96,7 @@ public class CarrelloImpl implements CarrelloServices{
 	    Carrello carrello = carrelloOptional.get();
 	    Prodotto prodotto = prodottoOptional.get();
 
+	    // Trova il prodotto nel carrello
 	    Optional<CarrelloProdotto> carrelloProdottoOptional = carrelloProdottoRepository.findByCarrelloAndProdotto(carrello, prodotto);
 
 	    if (!carrelloProdottoOptional.isPresent()) {
@@ -97,7 +104,7 @@ public class CarrelloImpl implements CarrelloServices{
 	    }
 
 	    CarrelloProdotto carrelloProdotto = carrelloProdottoOptional.get();
-	    
+
 	    // RIDUCE LA QUANTITÀ DEL PRODOTTO
 	    int nuovaQuantita = carrelloProdotto.getQuantita() - quantitaDaRimuovere;
 
@@ -123,16 +130,19 @@ public class CarrelloImpl implements CarrelloServices{
 
 
 
+
 	@Override
-	public List<CarrelloDTO> ottieniCarrello(int utenteId) {
-		List<Carrello> lU = carrelloRepository.findAll();
-		return lU.stream()
-				.map(u -> new CarrelloDTO(u.getId(),
-						u.getQuantita(),
-						u.getPrezzo(),
-						buildCarrelloProdottoDTO(u.getCarrelloProdotti())))
-				.collect(Collectors.toList());
+	public List<CarrelloDTO> ottieniCarrello(Integer utenteId) {
+	    // Filtra i carrelli in base all'utenteId
+	    List<Carrello> lU = carrelloRepository.findByUtenteId(utenteId);  // Usa un metodo di ricerca per utenteId
+	    return lU.stream()
+	            .map(u -> new CarrelloDTO(u.getId(),
+	                    u.getQuantita(),
+	                    u.getPrezzo(),
+	                    buildCarrelloProdottoDTO(u.getCarrelloProdotti())))
+	            .collect(Collectors.toList());
 	}
+
  
 	
 }

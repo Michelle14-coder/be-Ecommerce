@@ -1,8 +1,13 @@
 package com.betacom.bec.services.interfaces;
 
 import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.repository.query.Param;
 
 import com.betacom.bec.dto.UtenteDTO;
+import com.betacom.bec.models.Carrello;
+import com.betacom.bec.models.Utente;
 import com.betacom.bec.request.UtenteReq;
 
 
@@ -19,4 +24,11 @@ public interface UtenteServices {
 	void update(UtenteReq req) throws Exception;
 
 	UtenteDTO findById(Integer id) throws Exception;
+
+	UtenteDTO findByUsername(String userName) throws Exception;
+	
+	Optional<Carrello> findCarrelloByUserName(String userName) throws Exception;
+
+
+
 }

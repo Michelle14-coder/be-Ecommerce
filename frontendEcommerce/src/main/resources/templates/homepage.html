@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="it" xmlns:th="http://www.thymeleaf.org">
-<head>
+<html lang="it" xmlns:th="http://www.thymeleaf.org"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BetaSport</title>
@@ -16,35 +15,32 @@
 	<nav th:insert="~{fragments/navigation :: block-navigation('Navbar')}"></nav>
 
 
+
 	<section class="hero">
 		<div class="hero-content">
 			<h1>MADE FOR COMFORT</h1>
 			<p>Explore our new collection now</p>
-	<button type="button" class="btn btn-primary" style="background-color:#fff;color:#000;border:white" onclick="document.getElementById('clothes-for-her').scrollIntoView({ behavior: 'smooth' });">
-	    SHOP NOW
-	</button>
-
+			<button type="button" class="btn btn-primary" style="background-color:#fff;color:#000;border:white">SHOP NOW</button>
 		</div>
 	</section>
 
 	<!-- SEZIONE DONNA -->
-	<section class="fashion-section" id="clothes-for-her">
-	    <div class="container">
-	        <div class="card" style="width: 20rem;">
-	            <img src="img/fotodonnahome.png" class="img-fluid" alt="Abbigliamento donna" style="border-radius:10px">
-	            <div class="card-body">
-	                <h3 class="card-title">Clothes for Her</h3>
-	                <p class="card-text">Esplora le ultime tendenze per lei</p>
-	                <a type="button" th:href="@{/donna}" class="btn btn-primary">SHOP NOW</a>
-	            </div>
-	        </div>
-	
-	        <div class="image-box" style="margin-left:100px;">			
-	        </div>
-	        <img src="/img/fotodonnahome2.png" alt="Abbigliamento sportivo donna">
-	    </div>
-	</section>
+	<section class="fashion-section">
+		<div class="container">
+			<div class="card" style="width: 20rem;">
+			  <img src="img/fotodonnahome.png" class="img-fluid" alt="Abbigliamento donna" style="border-radius:10px">
+			  <div class="card-body">
+			    <h3 class="card-title">Clothes for Her</h3>
+			    <p class="card-text">Esplora le ultime tendenze per lei</p>
+			    <a th:href="@{/donna}" class="btn btn-primary">SHOP NOW</a>
+			  </div>
+			</div>
 
+			<div class="image-box" style="margin-left:100px;">			
+			</div>
+			<img src="/img/fotodonnahome2.png" alt="Abbigliamento sportivo donna">
+		</div>
+	</section>
 
 	<!-- SEZIONE UOMO -->
 	    <div class="sezioneuomo">
@@ -56,7 +52,7 @@
 			  <div class="card-body">
 			    <h3 class="card-title">Clothes for Him</h3>
 			    <p class="card-text">Esplora le ultime tendenze per lui</p>
-			    <a type="button" th:href="@{/uomo}" class="btn btn-primary">SHOP NOW</a>
+				<a th:href="@{/uomo}" class="btn btn-primary">SHOP NOW</a>
 			  </div>
 			</div>
     </div>
@@ -68,7 +64,7 @@
 			  <div class="card-body">
 			    <h3 class="card-title">Accessories</h3>
 			    <p class="card-text">Esplora le ultime tendenze</p>
-			    <a type="button" th:href="@{/accessori}" class="btn btn-primary">SHOP NOW</a>
+				<a th:href="@{/accessori}" class="btn btn-primary">SHOP NOW</a>
 			  </div>
 			</div>
 

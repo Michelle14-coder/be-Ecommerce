@@ -13,7 +13,7 @@ import com.betacom.bec.models.Utente;
 public interface CarrelloRepository extends JpaRepository<Carrello, Integer> {
 	
     
-    Optional<Carrello> findByUtenteId(Integer utenteId);
+    //Optional<Carrello> findByUtenteId(Integer utenteId);
     
     //List<Carrello> getByUtenteId(Integer utenteId);
 
@@ -30,6 +30,10 @@ public interface CarrelloRepository extends JpaRepository<Carrello, Integer> {
 
 	Optional<Carrello> findByUtente(Utente utente);
     
+	@Query(name = "utente.username")
+	Optional<Carrello> findByUserNameWithCarrello(@Param("userName") String userName);
+	
+	List<Carrello> findByUtenteId(Integer utenteId);
 
 
 }

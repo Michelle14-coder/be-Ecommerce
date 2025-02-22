@@ -75,6 +75,8 @@ public class UtenteImpl implements UtenteServices{
 			throw new Exception(msgS.getMessaggio("no-ruolo"));
 		if (req.getNumeroTelefono() == null)
 			throw new Exception(msgS.getMessaggio("no-num-tel"));
+		if (req.getNumeroTelefono() == null || !req.getNumeroTelefono().matches("^[0-9]{10}$"))
+			throw new Exception("Il numero di telefono deve essere di 10 cifre");
 		if (req.getIndirizzoDiSpedizione() == null)
 			throw new Exception(msgS.getMessaggio("no-spedizione"));
 		if (req.getIndirizzoDiFatturazione() == null)
@@ -117,6 +119,8 @@ public class UtenteImpl implements UtenteServices{
 			throw new Exception("Username inesistente");
 		if (req.getId() != null)
 			u.get().setId(req.getId());
+		if (req.getNome() != null)
+			u.get().setNome(req.getNome());
 		if (req.getCognome() != null)
 			u.get().setCognome(req.getCognome());
 		if (req.getEmail() != null)
@@ -163,7 +167,7 @@ public class UtenteImpl implements UtenteServices{
 	public UtenteDTO findById(Integer id) throws Exception {
 		Optional<Utente> u = utR.findById(id);
 		if (u.isEmpty())
-			throw new Exception("Username inesistente");
+			throw new Exception("Utente inesistente");
 		return new UtenteDTO(u.get().getId(),
 				u.get().getNome(),
 				u.get().getCognome(),
@@ -176,5 +180,29 @@ public class UtenteImpl implements UtenteServices{
 				u.get().getIndirizzoDiSpedizione());
 	}
 	
+	@Override
+	public UtenteDTO findByUsername(String userName) throws Exception {
+		Optional<Utente> u = utR.findByUserName(userName);
+		if (u.isEmpty())
+			throw new Exception("Utente inesistente");
+		return new UtenteDTO(u.get().getId(),
+				u.get().getNome(),
+				u.get().getCognome(),
+				u.get().getEmail(),
+				u.get().getUserName(), 
+				u.get().getPsw(), 
+				u.get().getRuolo().toString(),
+				u.get().getNumeroTelefono(),
+				u.get().getIndirizzoDiFatturazione(),
+				u.get().getIndirizzoDiSpedizione());
+	}
+	
+	@Override
+	public Optional<Carrello> findCarrelloByUserName(String userName) {
+	    return caR.findByUserNameWithCarrello(userName);
+	}
+
+
+
 	
 }
