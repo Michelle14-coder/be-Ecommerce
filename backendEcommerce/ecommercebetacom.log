@@ -754,3 +754,13 @@ Caused by: java.lang.ClassNotFoundException: HttpServletRequest
 2025-02-24T14:52:24.189+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.ProdottoController    : List 14
 2025-02-24T14:52:32.777+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
 2025-02-24T14:52:34.503+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.ProdottoController    : List 6
+2025-02-24T14:56:17.718+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.ProdottoController    : List 6
+2025-02-24T14:56:27.354+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T14:56:32.249+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T14:56:35.763+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-5] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: accessori
+2025-02-24T14:56:38.108+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T14:56:39.355+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : List 13
+2025-02-24T14:58:24.647+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.ProdottoController    : List 13
+2025-02-24T14:58:33.252+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T14:58:38.669+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-5] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T14:58:39.347+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.ProdottoController    : List 14

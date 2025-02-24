@@ -22,7 +22,7 @@
         <p><strong>Categoria:</strong> <span th:text="${prodotto.categoria}">Categoria</span></p>
         <p><strong>Colore:</strong> <span th:text="${prodotto.colore}">Colore</span></p>
         <p><strong>Taglie disponibili:</strong> <span th:text="${prodotto.size}">Size</span></p>
-        <p><strong>Prezzo:</strong> € <span th:text="${prodotto.prezzo}">XX,XX</span></p>
+        <p><strong>Prezzo:</strong> € <span th:text="${#numbers.formatDecimal(prodotto.prezzo, 1, 2)}">XX,XX</span></p>
         <p><strong>Disponibilità:</strong> <span th:text="${prodotto.quantitàDisponibile}">Quantità</span></p>
         <p th:text="${prodotto.descrizione}">Descrizione del prodotto...</p>
         
