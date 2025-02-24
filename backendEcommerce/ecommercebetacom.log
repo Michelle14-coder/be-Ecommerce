@@ -680,3 +680,77 @@ Caused by: java.lang.ClassNotFoundException: HttpServletRequest
 2025-02-24T11:52:15.917+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.UtenteController      : listSecurity 
 2025-02-24T11:52:24.926+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
 2025-02-24T11:52:38.573+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:00:08.855+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.UtenteController      : List pi
+2025-02-24T12:00:28.144+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.UtenteController      : List pi
+2025-02-24T12:00:30.021+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:00:32.862+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.ProdottoController    : List 13
+2025-02-24T12:03:16.312+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:11:31.225+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:11:36.730+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T12:11:47.800+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T12:11:52.156+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T12:11:57.806+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T12:25:52.338+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:25:55.353+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:25:57.880+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T12:26:01.487+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:27:09.088+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T12:28:09.071+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T12:28:12.262+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:28:13.956+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T12:29:24.837+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: accessori
+2025-02-24T12:29:30.903+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T12:29:32.434+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.ProdottoController    : List 6
+2025-02-24T12:29:44.044+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:29:45.887+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.ProdottoController    : List 13
+2025-02-24T12:29:50.746+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: accessori
+2025-02-24T12:30:07.935+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:30:10.242+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-5] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:30:15.137+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T12:30:26.481+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:31:25.891+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:31:30.734+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:33:39.988+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:34:24.225+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:34:36.125+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:34:36.948+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.ProdottoController    : List 13
+2025-02-24T12:35:10.569+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:35:20.271+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:36:09.919+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:36:20.002+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:40:51.482+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:42:02.523+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.ProdottoController    : List 
+2025-02-24T12:42:12.965+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : List 
+2025-02-24T12:42:17.507+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:45:04.592+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:45:12.544+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:45:21.029+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T12:45:25.731+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T12:46:39.483+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T14:44:17.267+01:00  WARN 13760 --- [backendEcommerce] [HikariPool-11 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Thread starvation or clock leap detected (housekeeper delta=1h37m50s211ms681µs100ns).
+2025-02-24T14:45:54.088+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T14:46:09.049+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T14:46:15.517+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T14:48:22.031+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T14:48:34.487+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T14:48:46.322+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T14:50:12.663+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: accessori
+2025-02-24T14:50:16.166+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T14:50:18.182+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T14:50:19.101+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.ProdottoController    : List 13
+2025-02-24T14:50:35.690+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T14:50:40.666+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T14:50:41.396+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.ProdottoController    : List 13
+2025-02-24T14:51:06.934+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.ProdottoController    : List 13
+2025-02-24T14:51:20.390+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T14:51:21.218+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.ProdottoController    : List 14
+2025-02-24T14:51:27.703+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T14:51:29.577+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.ProdottoController    : List 6
+2025-02-24T14:51:30.755+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T14:51:33.251+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T14:51:34.721+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.ProdottoController    : List 14
+2025-02-24T14:52:17.554+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.ProdottoController    : List 14
+2025-02-24T14:52:23.531+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-02-24T14:52:24.189+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.ProdottoController    : List 14
+2025-02-24T14:52:32.777+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-02-24T14:52:34.503+01:00 DEBUG 13760 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.ProdottoController    : List 6

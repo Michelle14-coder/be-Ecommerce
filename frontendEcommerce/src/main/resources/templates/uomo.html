@@ -34,7 +34,14 @@
                         <form th:action="@{/aggiungi}" method="get">
 						    <input type="hidden" name="prodottoId" th:value="${prodotto.id}">
 						    <input type="hidden" name="quantita" th:value="1"> 
-						    <button type="submit" class="btn btn-primary">Aggiungi al carrello</button>
+                                <a th:href="@{/login}" class="btn btn-primary" sec:authorize="!isAuthenticated()">
+                                    Aggiungi al carrello
+                                </a>
+
+                                <!-- Se l'utente è loggato e non è admin -->
+                                <button type="submit" class="btn btn-primary" sec:authorize="hasRole('ROLE_USER')">
+                                    Aggiungi al carrello
+                                </button>
 						</form>
                     </div>
                 </div>
