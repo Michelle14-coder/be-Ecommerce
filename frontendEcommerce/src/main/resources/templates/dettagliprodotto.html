@@ -25,7 +25,12 @@
         <p><strong>Prezzo:</strong> € <span th:text="${prodotto.prezzo}">XX,XX</span></p>
         <p><strong>Disponibilità:</strong> <span th:text="${prodotto.quantitàDisponibile}">Quantità</span></p>
         <p th:text="${prodotto.descrizione}">Descrizione del prodotto...</p>
-        <button class="btn-cart">Aggiungi al carrello</button>
+        
+		<form th:action="@{/aggiungi}" method="get">
+		    <input type="hidden" name="prodottoId" th:value="${prodotto.id}">
+		    <input type="hidden" name="quantita" th:value="1"> 
+		    <button type="submit" class="btn-cart">Aggiungi al carrello</button>
+		</form>
     </div>
 </div>
 

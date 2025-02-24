@@ -10,14 +10,10 @@ public interface CarrelloServices {
 	
     
     List<CarrelloDTO> ottieniCarrello(Integer utenteId);
-    	
-	//Carrello aggiungiProdottoAlCarrello(Integer utenteId, Integer prodottoId, Integer quantita);
 
-	//Carrello rimuoviProdotto(Integer utenteId, Integer prodottoId, Integer quantitaDaRimuovere);
+	Carrello rimuoviProdotto(Integer carrelloId, Integer prodottoId, Integer quantitaDaRimuovere);
 
-	Carrello rimuoviProdotto(Integer utenteId, Integer carrelloId, Integer prodottoId, Integer quantitaDaRimuovere);
-
-	Carrello aggiungiProdottoAlCarrello(Integer utenteId, Integer carrelloId, Integer prodottoId, Integer quantita);
+	Carrello aggiungiProdottoAlCarrello(Integer carrelloId, Integer prodottoId, Integer quantita);
 
 
 }

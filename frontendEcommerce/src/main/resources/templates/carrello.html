@@ -18,10 +18,10 @@
 
     <!-- Visualizza il carrello -->
     <div th:if="${listCarrelli != null}">
-      <div th:if="${#lists.isEmpty(listCarrelli)}">
-        <p>Il carrello è vuoto.</p>
+      <div th:if="${#lists.isEmpty(listCarrelli) or listCarrelli[0].quantita == 0}">
+        <p>Non ci sono prodotti nel tuo carrello.</p>
       </div>
-      <div th:if="${!#lists.isEmpty(listCarrelli)}">
+      <div th:if="${!#lists.isEmpty(listCarrelli) and listCarrelli[0].quantita > 0}">
         <div class="table-responsive">
           <table class="table table-striped">
             <thead>
@@ -34,7 +34,8 @@
             <tbody>
               <tr th:each="carrello : ${listCarrelli}">
                 <td th:text="${carrello.quantita}"></td>
-                <td th:text="${carrello.prezzo} + ' €'"></td>
+                <!-- Formatta il prezzo totale con due decimali -->
+                <td th:text="${#numbers.formatDecimal(carrello.prezzo, 1, 2)} + ' €'"></td>
                 <td>
                   <ul class="list-unstyled">
                     <!-- Itera sui prodotti presenti nel carrello -->
@@ -47,14 +48,16 @@
                           <small th:text="'Colore: ' + ${prod.prodotto.colore}"></small><br>
                           <small th:text="'Categoria: ' + ${prod.prodotto.categoria}"></small><br>
                           <small th:text="'Descrizione: ' + ${prod.prodotto.descrizione}"></small><br>
-                          <small th:text="'Marca: ' + ${prod.prodotto.marca}"></small><br>
-                          <small th:text="'Prezzo: €' + ${prod.prodotto.prezzo}"></small><br>
+                          <small th:text="'Prezzo: € ' + ${#numbers.formatDecimal(prod.prodotto.prezzo, 1, 2)}"></small><br>
                           <small th:text="'Quantità: ' + ${prod.quantita}"></small><br>
 
-                          <!-- Pulsante per eliminare il prodotto -->
-                          <form th:action="@{/carrello/elimina/{id}(id=${prod.id})}" method="post">
-                            <button type="submit" class="btn btn-danger mt-2">Elimina</button>
-                          </form>
+						<form th:action="@{/rimuovi}" method="get">
+						    <input type="hidden" name="carrelloId" th:value="${carrello.id}">
+						    <input type="hidden" name="prodottoId" th:value="${prod.prodotto.id}">
+						    <input type="hidden" name="quantitaDaRimuovere" th:value="1">
+						    <button type="submit" class="btn btn-danger mt-2">Elimina</button>
+						</form>
+
                         </div>
                       </div>
                     </li>

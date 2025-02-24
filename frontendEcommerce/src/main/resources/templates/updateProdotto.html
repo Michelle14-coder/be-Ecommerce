@@ -46,7 +46,7 @@
 
             <!-- Product form -->
             <form th:action="@{/saveUpdateProdotto}" method="post" th:object="${prodotto}" class="mx-auto">
-            	<input type="text" th:field="*{id}"/>                
+            	<input type="text" th:field="*{id}" hidden/>                
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <input type="text" th:field="*{marca}" class="form-control" placeholder="Marca" required/>
