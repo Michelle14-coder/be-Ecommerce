@@ -36,7 +36,7 @@
     create table pagamenti (
         cvv integer not null,
         id integer not null auto_increment,
-        id_utente integer,
+        id_utente integer not null,
         data_scadenza datetime(6) not null,
         numero_carta varchar(19) not null,
         metodo_pagamento varchar(100) not null,
@@ -106,11 +106,6 @@
 
     alter table ordini 
        add constraint FKqj5n4mdh5tc9qkj7hx54mvgi4 
-       foreign key (id_utente) 
-       references utenti (id);
-
-    alter table pagamenti 
-       add constraint FKkgi08br0yi2u29py759ivmeq3 
        foreign key (id_utente) 
        references utenti (id);
 

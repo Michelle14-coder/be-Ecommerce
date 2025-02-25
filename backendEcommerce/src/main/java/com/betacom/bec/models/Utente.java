@@ -4,6 +4,8 @@ import java.util.List;
 
 import com.betacom.bec.utils.Roles;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;  // Import necessario
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,157 +17,141 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity //tutti i db e tabelle sono entity
-@Table (name="utenti")
+@Table(name="utenti")
 public class Utente {
-	
-	@Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-	private Integer id;
-	
-	@Column(length=100,
-    		nullable=false)
-	private String nome;
-	
-	@Column(length=100,
-    		nullable=false)
-	private String cognome;
-	
-	@Column(length=100,
-    		nullable=false)
-	private String email;
-	
-	@Column(length=100,
-    		nullable=false)
-	private String userName;
-	
-	@Column(name="hash_password",
-			length=100,
-    		nullable=false)
-	private String psw;
-	
-	private Roles ruolo;
-	
-	@Column(name="numero_telefono",
-			length=100,
-    		nullable=false)
-	private String numeroTelefono;
-	
-	@Column(name="indirizzo_spedizione",
-			length=100,
-    		nullable=false)
-	private String indirizzoDiSpedizione;
-	
-	@Column(name="indirizzo_fatturazione",
-			length=100,
-    		nullable=false)
-	private String indirizzoDiFatturazione;
-		
-	@OneToMany(mappedBy="utente", 
-	 		   fetch = FetchType.EAGER, 
-	 		   cascade= CascadeType.REMOVE) 
-    private List<Ordine> ordini;
-	
 
-	@OneToMany(mappedBy="utente", 
- 		   fetch = FetchType.EAGER, 
- 		   cascade= CascadeType.REMOVE) 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(length = 100, nullable = false)
+    private String nome;
+
+    @Column(length = 100, nullable = false)
+    private String cognome;
+
+    @Column(length = 100, nullable = false)
+    private String email;
+
+    @Column(length = 100, nullable = false)
+    private String userName;
+
+    @Column(name = "hash_password", length = 100, nullable = false)
+    private String psw;
+
+    private Roles ruolo;
+
+    @Column(name = "numero_telefono", length = 100, nullable = false)
+    private String numeroTelefono;
+
+    @Column(name = "indirizzo_spedizione", length = 100, nullable = false)
+    private String indirizzoDiSpedizione;
+
+    @Column(name = "indirizzo_fatturazione", length = 100, nullable = false)
+    private String indirizzoDiFatturazione;
+
+    @OneToMany(mappedBy = "utente", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
+    @JsonManagedReference  // Gestisce la relazione con Ordine
+    private List<Ordine> ordini;
+
+    @OneToMany(mappedBy = "utente", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
+    @JsonManagedReference  // Gestisce la relazione con Recensione
     private List<Recensione> recensioni;
 
-	public Integer getId() {
-		return id;
-	}
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public String getNome() {
-		return nome;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+    public String getNome() {
+        return nome;
+    }
 
-	public String getCognome() {
-		return cognome;
-	}
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-	public void setCognome(String cognome) {
-		this.cognome = cognome;
-	}
+    public String getCognome() {
+        return cognome;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public String getPsw() {
-		return psw;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	public void setPsw(String psw) {
-		this.psw = psw;
-	}
+    public String getPsw() {
+        return psw;
+    }
 
-	public String getNumeroTelefono() {
-		return numeroTelefono;
-	}
+    public void setPsw(String psw) {
+        this.psw = psw;
+    }
 
-	public void setNumeroTelefono(String numeroTelefono) {
-		this.numeroTelefono = numeroTelefono;
-	}
+    public String getNumeroTelefono() {
+        return numeroTelefono;
+    }
 
-	public String getIndirizzoDiSpedizione() {
-		return indirizzoDiSpedizione;
-	}
+    public void setNumeroTelefono(String numeroTelefono) {
+        this.numeroTelefono = numeroTelefono;
+    }
 
-	public void setIndirizzoDiSpedizione(String indirizzoDiSpedizione) {
-		this.indirizzoDiSpedizione = indirizzoDiSpedizione;
-	}
+    public String getIndirizzoDiSpedizione() {
+        return indirizzoDiSpedizione;
+    }
 
-	public String getIndirizzoDiFatturazione() {
-		return indirizzoDiFatturazione;
-	}
+    public void setIndirizzoDiSpedizione(String indirizzoDiSpedizione) {
+        this.indirizzoDiSpedizione = indirizzoDiSpedizione;
+    }
 
-	public String getUserName() {
-		return userName;
-	}
+    public String getIndirizzoDiFatturazione() {
+        return indirizzoDiFatturazione;
+    }
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+    public void setIndirizzoDiFatturazione(String indirizzoDiFatturazione) {
+        this.indirizzoDiFatturazione = indirizzoDiFatturazione;
+    }
 
-	public void setIndirizzoDiFatturazione(String indirizzoDiFatturazione) {
-		this.indirizzoDiFatturazione = indirizzoDiFatturazione;
-	}
+    public String getUserName() {
+        return userName;
+    }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
-	public List<Recensione> getRecensioni() {
-		return recensioni;
-	}
+    public List<Ordine> getOrdini() {
+        return ordini;
+    }
 
-	public void setRecensioni(List<Recensione> recensioni) {
-		this.recensioni = recensioni;
-	}
+    public void setOrdini(List<Ordine> ordini) {
+        this.ordini = ordini;
+    }
 
-	public Roles getRuolo() {
-		return ruolo;
-	}
+    public List<Recensione> getRecensioni() {
+        return recensioni;
+    }
 
-	public void setRuolo(Roles ruolo) {
-		this.ruolo = ruolo;
-	}
-	
-	public List<Ordine> getOrdini() {
-		return ordini;
-	}
+    public void setRecensioni(List<Recensione> recensioni) {
+        this.recensioni = recensioni;
+    }
 
-	public void setOrdini(List<Ordine> ordini) {
-		this.ordini = ordini;
-	}
-	
+    public Roles getRuolo() {
+        return ruolo;
+    }
+
+    public void setRuolo(Roles ruolo) {
+        this.ruolo = ruolo;
+    }
 }

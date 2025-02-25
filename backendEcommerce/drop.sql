@@ -19,10 +19,6 @@
        drop 
        foreign key FKqj5n4mdh5tc9qkj7hx54mvgi4;
 
-    alter table pagamenti 
-       drop 
-       foreign key FKkgi08br0yi2u29py759ivmeq3;
-
     alter table recensioni 
        drop 
        foreign key FK5wtirys8opmifrpgxxe3lla6q;

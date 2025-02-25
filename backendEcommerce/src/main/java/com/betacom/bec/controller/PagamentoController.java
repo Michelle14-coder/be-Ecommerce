@@ -64,7 +64,7 @@ public class PagamentoController {
         }
         return r;
     }
-    
+
     @PostMapping("/update")
     public ResponseBase update(@RequestBody PagamentoReq req) {
         log.debug("update: " + req);
@@ -73,6 +73,22 @@ public class PagamentoController {
         try {
             pagamentoS.update(req);
         } catch (Exception e) {
+            r.setMsg(e.getMessage());
+            r.setRc(false);
+        }
+        return r;
+    }
+
+    // Metodo per ottenere tutti i pagamenti
+    @GetMapping("/listAll")
+    public ResponseList<Pagamento> listAll() {
+        log.debug("Recupero della lista completa dei pagamenti");
+        ResponseList<Pagamento> r = new ResponseList<>();
+        try {
+            r.setDati(pagamentoS.getAllPagamenti()); // Supponendo che esista questo metodo in PagamentoServices
+            r.setRc(true);
+        } catch (Exception e) {
+            log.error("Errore nel recupero dei pagamenti: ", e);
             r.setMsg(e.getMessage());
             r.setRc(false);
         }
