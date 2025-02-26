@@ -1,6 +1,10 @@
 
     alter table carrello 
        drop 
+       foreign key FK8x87h2rx8eluyrngi7eb94ia;
+
+    alter table carrello 
+       drop 
        foreign key FK776wjw2xhhhnvng0dcvarv4tg;
 
     alter table carrello_prodotto 

@@ -162,20 +162,13 @@ public class AdminController {
     public ModelAndView listOrdine() {
         ModelAndView mav = new ModelAndView("admin/listOrdini");
         
-        URI uri = UriComponentsBuilder
-                .fromUriString(backend + "ordine/list")
-                .buildAndExpand()
-                .toUri();
+        URI uri = UriComponentsBuilder.fromUriString(backend + "ordine/list").build().toUri();
         
-        log.debug("URI: {}", uri);
+        log.debug("URI: " + uri);
         
-        ResponseList<OrdineDTO> lUt = rest.getForEntity(uri, ResponseList.class).getBody();
+        ResponseList<?> listaPagamenti = rest.getForEntity(uri, ResponseList.class).getBody();
         
-        if (lUt == null || lUt.getDati().isEmpty()) {
-            mav.addObject("noOrdini", true);
-        } else {
-            mav.addObject("ordine", lUt.getDati());
-        }
+        mav.addObject("ordine", listaPagamenti);
         
         return mav;
     }

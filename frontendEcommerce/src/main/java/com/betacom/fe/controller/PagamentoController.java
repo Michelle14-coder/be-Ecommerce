@@ -60,54 +60,47 @@ public class PagamentoController {
         return mav;
     }
     
-    @GetMapping("/listByUserId")
-    public ModelAndView listByUserId(@RequestParam(required = false) String utenteId, Principal principal) {
-        ModelAndView pagamentoPage = new ModelAndView("inserisciPagamento");
+	@GetMapping("/listByUserId")
+	public ModelAndView listByUserId(@RequestParam(required = false) String utenteId, Principal principal) {
+	    ModelAndView pagamentoPage = new ModelAndView("inserisciPagamento"); 
 
-        try {
-            // Se l'ID non è passato come parametro, recuperalo dal nome utente
-            if (utenteId == null) {
-                utenteId = principal.getName();
-            }
+	    try {
+	        // Se l'ID non è passato come parametro, recuperalo dal nome utente
+	        if (utenteId == null) {
+	            utenteId = principal.getName();
+	        }
 
-            // Recupera l'ID dell'utente usando il nome
-            Integer userId = getUserIdByUsername(utenteId);
+	        // Recupera l'ID dell'utente usando il nome
+	        Integer userId = getUserIdByUsername(utenteId);
 
-            if (userId == null) {
-                pagamentoPage.addObject("error", "Impossibile recuperare l'ID dell'utente.");
-                return pagamentoPage;
-            }
+	        if (userId == null) {
+	        	pagamentoPage.addObject("error", "Impossibile recuperare l'ID dell'utente.");
+	            return pagamentoPage;
+	        }
 
-            URI uri = UriComponentsBuilder
-                    .fromUriString(backend + "pagamento/listByUserId")
-                    .queryParam("utenteId", userId)
-                    .build().toUri();
+	        URI uri = UriComponentsBuilder
+	                .fromUriString(backend + "pagamento/listByUserId")
+	                .queryParam("utenteId", userId)
+	                .build().toUri();
 
-            log.debug("URI: " + uri);
+	        log.debug("URI: " + uri);
+	        
 
-            ResponseList<PagamentoDTO> responseList = rest.getForObject(uri, ResponseList.class);
-
-            // Aggiungi log per vedere cosa contiene la risposta
-            log.debug("Response dati: " + (responseList != null ? responseList.getDati() : "null"));
-
-            if (responseList != null && responseList.getRc()) {
-                if (responseList.getDati() != null && !responseList.getDati().isEmpty()) {
-                    pagamentoPage.addObject("listPagamenti", responseList.getDati());  // Lista dei pagamenti
-                } else {
-                    pagamentoPage.addObject("noPagamenti", "Non hai metodi di pagamento associati. Vuoi aggiungerne uno?");
-                }
-            } else {
-                pagamentoPage.addObject("error", "Errore nel recupero dei pagamenti.");
-            }
-        } catch (Exception e) {
-            log.error("Errore nel recupero dei pagamenti", e);
-            pagamentoPage.addObject("error", "Si è verificato un errore durante il recupero dei pagamenti.");
-        }
-
-        return pagamentoPage;
-    }
+	        ResponseList<PagamentoDTO> responseList = rest.getForObject(uri, ResponseList.class);
 
 
+	        if (responseList != null && responseList.getRc()) {
+	        	pagamentoPage.addObject("listPagamenti", responseList.getDati());
+	        } else {
+	        	pagamentoPage.addObject("error", "Errore nel recupero dei pagamenti.");
+	        }
+	    } catch (Exception e) {
+	        log.error("Errore nel recupero del carrello", e);
+	        pagamentoPage.addObject("error", "Si è verificato un errore durante il recupero dei pagamenti.");
+	    }
+
+	    return pagamentoPage; 
+	}
 
 
 
@@ -137,7 +130,7 @@ public class PagamentoController {
 	}
     
     
-	@GetMapping("/createPagamentoDettagli")
+    @GetMapping("/createPagamentoDettagli")
 	public ModelAndView createPagamento(@RequestParam Integer carrelloId, @RequestParam Double prezzo, @RequestParam Integer utenteId) {
 	    ModelAndView mav = new ModelAndView("inserisciPagamento");
 	    mav.addObject("pagamento", new PagamentoReq());
@@ -146,61 +139,39 @@ public class PagamentoController {
 	    mav.addObject("prezzo", prezzo);  
 	    mav.addObject("utenteId", utenteId);  
 	    mav.addObject("errorMsg", null);
-
-	    // Chiamata al metodo listByUserId per ottenere i metodi di pagamento
-	    try {
-	        Integer userId = utenteId;  // O se vuoi usare il nome dell'utente, puoi fare principal.getName()
-	        URI uri = UriComponentsBuilder
-	                .fromUriString(backend + "pagamento/listByUserId")
-	                .queryParam("idUtente", userId)
-	                .build().toUri();
-
-	        ResponseList<PagamentoDTO> responseList = rest.getForObject(uri, ResponseList.class);
-
-	        if (responseList != null && responseList.getRc()) {
-	            if (responseList.getDati() != null && !responseList.getDati().isEmpty()) {
-	                mav.addObject("listPagamenti", responseList.getDati());  // Lista dei pagamenti
-	            } else {
-	                mav.addObject("noPagamenti", "Non hai metodi di pagamento associati. Vuoi aggiungerne uno?");
-	            }
-	        } else {
-	            mav.addObject("error", "Errore nel recupero dei pagamenti.");
-	        }
-	    } catch (Exception e) {
-	        mav.addObject("error", "Si è verificato un errore durante il recupero dei pagamenti.");
-	    }
-
 	    return mav;
 	}
-
     
     
-	@PostMapping("/savePagamentoDettagli")
-	public ModelAndView savePagamentoDettagli(@ModelAttribute PagamentoReq req, @RequestParam Double prezzo, @RequestParam Integer carrelloId) {
-	    ModelAndView mav = new ModelAndView("inserisciPagamento");
-	    mav.addObject("ordine", new OrdineReq());
-	    mav.addObject("carrelloId", carrelloId);
-	    mav.addObject("prezzo", prezzo);
-	    mav.addObject("pagamento", new PagamentoReq());
+    @PostMapping("/savePagamentoDettagli")
+    public ModelAndView savePagamentoDettagli(@ModelAttribute PagamentoReq req, @RequestParam Double prezzo, @RequestParam Integer carrelloId) {
+        try {
+            log.debug("savePagamentoDettagli: " + req);
 
-	    if (req.getMetodoDiPagamento() != null) { // SE L'UTENTE HA SCELTO UN METODO ESISTENTE
-	        mav.addObject("successMessage", "Metodo di pagamento selezionato!");
-	    } else {
-	        // CREA UN NUOVO METODO DI PAGAMENTO
-	        URI uri = UriComponentsBuilder.fromUriString(backend + "pagamento/create").build().toUri();
-	        ResponseBase response = rest.postForEntity(uri, req, ResponseBase.class).getBody();
+            URI uri = UriComponentsBuilder.fromUriString(backend + "pagamento/create").build().toUri();
+            ResponseBase response = rest.postForEntity(uri, req, ResponseBase.class).getBody();
 
-	        if (!response.getRc()) {
-	            mav.addObject("errorMessage", response.getMsg());
-	        } else {
-	            mav.addObject("successMessage", "Il pagamento è stato salvato con successo!");
-	        }
-	    }
+            ModelAndView mav = new ModelAndView("inserisciPagamento");
+            mav.addObject("ordine", new OrdineReq());
+            mav.addObject("carrelloId", carrelloId);  
+            mav.addObject("prezzo", prezzo); 
+            mav.addObject("pagamento", new PagamentoReq()); 
 
-	    return mav;
-	}
+            // Aggiungi messaggi solo se necessario
+            if (!response.getRc()) {
+                mav.addObject("errorMessage", response.getMsg());
+            } else {
+                mav.addObject("successMessage", "Il pagamento è stato salvato con successo!");
+            }
 
-
+            return mav;
+        } catch (Exception e) {
+            log.error("Errore durante il salvataggio dei dettagli del pagamento", e);
+            ModelAndView mav = new ModelAndView("errorPage");
+            mav.addObject("errorMessage", "Si è verificato un errore nel processare la richiesta.");
+            return mav;
+        }
+    }
 
     // Salvataggio di un nuovo pagamento
     @PostMapping("/savePagamento")

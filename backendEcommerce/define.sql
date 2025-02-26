@@ -1,6 +1,7 @@
 
     create table carrello (
         id integer not null auto_increment,
+        id_ordine integer,
         id_utente integer,
         prezzo float(53),
         quantita integer,
@@ -82,7 +83,15 @@
     ) engine=InnoDB;
 
     alter table carrello 
+       add constraint UKrmfk3aen85xmnwk32nbsem6vo unique (id_ordine);
+
+    alter table carrello 
        add constraint UKl287dga2nb4ahi1j34on39ruk unique (id_utente);
+
+    alter table carrello 
+       add constraint FK8x87h2rx8eluyrngi7eb94ia 
+       foreign key (id_ordine) 
+       references ordini (id);
 
     alter table carrello 
        add constraint FK776wjw2xhhhnvng0dcvarv4tg 
