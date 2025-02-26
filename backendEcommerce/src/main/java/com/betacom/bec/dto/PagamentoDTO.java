@@ -8,13 +8,17 @@ public class PagamentoDTO {
     private String metodoDiPagamento;
     private String numeroCarta;
     private Date dataScadenza;
+    private Integer idUtente;
 
-    public PagamentoDTO(Integer id, String metodoDiPagamento, String numeroCarta, Date dataScadenza) {
+
+
+	public PagamentoDTO(Integer id, String metodoDiPagamento, String numeroCarta, Date dataScadenza,Integer idUtente) {
         super();
         this.id = id;
         this.metodoDiPagamento = metodoDiPagamento;
         this.setNumeroCarta(numeroCarta);
         this.dataScadenza = dataScadenza;
+        this.idUtente = idUtente;
     }
 
     public PagamentoDTO() {
@@ -36,6 +40,14 @@ public class PagamentoDTO {
     public void setId(Integer id) {
         this.id = id;
     }
+    
+    public Integer getIdUtente() {
+		return idUtente;
+	}
+
+	public void setIdUtente(Integer idUtente) {
+		this.idUtente = idUtente;
+	}
 
     public String getMetodoDiPagamento() {
         return metodoDiPagamento;

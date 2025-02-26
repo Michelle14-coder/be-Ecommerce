@@ -1,94 +1,98 @@
 package com.betacom.fe.request;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class PagamentoReq {
 
-    private Integer id;
+	private Integer id;
     private String metodoDiPagamento;
     private String numeroCarta;
-    private Double importo;
     private String dataScadenza;
     private Integer cvv;
     private Integer userId;
 
-    public PagamentoReq() {
-        super();
-    }
+	public PagamentoReq() {
+		super();
+	}
 
-    public PagamentoReq(Integer id, String metodoDiPagamento, String numeroCarta, Double importo, String dataScadenza,
-                        Integer cvv, Integer userId) {
-        super();
-        this.id = id;
-        this.metodoDiPagamento = metodoDiPagamento;
-        this.numeroCarta = numeroCarta;
-        this.importo = importo;
-        this.dataScadenza = dataScadenza;
-        this.cvv = cvv;
-        this.userId = userId;
-    }
+	public PagamentoReq(Integer id, String metodoDiPagamento, String numeroCarta, String dataScadenza,
+			Integer cvv, Integer userId) {
+		super();
+		this.id = id;
+		this.metodoDiPagamento = metodoDiPagamento;
+		this.numeroCarta = numeroCarta;
+		this.dataScadenza = dataScadenza;
+		this.cvv = cvv;
+		this.userId = userId;
+	}
+	
+	
 
-    public Integer getUserId() {
-        return userId;
-    }
+	public PagamentoReq(Integer id, String metodoDiPagamento, String numeroCarta, String dataScadenza, Integer cvv) {
+		super();
+		this.id = id;
+		this.metodoDiPagamento = metodoDiPagamento;
+		this.numeroCarta = numeroCarta;
+		this.dataScadenza = dataScadenza;
+		this.cvv = cvv;
+	}
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
+	public Integer getUserId() {
+		return userId;
+	}
 
-    public String getNumeroCarta() {
-        return numeroCarta;
-    }
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
 
-    public void setNumeroCarta(String numeroCarta) {
-        this.numeroCarta = numeroCarta;
-    }
+	public String getNumeroCarta() {
+		return numeroCarta;
+	}
 
-    @Override
-    public String toString() {
-        return "PagamentoReq [id=" + id + ", metodoDiPagamento=" + metodoDiPagamento + ", numeroCarta=" + numeroCarta
-                + ", importo=" + importo + ", dataScadenza=" + dataScadenza + ", cvv=" + cvv + ", userId=" + userId
-                + "]";
-    }
+	public void setNumeroCarta(String numeroCarta) {
+		this.numeroCarta = numeroCarta;
+	}
 
-    public Integer getId() {
-        return id;
-    }
+	@Override
+	public String toString() {
+		return "PagamentoReq [id=" + id + ", metodoDiPagamento=" + metodoDiPagamento + ", numeroCarta=" + numeroCarta
+				 + ", dataScadenza=" + dataScadenza + ", cvv=" + cvv + ", userId=" + userId
+				+ "]";
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public String getMetodoDiPagamento() {
-        return metodoDiPagamento;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public void setMetodoDiPagamento(String metodoDiPagamento) {
-        this.metodoDiPagamento = metodoDiPagamento;
-    }
+	public String getMetodoDiPagamento() {
+		return metodoDiPagamento;
+	}
 
-    public Double getImporto() {
-        return importo;
-    }
+	public void setMetodoDiPagamento(String metodoDiPagamento) {
+		this.metodoDiPagamento = metodoDiPagamento;
+	}
 
-    public void setImporto(Double importo) {
-        this.importo = importo;
-    }
+	
 
-    public String getDataScadenza() {
-        return dataScadenza;
-    }
+	public String getDataScadenza() {
+		return dataScadenza;
+	}
 
-    public void setDataScadenza(String dataScadenza) {
-        this.dataScadenza = dataScadenza;
-    }
+	public void setDataScadenza(String dataScadenza) {
+		this.dataScadenza = dataScadenza;
+	}
 
-    public Integer getCvv() {
-        return cvv;
-    }
+	public Integer getCvv() {
+		return cvv;
+	}
 
-    public void setCvv(Integer cvv) {
-        this.cvv = cvv;
-    }
+	public void setCvv(Integer cvv) {
+		this.cvv = cvv;
+	}
+
+	
+    
 }

@@ -17,7 +17,11 @@ import com.betacom.bec.models.Prodotto;
 import com.betacom.bec.repositories.CarrelloProdottoRepository;
 import com.betacom.bec.repositories.CarrelloRepository;
 import com.betacom.bec.repositories.ProdottoRepository;
+import com.betacom.bec.request.ProdottoReq;
 import com.betacom.bec.services.interfaces.CarrelloServices;
+import com.betacom.bec.services.interfaces.MessaggioServices;
+
+import jakarta.transaction.Transactional;
 
 import static com.betacom.bec.utils.Utilities.buildCarrelloProdottoDTO;
 
@@ -29,6 +33,12 @@ public class CarrelloImpl implements CarrelloServices{
 	
 	@Autowired
     private ProdottoRepository prodottoRepository;
+	
+    @Autowired
+    CarrelloProdottoRepository cpR;
+	
+    @Autowired
+    private MessaggioServices msgS;
 	
     
     @Autowired
@@ -107,9 +117,9 @@ public class CarrelloImpl implements CarrelloServices{
 	        carrelloProdottoRepository.save(carrelloProdotto);
 	    } else {
 	        // SE LA QUANTITÀ SCENDE A 0, RIMUOVE IL PRODOTTO DAL CARRELLO
-	        carrello.getCarrelloProdotti().remove(carrelloProdotto);  // 🔥 RIMUOVE IL PRODOTTO DALLA LISTA DEL CARRELLO
+	        carrello.getCarrelloProdotti().remove(carrelloProdotto); 
 	        carrelloProdottoRepository.delete(carrelloProdotto);
-	        carrelloProdottoRepository.flush(); // 🔥 FORZA L'ELIMINAZIONE DAL DB
+	        carrelloProdottoRepository.flush();
 	    }
 
 	    // AGGIORNA AUTOMATICAMENTE I TOTALI DEL CARRELLO USANDO LE QUERY
@@ -128,14 +138,35 @@ public class CarrelloImpl implements CarrelloServices{
 	@Override
 	public List<CarrelloDTO> ottieniCarrello(Integer utenteId) {
 	    // Filtra i carrelli in base all'utenteId
-	    List<Carrello> lU = carrelloRepository.findByUtenteId(utenteId);  // Usa un metodo di ricerca per utenteId
+	    List<Carrello> lU = carrelloRepository.findByUtenteId(utenteId);  
 	    return lU.stream()
 	            .map(u -> new CarrelloDTO(u.getId(),
 	                    u.getQuantita(),
 	                    u.getPrezzo(),
+	                    u.getUtente().getId(),
 	                    buildCarrelloProdottoDTO(u.getCarrelloProdotti())))
 	            .collect(Collectors.toList());
 	}
+	
+	@Override
+	@Transactional
+	public void eliminaCarrello(Integer carrelloId) throws Exception {
+	    Optional<Carrello> carrelloOptional = carrelloRepository.findById(carrelloId);
+
+	    if (carrelloOptional.isEmpty()) {
+	        throw new Exception(msgS.getMessaggio("no-carrello"));
+	    }
+
+	    // Svuota carrello
+	    cpR.deleteByCarrelloId(carrelloId);
+
+	    Carrello carrello = carrelloOptional.get();
+	    carrello.setQuantita(0);
+	    carrello.setPrezzo(0.0);
+	    carrelloRepository.save(carrello);
+	}
+
+
 
  
 	

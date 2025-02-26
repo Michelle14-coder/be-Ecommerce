@@ -15,5 +15,7 @@ public interface CarrelloServices {
 
 	Carrello aggiungiProdottoAlCarrello(Integer carrelloId, Integer prodottoId, Integer quantita);
 
+	void eliminaCarrello(Integer carrelloId) throws Exception;
+
 
 }

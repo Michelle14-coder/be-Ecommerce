@@ -11,7 +11,7 @@ public class CarrelloDTO {
 	private Integer id;
     private Integer quantita;
     private Double prezzo;
-    //private UtenteDTO utente;
+    private Integer utente;
     private List<CarrelloProdottoDTO> carrelloProdottiDTO;
     
 
@@ -23,6 +23,23 @@ public class CarrelloDTO {
 		this.prezzo = prezzo;
 		this.carrelloProdottiDTO = carrelloProdottiDTO;
 	}
+
+
+
+
+
+
+	public CarrelloDTO(Integer id, Integer quantita, Double prezzo, Integer idUtente,
+			List<CarrelloProdottoDTO> carrelloProdottiDTO) {
+		this.id = id;
+		this.quantita = quantita;
+		this.prezzo = prezzo;
+		this.utente = idUtente;
+		this.carrelloProdottiDTO = carrelloProdottiDTO;
+	}
+
+
+
 
 
 
@@ -59,13 +76,43 @@ public class CarrelloDTO {
 		this.prezzo = prezzo;
 	}
 
-//	public UtenteDTO getUtente() {
-//		return utente;
-//	}
-//
-//	public void setUtente(UtenteDTO utente) {
-//		this.utente = utente;
-//	}
+
+
+
+
+	public Integer getUtente() {
+		return utente;
+	}
+
+
+
+
+
+
+	public void setUtente(Integer utente) {
+		this.utente = utente;
+	}
+
+
+
+
+
+
+	public List<CarrelloProdottoDTO> getCarrelloProdottiDTO() {
+		return carrelloProdottiDTO;
+	}
+
+
+
+
+
+
+	public void setCarrelloProdottiDTO(List<CarrelloProdottoDTO> carrelloProdottiDTO) {
+		this.carrelloProdottiDTO = carrelloProdottiDTO;
+	}
+
+
+
 
 
 

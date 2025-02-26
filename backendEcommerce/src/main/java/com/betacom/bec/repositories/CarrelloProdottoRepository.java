@@ -27,4 +27,11 @@ public interface CarrelloProdottoRepository extends JpaRepository<CarrelloProdot
 
 	List<CarrelloProdotto> findByProdotto(Prodotto prodotto);
 
+	Optional<CarrelloProdotto> findByCarrelloId(Integer carrelloId);
+
+	@Modifying
+	@Query(name = "carrello.svuota")
+	void deleteByCarrelloId(@Param("carrelloId") Integer carrelloId);
+
+
 }

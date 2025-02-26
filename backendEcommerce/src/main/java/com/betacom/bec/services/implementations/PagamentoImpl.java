@@ -1,18 +1,28 @@
 package com.betacom.bec.services.implementations;
 
+import static com.betacom.bec.utils.Utilities.buildCarrelloProdottoDTO;
 import static com.betacom.bec.utils.Utilities.convertStringToDateCarta;
 
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.betacom.bec.dto.CarrelloDTO;
+import com.betacom.bec.dto.PagamentoDTO;
+import com.betacom.bec.dto.ProdottoDTO;
+import com.betacom.bec.dto.RecensioneDTO;
+import com.betacom.bec.dto.UtenteDTO;
+import com.betacom.bec.models.Carrello;
 import com.betacom.bec.models.Pagamento;
+import com.betacom.bec.models.Prodotto;
 import com.betacom.bec.models.Utente;
 import com.betacom.bec.repositories.PagamentoRepository;
 import com.betacom.bec.repositories.UtenteRepository;
@@ -104,95 +114,100 @@ public class PagamentoImpl implements PagamentoServices {
 	}
 
 	
-	// Metodo che recupera i pagamenti salvati per un utente
-	
-	@Override
-	public List<Pagamento> getPagamentiByUserId(Integer userId) {
-	    return pagamentoR.findByIdUtente(userId);
-	}
-
-
-
 	// Rimuovi pagamento
 
-	@Override
-	public void removePagamento(PagamentoReq req) throws Exception {
-	    // Verifica che l'ID del pagamento sia fornito
-	    if (req.getId() == null) {
-	        throw new Exception(msgS.getMessaggio("no-pagamento-id"));
-	    }
+		@Override
+		public void removePagamento(PagamentoReq req) throws Exception {
+		    // Verifica che l'ID del pagamento sia fornito
+		    if (req.getId() == null) {
+		        throw new Exception(msgS.getMessaggio("no-pagamento-id"));
+		    }
 
-	    // Recupera il pagamento dal database
-	    Optional<Pagamento> pagamentoOpt = pagamentoR.findById(req.getId());
-	    if (pagamentoOpt.isEmpty()) {
-	        throw new Exception(msgS.getMessaggio("pagamento-non-trovato"));
-	    }
+		    // Recupera il pagamento dal database
+		    Optional<Pagamento> pagamentoOpt = pagamentoR.findById(req.getId());
+		    if (pagamentoOpt.isEmpty()) {
+		        throw new Exception(msgS.getMessaggio("pagamento-non-trovato"));
+		    }
 
-	    Pagamento pagamento = pagamentoOpt.get();
+		    Pagamento pagamento = pagamentoOpt.get();
 
-	    // Verifica che il pagamento sia associato all'utente
-	    if (pagamento.getIdUtente() == null || !pagamento.getIdUtente().equals(req.getUserId())) {
-	        throw new Exception(msgS.getMessaggio("pagamento-non-associato-utente"));
-	    }
+		    // Verifica che il pagamento sia associato all'utente
+		    if (pagamento.getIdUtente() == null || !pagamento.getIdUtente().equals(req.getUserId())) {
+		        throw new Exception(msgS.getMessaggio("pagamento-non-associato-utente"));
+		    }
 
-	    // Rimuovi il pagamento
-	    pagamentoR.delete(pagamento);
-	    log.debug("Pagamento con ID " + req.getId() + " rimosso per l'utente con ID " + req.getUserId());
-	}
-	
-	@Override
-	public void update(PagamentoReq req) throws Exception {
-	    log.debug("Update Pagamento: " + req);
+		    // Rimuovi il pagamento
+		    pagamentoR.delete(pagamento);
+		    log.debug("Pagamento con ID " + req.getId() + " rimosso per l'utente con ID " + req.getUserId());
+		}
+		
+		@Override
+		public void update(PagamentoReq req) throws Exception {
+		    log.debug("Update Pagamento: " + req);
 
-	    // Controlla se esiste un pagamento con lo stesso numero di carta per un altro utente
-	    List<Pagamento> existingPagamenti = pagamentoR.findAll();
-	    boolean numeroCartaExists = existingPagamenti.stream().anyMatch(p ->
-	            p.getNumeroCarta().equals(req.getNumeroCarta()) &&
-	            !p.getId().equals(req.getId()));
+		    // Controlla se esiste un pagamento con lo stesso numero di carta per un altro utente
+		    List<Pagamento> existingPagamenti = pagamentoR.findAll();
+		    boolean numeroCartaExists = existingPagamenti.stream().anyMatch(p ->
+		            p.getNumeroCarta().equals(req.getNumeroCarta()) &&
+		            !p.getId().equals(req.getId()));
 
-	    if (numeroCartaExists) {
-	        throw new Exception(msgS.getMessaggio("find-pagamento"));
-	    }
+		    if (numeroCartaExists) {
+		        throw new Exception(msgS.getMessaggio("find-pagamento"));
+		    }
 
-	    Optional<Pagamento> optPagamento = pagamentoR.findById(req.getId());
-	    if (optPagamento.isEmpty()) {
-	        throw new Exception(msgS.getMessaggio("no-pagamento"));
-	    }
+		    Optional<Pagamento> optPagamento = pagamentoR.findById(req.getId());
+		    if (optPagamento.isEmpty()) {
+		        throw new Exception(msgS.getMessaggio("no-pagamento"));
+		    }
 
-	    Pagamento p = optPagamento.get();
+		    Pagamento p = optPagamento.get();
 
-	    if (req.getMetodoDiPagamento() != null) {
-	        p.setMetodoDiPagamento(req.getMetodoDiPagamento());
-	    }
-	    if (req.getNumeroCarta() != null) {
-	        p.setNumeroCarta(req.getNumeroCarta());
-	    }
-	    if (req.getCvv() != null) {
-	        p.setCvv(req.getCvv());
-	    }
-	    if (req.getDataScadenza() != null) {
-	        p.setDataScadenza(convertStringToDateCarta(req.getDataScadenza()));
-	    }
+		    if (req.getMetodoDiPagamento() != null) {
+		        p.setMetodoDiPagamento(req.getMetodoDiPagamento());
+		    }
+		    if (req.getNumeroCarta() != null) {
+		        p.setNumeroCarta(req.getNumeroCarta());
+		    }
+		    if (req.getCvv() != null) {
+		        p.setCvv(req.getCvv());
+		    }
+		    if (req.getDataScadenza() != null) {
+		        p.setDataScadenza(convertStringToDateCarta(req.getDataScadenza()));
+		    }
 
-	    pagamentoR.save(p);
-	}
-
-
-	@Override
-	public List<Pagamento> getAllPagamenti() {
-	    List<Pagamento> pagamenti = pagamentoR.findAll();
-	    for (Pagamento pagamento : pagamenti) {
-	        // Verifica che il campo utente non sia null
-	        if (pagamento.getIdUtente() != null) {
-	        	log.debug("Pagamento ID: " + pagamento.getId() + ", User ID: " + pagamento.getIdUtente());
-	        } else {
-	        	log.debug("Pagamento ID: " + pagamento.getId() + ", User ID: null");
-	        }
-	    }
-	    return pagamenti;
-	}
+		    pagamentoR.save(p);
+		}
 
 
+		@Override
+		public List<Pagamento> getAllPagamenti() {
+		    List<Pagamento> pagamenti = pagamentoR.findAll();
+		    for (Pagamento pagamento : pagamenti) {
+		        // Verifica che il campo utente non sia null
+		        if (pagamento.getIdUtente() != null) {
+		        	log.debug("Pagamento ID: " + pagamento.getId() + ", User ID: " + pagamento.getIdUtente());
+		        } else {
+		        	log.debug("Pagamento ID: " + pagamento.getId() + ", User ID: null");
+		        }
+		    }
+		    return pagamenti;
+		}
 
+
+		@Override
+		public List<PagamentoDTO> ottieniPagamenti(Integer idUtente) {
+		    List<Pagamento> lU = pagamentoR.findByidUtente(idUtente);
+		    
+		    return lU.stream()
+		            .map(u -> new PagamentoDTO(
+		                    u.getId(), 
+		                    u.getMetodoDiPagamento(), 
+		                    u.getNumeroCarta(), 
+		                    u.getDataScadenza(), 
+		                    u.getIdUtente())) 
+		            .collect(Collectors.toList());
+
+
+}
 
 }

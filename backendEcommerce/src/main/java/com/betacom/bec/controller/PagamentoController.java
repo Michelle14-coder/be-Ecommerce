@@ -1,13 +1,19 @@
 package com.betacom.bec.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.betacom.bec.services.interfaces.PagamentoServices;
+import com.betacom.bec.dto.CarrelloDTO;
+import com.betacom.bec.dto.PagamentoDTO;
+import com.betacom.bec.dto.ProdottoDTO;
 import com.betacom.bec.models.Pagamento;
 import com.betacom.bec.request.PagamentoReq;
 import com.betacom.bec.response.ResponseBase;
 import com.betacom.bec.response.ResponseList;
+import com.betacom.bec.response.ResponseObject;
 
 @RestController
 @RequestMapping("/rest/pagamento")
@@ -34,21 +40,21 @@ public class PagamentoController {
         return r;
     }
 
-    // Metodo per ottenere i pagamenti di un utente
-    @GetMapping("/listByUser/{userId}")
-    public ResponseList<Pagamento> listByUser(@PathVariable Integer userId) {
-        log.debug("Lista dei pagamenti per l'utente con ID: " + userId);
-        ResponseList<Pagamento> r = new ResponseList<>();
-        try {
-            r.setDati(pagamentoS.getPagamentiByUserId(userId));
-            r.setRc(true);
-        } catch (Exception e) {
-            log.error("Errore nel recupero dei pagamenti: ", e);
-            r.setMsg(e.getMessage());
-            r.setRc(false);
-        }
-        return r;
-    }
+	@GetMapping("/listByUserId")
+	public ResponseList<PagamentoDTO> listByUserId(@RequestParam Integer idUtente) {
+
+	    ResponseList<PagamentoDTO> response = new ResponseList<PagamentoDTO>();
+	    response.setRc(true);
+	    try {
+	    	response.setDati(pagamentoS.ottieniPagamenti(idUtente));
+
+	    } catch (Exception e) {
+	        response.setMsg(e.getMessage());
+	        response.setRc(false);
+	    }
+	    return response;
+	}
+	
 
     // Metodo per rimuovere un pagamento
     @PostMapping("/remove")
@@ -64,7 +70,7 @@ public class PagamentoController {
         }
         return r;
     }
-
+    
     @PostMapping("/update")
     public ResponseBase update(@RequestBody PagamentoReq req) {
         log.debug("update: " + req);
@@ -78,8 +84,8 @@ public class PagamentoController {
         }
         return r;
     }
-
-    // Metodo per ottenere tutti i pagamenti
+    
+ // Metodo per ottenere tutti i pagamenti
     @GetMapping("/listAll")
     public ResponseList<Pagamento> listAll() {
         log.debug("Recupero della lista completa dei pagamenti");

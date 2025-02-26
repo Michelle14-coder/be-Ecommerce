@@ -1,4 +1,4 @@
-package com.betacom.bec.services.implementations;
+	package com.betacom.bec.services.implementations;
 
 import static com.betacom.bec.utils.Utilities.buildCarrelloProdottoDTO;
 import static com.betacom.bec.utils.Utilities.convertStringToDate;
@@ -127,6 +127,27 @@ public class OrdineImpl implements OrdineServices{
 	            )
 	    )).collect(Collectors.toList());
 	}
+	
+	@Override
+	public List<OrdineDTO> list() {
+	    List<Ordine> ordini = orR.findAll(); // Recupera tutti gli ordini dal database
+
+	    return ordini.stream().map(o -> new OrdineDTO(
+	            o.getId(),
+	            o.getIndirizzoDiSpedizione(),
+	            o.getCap(),
+	            o.getCitta(),
+	            o.getDataOrdine(),
+	            o.getUtente() != null ? o.getUtente().getId() : null, // Utente ID
+	            o.getCarrello() != null ? new CarrelloDTO(
+	                    o.getCarrello().getId(),
+	                    o.getCarrello().getQuantita(),
+	                    o.getCarrello().getPrezzo(),
+	                    buildCarrelloProdottoDTO(o.getCarrello().getCarrelloProdotti())
+	            ) : null // Se il carrello è null, evita NullPointerException
+	    )).collect(Collectors.toList());
+	}
+
 
 
 

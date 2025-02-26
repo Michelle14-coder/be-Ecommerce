@@ -1,6 +1,9 @@
 package com.betacom.fe.controller;
 
 import java.net.URI;
+import java.security.Principal;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -16,7 +19,10 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import com.betacom.fe.dto.CarrelloDTO;
 import com.betacom.fe.dto.PagamentoDTO;
+import com.betacom.fe.dto.UtenteDTO;
+import com.betacom.fe.request.OrdineReq;
 import com.betacom.fe.request.PagamentoReq;
 import com.betacom.fe.response.ResponseBase;
 import com.betacom.fe.response.ResponseList;
@@ -33,8 +39,10 @@ public class PagamentoController {
 
     @Autowired
     Logger log;
+    
 
-    // Lista di tutti i pagamenti
+
+ // Lista di tutti i pagamenti
     @GetMapping("/listPagamenti")
     public ModelAndView listPagamenti() {
         ModelAndView mav = new ModelAndView("admin/listPagamenti");
@@ -51,15 +59,148 @@ public class PagamentoController {
 
         return mav;
     }
+    
+    @GetMapping("/listByUserId")
+    public ModelAndView listByUserId(@RequestParam(required = false) String utenteId, Principal principal) {
+        ModelAndView pagamentoPage = new ModelAndView("inserisciPagamento");
 
-    // Form per creare un nuovo pagamento
-    @GetMapping("/createPagamento")
-    public ModelAndView createPagamento() {
-        ModelAndView mav = new ModelAndView("createPagamento");
-        mav.addObject("req", new PagamentoReq());
-        mav.addObject("errorMsg", null);
-        return mav;
+        try {
+            // Se l'ID non è passato come parametro, recuperalo dal nome utente
+            if (utenteId == null) {
+                utenteId = principal.getName();
+            }
+
+            // Recupera l'ID dell'utente usando il nome
+            Integer userId = getUserIdByUsername(utenteId);
+
+            if (userId == null) {
+                pagamentoPage.addObject("error", "Impossibile recuperare l'ID dell'utente.");
+                return pagamentoPage;
+            }
+
+            URI uri = UriComponentsBuilder
+                    .fromUriString(backend + "pagamento/listByUserId")
+                    .queryParam("utenteId", userId)
+                    .build().toUri();
+
+            log.debug("URI: " + uri);
+
+            ResponseList<PagamentoDTO> responseList = rest.getForObject(uri, ResponseList.class);
+
+            // Aggiungi log per vedere cosa contiene la risposta
+            log.debug("Response dati: " + (responseList != null ? responseList.getDati() : "null"));
+
+            if (responseList != null && responseList.getRc()) {
+                if (responseList.getDati() != null && !responseList.getDati().isEmpty()) {
+                    pagamentoPage.addObject("listPagamenti", responseList.getDati());  // Lista dei pagamenti
+                } else {
+                    pagamentoPage.addObject("noPagamenti", "Non hai metodi di pagamento associati. Vuoi aggiungerne uno?");
+                }
+            } else {
+                pagamentoPage.addObject("error", "Errore nel recupero dei pagamenti.");
+            }
+        } catch (Exception e) {
+            log.error("Errore nel recupero dei pagamenti", e);
+            pagamentoPage.addObject("error", "Si è verificato un errore durante il recupero dei pagamenti.");
+        }
+
+        return pagamentoPage;
     }
+
+
+
+
+
+	private Integer getUserIdByUsername(String username) {
+	    try {
+	        URI uri = UriComponentsBuilder
+	                .fromUriString(backend + "utente/carrelloByUsername")
+	                .queryParam("userName", username)
+	                .build().toUri();
+
+	        log.debug("Recupero ID per utente: " + username);
+
+	        HashMap<String, Object> userResponse = rest.getForObject(uri, HashMap.class);
+
+	        // Verifica se i dati sono validi e restituisci l'ID utente
+	        if (userResponse != null && userResponse.containsKey("dati")) {
+	            HashMap<String, Object> dati = (HashMap<String, Object>) userResponse.get("dati");
+	            HashMap<String, Object> utente = (HashMap<String, Object>) dati.get("utente");
+	            return (Integer) utente.get("id");  // Ottieni l'ID utente
+	        }
+	        
+	        return null;
+	    } catch (Exception e) {
+	        log.error("Errore nel recupero dell'ID utente", e);
+	        return null;
+	    }
+	}
+    
+    
+	@GetMapping("/createPagamentoDettagli")
+	public ModelAndView createPagamento(@RequestParam Integer carrelloId, @RequestParam Double prezzo, @RequestParam Integer utenteId) {
+	    ModelAndView mav = new ModelAndView("inserisciPagamento");
+	    mav.addObject("pagamento", new PagamentoReq());
+	    mav.addObject("ordine", new OrdineReq());    
+	    mav.addObject("carrelloId", carrelloId);  
+	    mav.addObject("prezzo", prezzo);  
+	    mav.addObject("utenteId", utenteId);  
+	    mav.addObject("errorMsg", null);
+
+	    // Chiamata al metodo listByUserId per ottenere i metodi di pagamento
+	    try {
+	        Integer userId = utenteId;  // O se vuoi usare il nome dell'utente, puoi fare principal.getName()
+	        URI uri = UriComponentsBuilder
+	                .fromUriString(backend + "pagamento/listByUserId")
+	                .queryParam("idUtente", userId)
+	                .build().toUri();
+
+	        ResponseList<PagamentoDTO> responseList = rest.getForObject(uri, ResponseList.class);
+
+	        if (responseList != null && responseList.getRc()) {
+	            if (responseList.getDati() != null && !responseList.getDati().isEmpty()) {
+	                mav.addObject("listPagamenti", responseList.getDati());  // Lista dei pagamenti
+	            } else {
+	                mav.addObject("noPagamenti", "Non hai metodi di pagamento associati. Vuoi aggiungerne uno?");
+	            }
+	        } else {
+	            mav.addObject("error", "Errore nel recupero dei pagamenti.");
+	        }
+	    } catch (Exception e) {
+	        mav.addObject("error", "Si è verificato un errore durante il recupero dei pagamenti.");
+	    }
+
+	    return mav;
+	}
+
+    
+    
+	@PostMapping("/savePagamentoDettagli")
+	public ModelAndView savePagamentoDettagli(@ModelAttribute PagamentoReq req, @RequestParam Double prezzo, @RequestParam Integer carrelloId) {
+	    ModelAndView mav = new ModelAndView("inserisciPagamento");
+	    mav.addObject("ordine", new OrdineReq());
+	    mav.addObject("carrelloId", carrelloId);
+	    mav.addObject("prezzo", prezzo);
+	    mav.addObject("pagamento", new PagamentoReq());
+
+	    if (req.getMetodoDiPagamento() != null) { // SE L'UTENTE HA SCELTO UN METODO ESISTENTE
+	        mav.addObject("successMessage", "Metodo di pagamento selezionato!");
+	    } else {
+	        // CREA UN NUOVO METODO DI PAGAMENTO
+	        URI uri = UriComponentsBuilder.fromUriString(backend + "pagamento/create").build().toUri();
+	        ResponseBase response = rest.postForEntity(uri, req, ResponseBase.class).getBody();
+
+	        if (!response.getRc()) {
+	            mav.addObject("errorMessage", response.getMsg());
+	        } else {
+	            mav.addObject("successMessage", "Il pagamento è stato salvato con successo!");
+	        }
+	    }
+
+	    return mav;
+	}
+
+
 
     // Salvataggio di un nuovo pagamento
     @PostMapping("/savePagamento")

@@ -1,7 +1,5 @@
 package com.betacom.bec.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -75,7 +73,19 @@ public class CarrelloController {
         return response;
     }
 	
-	
+	@PostMapping("/eliminaCarrello")
+	public ResponseBase eliminaCarrello(@RequestParam Integer carrelloId) {
+
+	    ResponseBase response = new ResponseBase();
+	    response.setRc(true);
+	    try {
+	        carrelloS.eliminaCarrello(carrelloId);
+	    } catch (Exception e) {
+	        response.setMsg(e.getMessage());
+	        response.setRc(false);
+	    }
+	    return response;
+	}
 
 
 
