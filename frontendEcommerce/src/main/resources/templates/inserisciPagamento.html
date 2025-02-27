@@ -25,12 +25,13 @@
                     <p th:text="${errorMessage}"></p>
                 </div>
 
+
                 <!-- Form Pagamento -->
                 <form th:action="@{/savePagamentoDettagli}" method="post" th:object="${pagamento}">
                     <input type="hidden" th:field="*{id}" />
                     <input type="hidden" th:name="carrelloId" th:value="${carrelloId}" />
                     <input type="hidden" th:name="prezzo" th:value="${prezzo}" />
-                    <input type="hidden" name="userId" th:value="${utenteId}" />
+                    <input type="hidden" th:name="userId" th:value="${utenteId}" />
 
                     <div class="row mb-3">
                         <div class="col-md-6">
@@ -67,9 +68,11 @@
 
                 <!-- FORM D'ORDINE - VISIBILE SOLO DOPO IL SUCCESSO DEL PAGAMENTO -->
                 <div th:if="${successMessage}">
-                    <form th:action="@{saveOrdine}" method="post" th:object="${ordine}" style="margin-top:10px">
-                        <input type="hidden" name="carrelloId" th:value="${carrelloId}" />
-                        <input type="hidden" name="utenteId" th:value="${userId}" />
+                    <form th:action="@{/saveOrdine}" method="post" th:object="${ordine}" style="margin-top:10px">
+                        <input type="text" name="carrelloId" th:value="${carrelloId}" />
+                         <input type="text" name="userId" th:value="${utenteId}" />
+							
+                        
 
                         <div class="row mb-3">
                             <div class="col-md-6">

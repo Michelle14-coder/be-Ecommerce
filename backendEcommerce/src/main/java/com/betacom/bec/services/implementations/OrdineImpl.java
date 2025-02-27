@@ -79,6 +79,7 @@ public class OrdineImpl implements OrdineServices{
 
 	    Optional<Utente> utenteOpt = Optional.ofNullable(req.getUtenteId())
 	            .flatMap(utR::findById);
+	    
 
 	    utenteOpt.ifPresent(ordine::setUtente);
 

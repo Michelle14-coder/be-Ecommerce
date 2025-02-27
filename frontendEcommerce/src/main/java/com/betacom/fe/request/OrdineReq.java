@@ -11,15 +11,27 @@ public class OrdineReq {
 	private String citta;
 	private String dataOrdine;
 	private Integer carrelloId;
-	private Integer utenteId;
+	private Integer userId;
 	private Integer quantitaTotale;
 	private Double prezzoTotale;
 	
 	
 	
 	
+	public Integer getUserId() {
+		return userId;
+	}
+
+
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
+
+
+
 	public OrdineReq(Integer id, String indirizzoDiSpedizione, String cap, String citta, String dataOrdine,
-			Integer carrelloId, Integer utenteId, Integer quantitaTotale, Double prezzoTotale) {
+			Integer carrelloId, Integer userId, Integer quantitaTotale, Double prezzoTotale) {
 		super();
 		this.id = id;
 		this.indirizzoDiSpedizione = indirizzoDiSpedizione;
@@ -27,7 +39,7 @@ public class OrdineReq {
 		this.citta = citta;
 		this.dataOrdine = dataOrdine;
 		this.carrelloId = carrelloId;
-		this.utenteId = utenteId;
+		this.userId = userId;
 		this.quantitaTotale = quantitaTotale;
 		this.prezzoTotale = prezzoTotale;
 		
@@ -46,7 +58,7 @@ public class OrdineReq {
 
 
 	public OrdineReq(Integer id, String indirizzoDiSpedizione, String cap, String citta, String dataOrdine,
-			Integer carrelloId, Integer utenteId) {
+			Integer carrelloId, Integer userId) {
 		super();
 		this.id = id;
 		this.indirizzoDiSpedizione = indirizzoDiSpedizione;
@@ -54,10 +66,19 @@ public class OrdineReq {
 		this.citta = citta;
 		this.dataOrdine = dataOrdine;
 		this.carrelloId = carrelloId;
-		this.utenteId = utenteId;
+		this.userId = userId;
 	}
 
 	
+
+	@Override
+	public String toString() {
+		return "OrdineReq [id=" + id + ", indirizzoDiSpedizione=" + indirizzoDiSpedizione + ", cap=" + cap + ", citta="
+				+ citta + ", dataOrdine=" + dataOrdine + ", carrelloId=" + carrelloId + ", userId=" + userId
+				+ ", quantitaTotale=" + quantitaTotale + ", prezzoTotale=" + prezzoTotale + "]";
+	}
+
+
 
 	public OrdineReq() {
 		
@@ -117,11 +138,11 @@ public class OrdineReq {
 	}
 
 	public Integer getUtenteId() {
-		return utenteId;
+		return userId;
 	}
 
-	public void setUtenteId(Integer utenteId) {
-		this.utenteId = utenteId;
+	public void setUtenteId(Integer userId) {
+		this.userId = userId;
 	}
 
 

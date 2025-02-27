@@ -77,10 +77,10 @@ public class OrdineController {
 	    return mav;
 	}
 
+	
 
 	@PostMapping("/saveOrdine")
 	public Object saveOrdine(@ModelAttribute OrdineReq req) {
-	    log.debug("SaveOrdine " + req);
 
 	    URI uriOrdine = UriComponentsBuilder
 	            .fromUriString(backend + "ordine/create") 
@@ -89,7 +89,7 @@ public class OrdineController {
 
 	    ResponseBase rc = rest.postForEntity(uriOrdine, req, ResponseBase.class).getBody();
 
-	    log.debug("rc " + rc.getRc());
+	    log.debug("Risposta dal backend: rc={}", rc.getRc());
 
 	    if (!rc.getRc()) {
 	        ModelAndView mav = new ModelAndView("inserisciPagamento");
@@ -100,13 +100,13 @@ public class OrdineController {
 
 	    // SVUOTO IL CARRELLO SOLO SE L’ORDINE È STATO CREATO CON SUCCESSO
 	    try {
-	    	URI uriCarrello = UriComponentsBuilder
-	    	        .fromUriString(backend + "carrello/eliminaCarrello")
-	    	        .queryParam("carrelloId", req.getCarrelloId())  
-	    	        .build()
-	    	        .toUri();
+	        URI uriCarrello = UriComponentsBuilder
+	                .fromUriString(backend + "carrello/eliminaCarrello")
+	                .queryParam("carrelloId", req.getCarrelloId())  
+	                .build()
+	                .toUri();
 
-	    	ResponseBase rCarrello = rest.postForEntity(uriCarrello, null, ResponseBase.class).getBody();
+	        ResponseBase rCarrello = rest.postForEntity(uriCarrello, null, ResponseBase.class).getBody();
 	        
 	        if (!rCarrello.getRc()) {
 	            log.error("Errore nello svuotamento del carrello: " + rCarrello.getMsg());
@@ -117,6 +117,7 @@ public class OrdineController {
 
 	    return "redirect:/ordineSuccesso";
 	}
+
 
 
 }

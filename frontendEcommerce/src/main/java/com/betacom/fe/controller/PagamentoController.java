@@ -152,24 +152,27 @@ public class PagamentoController {
     
     
     @PostMapping("/savePagamentoDettagli")
-    public ModelAndView savePagamentoDettagli(@ModelAttribute PagamentoReq req, @RequestParam Double prezzo, @RequestParam Integer carrelloId) {
+    public ModelAndView savePagamentoDettagli(@ModelAttribute PagamentoReq pagamentoReq, 
+                                              @RequestParam Double prezzo, 
+                                              @RequestParam Integer carrelloId, 
+                                              @RequestParam Integer userId) {
         try {
-            log.debug("savePagamentoDettagli: " + req);
-
+            // Save the payment
             URI uri = UriComponentsBuilder.fromUriString(backend + "pagamento/create").build().toUri();
-            ResponseBase response = rest.postForEntity(uri, req, ResponseBase.class).getBody();
+            ResponseBase response = rest.postForEntity(uri, pagamentoReq, ResponseBase.class).getBody();
 
             ModelAndView mav = new ModelAndView("inserisciPagamento");
             mav.addObject("ordine", new OrdineReq());
-            mav.addObject("carrelloId", carrelloId);  
-            mav.addObject("prezzo", prezzo); 
-            mav.addObject("pagamento", new PagamentoReq()); 
+            mav.addObject("pagamento", new PagamentoReq());
+            mav.addObject("carrelloId", carrelloId);
+            mav.addObject("prezzo", prezzo);
+            mav.addObject("utenteId", userId);  
 
-            // Aggiungi messaggi solo se necessario
             if (!response.getRc()) {
                 mav.addObject("errorMessage", response.getMsg());
             } else {
                 mav.addObject("successMessage", "Il pagamento è stato salvato con successo!");
+                mav.addObject("utenteId", userId);
             }
 
             return mav;
@@ -180,6 +183,7 @@ public class PagamentoController {
             return mav;
         }
     }
+
 
     // Salvataggio di un nuovo pagamento
     @PostMapping("/savePagamento")

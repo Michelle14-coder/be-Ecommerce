@@ -60,6 +60,15 @@ public class OrdineReq {
 
 	
 
+	@Override
+	public String toString() {
+		return "OrdineReq [id=" + id + ", indirizzoDiSpedizione=" + indirizzoDiSpedizione + ", cap=" + cap + ", citta="
+				+ citta + ", dataOrdine=" + dataOrdine + ", carrelloId=" + carrelloId + ", utenteId=" + utenteId
+				+ ", quantitaTotale=" + quantitaTotale + ", prezzoTotale=" + prezzoTotale + "]";
+	}
+
+
+
 	public OrdineReq() {
 		
 	}
