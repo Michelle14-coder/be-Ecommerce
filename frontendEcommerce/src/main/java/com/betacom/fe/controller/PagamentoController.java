@@ -103,6 +103,14 @@ public class PagamentoController {
 	}
 
 
+    // Form per creare un nuovo pagamento
+    @GetMapping("/createPagamento")
+    public ModelAndView createPagamento() {
+        ModelAndView mav = new ModelAndView("createPagamento");
+        mav.addObject("req", new PagamentoReq());
+        mav.addObject("errorMsg", null);
+        return mav;
+    }
 
 	private Integer getUserIdByUsername(String username) {
 	    try {
@@ -266,6 +274,6 @@ public class PagamentoController {
             log.error("Errore nella rimozione del pagamento: " + response.getMsg());
         }
 
-        return "redirect:/admin/listPagamenti";
+        return "redirect:/profilo";
     }
 }

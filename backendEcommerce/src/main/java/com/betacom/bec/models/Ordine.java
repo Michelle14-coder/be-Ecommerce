@@ -1,9 +1,12 @@
 package com.betacom.bec.models;
 
 import java.util.Date;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;  // Import necessario
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,6 +14,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
@@ -32,6 +36,18 @@ public class Ordine {
     @ManyToOne
     @JoinColumn(name = "id_carrello")
     private Carrello carrello;
+    
+    @OneToMany(mappedBy = "ordine", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
+    private List<OrdineProdotto> ordineProdotti;
+
+
+
+	@Column(nullable = false)
+    private Integer quantitaTotale;
+
+    @Column(nullable = false)
+    private Double prezzoTotale;
 
     @Column(name = "indirizzo_spedizione", length = 100, nullable = false)
     private String indirizzoDiSpedizione;
@@ -45,6 +61,30 @@ public class Ordine {
     @Column(name = "data_ordine", updatable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataOrdine;
+    
+    public List<OrdineProdotto> getOrdineProdotti() {
+		return ordineProdotti;
+	}
+
+	public void setOrdineProdotti(List<OrdineProdotto> ordineProdotti) {
+		this.ordineProdotti = ordineProdotti;
+	}
+
+	public Integer getQuantitaTotale() {
+		return quantitaTotale;
+	}
+
+	public void setQuantitaTotale(Integer quantitaTotale) {
+		this.quantitaTotale = quantitaTotale;
+	}
+
+	public Double getPrezzoTotale() {
+		return prezzoTotale;
+	}
+
+	public void setPrezzoTotale(Double prezzoTotale) {
+		this.prezzoTotale = prezzoTotale;
+	}
 
     public Integer getId() {
         return id;

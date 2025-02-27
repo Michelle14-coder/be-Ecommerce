@@ -17,14 +17,19 @@ import org.springframework.stereotype.Service;
 import com.betacom.bec.dto.CarrelloDTO;
 import com.betacom.bec.dto.OrdineDTO;
 import com.betacom.bec.models.Carrello;
+import com.betacom.bec.models.CarrelloProdotto;
 import com.betacom.bec.models.Ordine;
+import com.betacom.bec.models.OrdineProdotto;
 import com.betacom.bec.models.Utente;
 import com.betacom.bec.repositories.CarrelloRepository;
 import com.betacom.bec.repositories.OrdineRepository;
 import com.betacom.bec.repositories.UtenteRepository;
 import com.betacom.bec.request.OrdineReq;
+import com.betacom.bec.services.interfaces.CarrelloServices;
 import com.betacom.bec.services.interfaces.MessaggioServices;
 import com.betacom.bec.services.interfaces.OrdineServices;
+
+import jakarta.transaction.Transactional;
 
 
 @Service
@@ -37,6 +42,9 @@ public class OrdineImpl implements OrdineServices{
 	CarrelloRepository carR;
 	
 	@Autowired
+	CarrelloServices carS;
+	
+	@Autowired
 	UtenteRepository utR;
 	
 	
@@ -47,37 +55,60 @@ public class OrdineImpl implements OrdineServices{
 	Logger log;
 	
 	@Override
+	@Transactional
 	public void create(OrdineReq req) throws Exception {
-	    if (req.getIndirizzoDiSpedizione() == null)
+	    if (req.getIndirizzoDiSpedizione() == null || req.getIndirizzoDiSpedizione().isEmpty())
 	        throw new Exception(msgS.getMessaggio("no-spedizione"));
-	    if (req.getCap() == null)
+	    if (req.getCap() == null || req.getCap().isEmpty())
 	        throw new Exception(msgS.getMessaggio("no-cap"));
-	    if (req.getCitta() == null)
+	    if (req.getCitta() == null || req.getCitta().isEmpty())
 	        throw new Exception(msgS.getMessaggio("no-citta"));
-	    
 
 	    Ordine ordine = new Ordine();
 	    ordine.setIndirizzoDiSpedizione(req.getIndirizzoDiSpedizione());
 	    ordine.setCap(req.getCap());
 	    ordine.setCitta(req.getCitta());
-	    ordine.setDataOrdine(req.getDataOrdine() == null || req.getDataOrdine().isEmpty()
+	    ordine.setDataOrdine((req.getDataOrdine() == null || req.getDataOrdine().isEmpty())
 	            ? new Date() 
 	            : convertStringToDate(req.getDataOrdine()));
 
-	    if (req.getCarrelloId() != null) {
-	        Carrello carrello = carR.findById(req.getCarrelloId())
-	                .orElseThrow(() -> new Exception("Carrello non trovato"));
-	        ordine.setCarrello(carrello);
-	    }
-	    
-	    if (req.getUtenteId() != null) {
-	        Utente utente = utR.findById(req.getUtenteId())
-	                .orElseThrow(() -> new Exception("Utente non trovato"));
-	        ordine.setUtente(utente);
-	    }
+	    Optional<Carrello> carrelloOpt = Optional.ofNullable(req.getCarrelloId())
+	            .flatMap(carR::findById);
+
+	    carrelloOpt.ifPresent(ordine::setCarrello);
+
+	    Optional<Utente> utenteOpt = Optional.ofNullable(req.getUtenteId())
+	            .flatMap(utR::findById);
+
+	    utenteOpt.ifPresent(ordine::setUtente);
+
+	    carrelloOpt.ifPresent(carrello -> {
+	        List<OrdineProdotto> prodottiOrdine = carrello.getCarrelloProdotti().stream().map(cp -> {
+	            OrdineProdotto op = new OrdineProdotto();
+	            op.setOrdine(ordine);
+	            op.setProdotto(cp.getProdotto());
+	            op.setQuantita(cp.getQuantita());
+	            op.setPrezzo(cp.getProdotto().getPrezzo() * cp.getQuantita());
+	            return op;
+	        }).collect(Collectors.toList());
+
+	        ordine.setOrdineProdotti(prodottiOrdine);
+	        ordine.setQuantitaTotale(carrello.getQuantita());
+	        ordine.setPrezzoTotale(carrello.getPrezzo());
+	    });
 
 	    orR.save(ordine);
+
+	    carrelloOpt.ifPresent(carrello -> {
+			try {
+				carS.eliminaCarrello(carrello.getId());
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.getMessage();
+			}
+		}); 
 	}
+
 
 	@Override
 	public List<OrdineDTO> listOrdiniConUtente() {

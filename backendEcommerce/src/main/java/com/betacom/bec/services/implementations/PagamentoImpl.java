@@ -112,6 +112,12 @@ public class PagamentoImpl implements PagamentoServices {
 	    }
 	    return true;
 	}
+	
+	@Override
+	public List<Pagamento> getPagamentiByUserId(Integer userId) {
+	    return pagamentoR.findByIdUtente(userId);
+	}
+
 
 	
 	// Rimuovi pagamento

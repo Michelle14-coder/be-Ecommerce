@@ -40,6 +40,13 @@ public class CarrelloDTO {
 
 
 
+	public CarrelloDTO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+
 	@Override
 	public String toString() {
 		return "CarrelloDTO [id=" + id + ", quantita=" + quantita + ", prezzo=" + prezzo + ", carrelloProdottiDTO="

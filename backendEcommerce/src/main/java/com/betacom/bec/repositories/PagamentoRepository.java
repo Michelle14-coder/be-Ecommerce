@@ -10,4 +10,6 @@ public interface PagamentoRepository extends JpaRepository<Pagamento, Integer> {
 
 	List<Pagamento> findByidUtente(Integer idUtente);
 
+	List<Pagamento> findByIdUtente(Integer userId);
+
 }

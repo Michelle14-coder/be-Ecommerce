@@ -24,4 +24,6 @@ public interface PagamentoServices{
 
 	List<PagamentoDTO> ottieniPagamenti(Integer idUtente);
 
+	List<Pagamento> getPagamentiByUserId(Integer userId);
+
 }

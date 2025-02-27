@@ -55,6 +55,22 @@ public class PagamentoController {
 	    return response;
 	}
 	
+    // Metodo per ottenere i pagamenti di un utente
+    @GetMapping("/listByUser/{userId}")
+    public ResponseList<Pagamento> listByUser(@PathVariable Integer userId) {
+        log.debug("Lista dei pagamenti per l'utente con ID: " + userId);
+        ResponseList<Pagamento> r = new ResponseList<>();
+        try {
+            r.setDati(pagamentoS.getPagamentiByUserId(userId));
+            r.setRc(true);
+        } catch (Exception e) {
+            log.error("Errore nel recupero dei pagamenti: ", e);
+            r.setMsg(e.getMessage());
+            r.setRc(false);
+        }
+        return r;
+    }
+	
 
     // Metodo per rimuovere un pagamento
     @PostMapping("/remove")

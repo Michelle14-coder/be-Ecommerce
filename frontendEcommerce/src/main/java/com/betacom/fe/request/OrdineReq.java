@@ -1,5 +1,7 @@
 package com.betacom.fe.request;
 
+import java.util.List;
+
 
 public class OrdineReq {
 
@@ -10,9 +12,26 @@ public class OrdineReq {
 	private String dataOrdine;
 	private Integer carrelloId;
 	private Integer utenteId;
-
-
-
+	private Integer quantitaTotale;
+	private Double prezzoTotale;
+	
+	
+	
+	
+	public OrdineReq(Integer id, String indirizzoDiSpedizione, String cap, String citta, String dataOrdine,
+			Integer carrelloId, Integer utenteId, Integer quantitaTotale, Double prezzoTotale) {
+		super();
+		this.id = id;
+		this.indirizzoDiSpedizione = indirizzoDiSpedizione;
+		this.cap = cap;
+		this.citta = citta;
+		this.dataOrdine = dataOrdine;
+		this.carrelloId = carrelloId;
+		this.utenteId = utenteId;
+		this.quantitaTotale = quantitaTotale;
+		this.prezzoTotale = prezzoTotale;
+		
+	}
 
 
 
@@ -105,5 +124,34 @@ public class OrdineReq {
 		this.utenteId = utenteId;
 	}
 
+
+
+	public Integer getQuantitaTotale() {
+		return quantitaTotale;
+	}
+
+
+
+	public void setQuantitaTotale(Integer quantitaTotale) {
+		this.quantitaTotale = quantitaTotale;
+	}
+
+
+
+	public Double getPrezzoTotale() {
+		return prezzoTotale;
+	}
+
+
+
+	public void setPrezzoTotale(Double prezzoTotale) {
+		this.prezzoTotale = prezzoTotale;
+	}
+
+
+
+	
+
+	
 
 }
