@@ -2,6 +2,8 @@ package com.betacom.bec.models;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -39,7 +41,7 @@ public class Recensione {
     private Utente utente;
 
     @ManyToOne
-    @JoinColumn(name = "id_prodotto")
+    @JoinColumn(name = "id_prodotto") 
     private Prodotto prodotto;
 
 	public Integer getId() {

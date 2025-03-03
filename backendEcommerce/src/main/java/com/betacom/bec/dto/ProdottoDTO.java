@@ -172,13 +172,19 @@ public class ProdottoDTO {
 		this.prezzo = prezzo;
 	}
 
-	public Integer getQuantitàDisponibile() {
+
+
+	public Integer getQuantitaDisponibile() {
 		return quantitaDisponibile;
 	}
 
-	public void setQuantitàDisponibile(Integer quantitaDisponibile) {
+
+
+	public void setQuantitaDisponibile(Integer quantitaDisponibile) {
 		this.quantitaDisponibile = quantitaDisponibile;
 	}
+
+
 
 	public String getUrlImg() {
 		return urlImg;

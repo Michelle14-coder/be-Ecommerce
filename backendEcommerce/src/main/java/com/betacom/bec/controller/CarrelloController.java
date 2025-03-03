@@ -57,12 +57,12 @@ public class CarrelloController {
 	}
 	
 	@PostMapping("/aggiungi")
-    public ResponseObject<Carrello> aggiungiProdotto(@RequestParam int prodottoId, @RequestParam int carrelloId, @RequestParam int quantita) {
+    public ResponseObject<Carrello> aggiungiProdotto(@RequestParam int prodottoId, @RequestParam int userId, @RequestParam int quantita) {
 
         ResponseObject<Carrello> response = new ResponseObject<>();
         response.setRc(true);
         try {
-            Carrello carrello = carrelloS.aggiungiProdottoAlCarrello(carrelloId, prodottoId, quantita);
+            Carrello carrello = carrelloS.aggiungiProdottoAlCarrello(userId, prodottoId, quantita);
             
             response.setDati(carrello);
 

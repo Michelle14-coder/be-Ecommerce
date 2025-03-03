@@ -16,4 +16,5 @@ public interface RecensioneServices {
 	List<RecensioneDTO> listAllRecensioni() throws Exception;
 
 	List<RecensioneDTO> listByProdotto(Integer idProdotto);
+
 }

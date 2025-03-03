@@ -48,24 +48,23 @@ public class CarrelloImpl implements CarrelloServices{
 	Logger log;
 	
 	@Override
-	public Carrello aggiungiProdottoAlCarrello(Integer carrelloId, Integer prodottoId, Integer quantita) {
+	public Carrello aggiungiProdottoAlCarrello(Integer userId, Integer prodottoId, Integer quantita) {
 	    // Trova il carrello specifico per l'utente
-	    Optional<Carrello> carrelloOptional = carrelloRepository.findById(carrelloId);
+	    List<Carrello> carrelloOptional = carrelloRepository.findByUtenteId(userId);
 	    Optional<Prodotto> prodottoOptional = prodottoRepository.findById(prodottoId);
 
 	    if (!prodottoOptional.isPresent()) {
 	        throw new RuntimeException("Prodotto con ID " + prodottoId + " non trovato.");
 	    }
 
-	    Carrello carrello = carrelloOptional.get();
+	    Carrello carrello = carrelloOptional.get(0);
 	    Prodotto prodotto = prodottoOptional.get();
 
-	    // Se il carrello non ha ancora prodotti, inizializzalo
 	    if (carrello.getCarrelloProdotti() == null) {
 	        carrello.setCarrelloProdotti(new ArrayList<>());
 	    }
 
-	    // Verifica se il prodotto è già presente nel carrello, altrimenti creane uno nuovo
+	    // Verifica se il prodotto è già presente nel carrello
 	    Optional<CarrelloProdotto> optionalCarrelloProdotto = carrelloProdottoRepository.findByCarrelloAndProdotto(carrello, prodotto);
 	    CarrelloProdotto carrelloProdotto = optionalCarrelloProdotto.orElseGet(() -> {
 	        CarrelloProdotto nuovoCarrelloProdotto = new CarrelloProdotto();
@@ -76,7 +75,6 @@ public class CarrelloImpl implements CarrelloServices{
 	        return nuovoCarrelloProdotto;
 	    });
 
-	    // Aggiungi la quantità richiesta
 	    carrelloProdotto.setQuantita(carrelloProdotto.getQuantita() + quantita);
 	    carrelloProdottoRepository.save(carrelloProdotto);
 
@@ -154,7 +152,7 @@ public class CarrelloImpl implements CarrelloServices{
 	    Optional<Carrello> carrelloOptional = carrelloRepository.findById(carrelloId);
 
 	    if (carrelloOptional.isEmpty()) {
-	        throw new Exception(msgS.getMessaggio("no-carrello"));
+	        throw new Exception(msgS.getMessaggio("Carrello non trovato"));
 	    }
 
 	    // Svuota carrello

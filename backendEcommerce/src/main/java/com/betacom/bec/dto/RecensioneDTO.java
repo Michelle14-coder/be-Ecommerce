@@ -7,7 +7,7 @@ public class RecensioneDTO {
 	private Integer id;
     private Integer valutazione;
     private String commento;
-    private Date dataRecensione;
+    private String dataRecensione;
     private UtenteDTO utente; 
     private ProdottoDTO prodotto;
 	    
@@ -15,7 +15,7 @@ public class RecensioneDTO {
 
 
 
-		public RecensioneDTO(Integer id, Integer valutazione, String commento, Date dataRecensione, UtenteDTO utente,
+		public RecensioneDTO(Integer id, Integer valutazione, String commento, String dataRecensione, UtenteDTO utente,
 			ProdottoDTO prodotto) {
 		super();
 		this.id = id;
@@ -66,11 +66,11 @@ public class RecensioneDTO {
 
 
 
-		public Date getDataRecensione() {
+		public String getDataRecensione() {
 			return dataRecensione;
 		}
 
-		public void setDataRecensione(Date dataRecensione) {
+		public void setDataRecensione(String dataRecensione) {
 			this.dataRecensione = dataRecensione;
 		}
 

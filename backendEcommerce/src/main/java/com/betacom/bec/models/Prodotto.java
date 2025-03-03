@@ -4,6 +4,8 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -34,10 +36,6 @@ public class Prodotto {
     @JsonIgnore
     private List<CarrelloProdotto> carrelloProdotti;
 
-
-    @OneToMany(mappedBy = "prodotto")
-    @JsonBackReference
-    private List<Recensione> recensioni;
 
 	public Integer getId() {
 		return id;
@@ -130,13 +128,6 @@ public class Prodotto {
 	}
 
 
-	public List<Recensione> getRecensioni() {
-		return recensioni;
-	}
-
-	public void setRecensioni(List<Recensione> recensioni) {
-		this.recensioni = recensioni;
-	}
 
     
 }

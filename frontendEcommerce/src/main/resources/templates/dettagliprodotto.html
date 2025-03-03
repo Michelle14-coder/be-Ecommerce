@@ -24,18 +24,18 @@
         <p><strong>Colore:</strong> <span th:text="${prodotto.colore}">Colore</span></p>
         <p><strong>Taglie disponibili:</strong> <span th:text="${prodotto.size}">Size</span></p>
         <p><strong>Prezzo:</strong> € <span th:text="${#numbers.formatDecimal(prodotto.prezzo, 1, 2)}">XX,XX</span></p>
-        <p><strong>Disponibilità:</strong> <span th:text="${prodotto.quantitàDisponibile}">Quantità</span></p>
+        <p><strong>Disponibilità:</strong> <span th:text="${prodotto.quantitaDisponibile}">Quantità</span></p>
         <p th:text="${prodotto.descrizione}">Descrizione del prodotto...</p>
         
 		<form th:action="@{/aggiungi}" method="get">
 		    <input type="hidden" name="prodottoId" th:value="${prodotto.id}">
 		    <input type="hidden" name="quantita" th:value="1"> 
-              <a th:href="@{/login}" class="btn-cart" sec:authorize="!isAuthenticated()" style="text-decoration:none">
+            <a th:href="@{/login}" class="btn btn-primary" sec:authorize="!isAuthenticated()" style="text-decoration:none">
                  <i class="bi bi-cart4"></i> Aggiungi al carrello
              </a>
 
              <!-- Se l'utente è loggato e non è admin -->
-             <button type="submit" class="btn-cart" sec:authorize="hasRole('ROLE_USER')">
+             <button type="submit" class="btn btn-primary" sec:authorize="hasRole('ROLE_USER')">
                  <i class="bi bi-cart4"></i> Aggiungi al carrello
              </button>
 		</form>
@@ -50,16 +50,79 @@
 <!-- Sezione Recensioni -->
 <div class="reviews-section" th:if="${prodotto != null}">
     <h3>Recensioni</h3>
-
-    <div th:if="${#lists.isEmpty(prodotto.recensioni)}">
-        <p class="no-reviews">Nessuna recensione disponibile.</p>
+    
+      <div th:if="${errorMessage}" class="alert alert-danger">
+        <p th:text="${errorMessage}"></p>
     </div>
 
-    <div th:each="recensione : ${prodotto.recensioni}" class="review">
-        <h4 th:text="${recensione.utente}">Nome Utente</h4>
-        <p><strong>Valutazione:</strong> <span th:text="${recensione.valutazione} + '/5'">Voto</span></p>
-        <p th:text="${recensione.commento}">Commento...</p>
-        <span class="review-date" th:text="'Data: ' + ${#temporals.format(recensione.dataRecensione, 'dd/MM/yyyy')}">Data</span>
+    <div th:if="${#lists.isEmpty(recensioni)}">
+        <p class="text-muted">Nessuna recensione disponibile.</p>
+    </div>
+
+    <div th:each="recensione : ${recensioni}" class="card mb-3 review-card">
+        <div class="card-body">
+			<h4>
+			    <span th:text="${recensione.utente.nome}">Nome</span>
+			    <span th:text="${recensione.utente.cognome}">Cognome</span>
+			</h4>
+
+            <div class="review-rating">
+                <strong>Valutazione:</strong>
+                <span th:text="${recensione.valutazione} + '/5'"></span>
+                <div class="stars">
+                    <span th:each="i : ${#numbers.sequence(1, recensione.valutazione)}" class="bi bi-star-fill" style="color: #ffcc00;"></span>
+                    <span th:each="i : ${#numbers.sequence(1, 5 - recensione.valutazione)}" class="bi bi-star" style="color: #ccc;"></span>
+                </div>
+            </div>
+            <div class="review-comment">
+                <p th:text="'Commento: ' + ${recensione.commento}">Commento...</p>
+            </div>
+            <div class="review-date">
+                <p th:text="'Data Recensione: ' + ${recensione.dataRecensione}">Data Recensione</p>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#recensioneModal" sec:authorize="isAuthenticated()">
+        <i class="bi bi-pencil"></i> Scrivi una recensione
+    </button>
+</div>
+
+<!-- Modal per Scrivere una Recensione -->
+<div class="modal fade" id="recensioneModal" tabindex="-1" aria-labelledby="recensioneModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="recensioneModalLabel">Scrivi una Recensione</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+            </div>
+            <div class="modal-body">
+                <form th:action="@{/saveRecensione}" method="post">
+                    <input type="hidden" name="prodottoId" th:value="${prodotto.id}">
+                    <input type="hidden" name="username" th:value="${#authentication.name}">
+                    
+                    <div class="mb-3">
+                        <label for="valutazione" class="form-label">Valutazione:</label>
+                        <select class="form-select" id="valutazione" name="valutazione" required>
+                            <option value="1">1 ⭐</option>
+                            <option value="2">2 ⭐⭐</option>
+                            <option value="3">3 ⭐⭐⭐</option>
+                            <option value="4">4 ⭐⭐⭐⭐</option>
+                            <option value="5">5 ⭐⭐⭐⭐⭐</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="commento" class="form-label">Commento:</label>
+                        <textarea class="form-control" id="commento" name="commento" rows="3" required></textarea>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                        <button type="submit" class="btn btn-success">Invia Recensione</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 

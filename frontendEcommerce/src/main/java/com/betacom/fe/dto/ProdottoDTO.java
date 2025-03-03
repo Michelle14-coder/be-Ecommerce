@@ -14,7 +14,9 @@ public class ProdottoDTO {
     private String descrizione;
     private Double prezzo;
     private Integer quantitaDisponibile;
-    private String urlImg;
+
+
+	private String urlImg;
     private String size;
     private String colore;
     private List<CarrelloDTO> carrelli;
@@ -126,11 +128,12 @@ public class ProdottoDTO {
 		this.prezzo = prezzo;
 	}
 
-	public Integer getQuantitàDisponibile() {
+    public Integer getQuantitaDisponibile() {
 		return quantitaDisponibile;
 	}
 
-	public void setQuantitàDisponibile(Integer quantitaDisponibile) {
+
+	public void setQuantitaDisponibile(Integer quantitaDisponibile) {
 		this.quantitaDisponibile = quantitaDisponibile;
 	}
 

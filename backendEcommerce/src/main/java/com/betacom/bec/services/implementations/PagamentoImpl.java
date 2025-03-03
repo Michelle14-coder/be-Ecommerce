@@ -52,22 +52,22 @@ public class PagamentoImpl implements PagamentoServices {
 
 
 	    if (req.getMetodoDiPagamento() == null)
-	        throw new Exception(msgS.getMessaggio("no-metodopagamento"));
+	        throw new Exception(msgS.getMessaggio("Metodo di pagamento obbligatorio!"));
 	    if (req.getNumeroCarta() == null)
-	        throw new Exception(msgS.getMessaggio("no-numerocarta"));
+	        throw new Exception(msgS.getMessaggio("Numero carta obbligatorio!"));
 	    if (!isNumeroCartaValido(req.getNumeroCarta()))
-	        throw new Exception(msgS.getMessaggio("numero-carta-non-valido"));
+	        throw new Exception(msgS.getMessaggio("Numero carta non valido!"));
 	    if (!isDataScadenzaValida(req.getDataScadenza()))
-	        throw new Exception(msgS.getMessaggio("data-scadenza-non-valida"));
+	        throw new Exception(msgS.getMessaggio("Data scadenza non valida!"));
 	    if (req.getCvv() == null)
-	        throw new Exception(msgS.getMessaggio("no-cvv"));
+	        throw new Exception(msgS.getMessaggio("Cvv obbligatorio!"));
 	    if (req.getUserId() == null)
-	        throw new Exception(msgS.getMessaggio("no-userid"));
+	        throw new Exception(msgS.getMessaggio("Utente non trovato"));
 
 	    // Recupera l'utente dal database
 	    Optional<Utente> utenteOpt = utenteRepository.findById(req.getUserId());
 	    if (utenteOpt.isEmpty()) {
-	        throw new Exception(msgS.getMessaggio("utente-non-trovato"));
+	        throw new Exception(msgS.getMessaggio("Utente non trovato"));
 	    }
 
 	    Pagamento pg = new Pagamento();
@@ -126,20 +126,20 @@ public class PagamentoImpl implements PagamentoServices {
 		public void removePagamento(PagamentoReq req) throws Exception {
 		    // Verifica che l'ID del pagamento sia fornito
 		    if (req.getId() == null) {
-		        throw new Exception(msgS.getMessaggio("no-pagamento-id"));
+		        throw new Exception(msgS.getMessaggio("Pagamento non trovato"));
 		    }
 
 		    // Recupera il pagamento dal database
 		    Optional<Pagamento> pagamentoOpt = pagamentoR.findById(req.getId());
 		    if (pagamentoOpt.isEmpty()) {
-		        throw new Exception(msgS.getMessaggio("pagamento-non-trovato"));
+		        throw new Exception(msgS.getMessaggio("Pagamento non trovato"));
 		    }
 
 		    Pagamento pagamento = pagamentoOpt.get();
 
 		    // Verifica che il pagamento sia associato all'utente
 		    if (pagamento.getIdUtente() == null || !pagamento.getIdUtente().equals(req.getUserId())) {
-		        throw new Exception(msgS.getMessaggio("pagamento-non-associato-utente"));
+		        throw new Exception(msgS.getMessaggio("Pagamento non associato ad utente"));
 		    }
 
 		    // Rimuovi il pagamento
@@ -158,12 +158,12 @@ public class PagamentoImpl implements PagamentoServices {
 		            !p.getId().equals(req.getId()));
 
 		    if (numeroCartaExists) {
-		        throw new Exception(msgS.getMessaggio("find-pagamento"));
+		        throw new Exception(msgS.getMessaggio("Metodo di pagamento esistente"));
 		    }
 
 		    Optional<Pagamento> optPagamento = pagamentoR.findById(req.getId());
 		    if (optPagamento.isEmpty()) {
-		        throw new Exception(msgS.getMessaggio("no-pagamento"));
+		        throw new Exception(msgS.getMessaggio("Metodo di pagamento non trovato"));
 		    }
 
 		    Pagamento p = optPagamento.get();

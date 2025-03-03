@@ -60,27 +60,27 @@ public class UtenteImpl implements UtenteServices{
 		Optional<Utente> c = utR.findByUserName(req.getUserName().trim());
 		
 		if(c.isPresent())
-			throw new Exception(msgS.getMessaggio("find-utente"));		
+			throw new Exception(msgS.getMessaggio("Utente esistente"));		
 		if (req.getNome() == null)
-			throw new Exception(msgS.getMessaggio("no-nome"));
+			throw new Exception(msgS.getMessaggio("Nome obbligatorio!"));
 		if (req.getCognome() == null)
-			throw new Exception(msgS.getMessaggio("no-cognome"));
+			throw new Exception(msgS.getMessaggio("Cognome obbligatorio!"));
 		if (req.getEmail() == null)
-			throw new Exception(msgS.getMessaggio("no-email"));
+			throw new Exception(msgS.getMessaggio("Email obbligatoria!"));
 		if (req.getUserName() == null)
-			throw new Exception(msgS.getMessaggio("no-username"));
+			throw new Exception(msgS.getMessaggio("Username obbligatorio!"));
 		if (req.getPassword() == null)
-			throw new Exception(msgS.getMessaggio("no-psw"));
+			throw new Exception(msgS.getMessaggio("Password obbligatoria!"));
 		if (req.getRuolo() == null)
 			throw new Exception(msgS.getMessaggio("no-ruolo"));
 		if (req.getNumeroTelefono() == null)
-			throw new Exception(msgS.getMessaggio("no-num-tel"));
+			throw new Exception(msgS.getMessaggio("Num telefono obbligatorio!"));
 		if (req.getNumeroTelefono() == null || !req.getNumeroTelefono().matches("^[0-9]{10}$"))
 			throw new Exception("Il numero di telefono deve essere di 10 cifre");
 		if (req.getIndirizzoDiSpedizione() == null)
-			throw new Exception(msgS.getMessaggio("no-spedizione"));
+			throw new Exception(msgS.getMessaggio("Indirizzo spedizione obbligatorio!"));
 		if (req.getIndirizzoDiFatturazione() == null)
-			throw new Exception(msgS.getMessaggio("no-fatturazione"));
+			throw new Exception(msgS.getMessaggio("Indirizzo fatturazione obbligatorio!"));
 
 		
 		Utente utente = new Utente();

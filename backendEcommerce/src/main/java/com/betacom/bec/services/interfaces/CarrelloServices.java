@@ -13,7 +13,7 @@ public interface CarrelloServices {
 
 	Carrello rimuoviProdotto(Integer carrelloId, Integer prodottoId, Integer quantitaDaRimuovere);
 
-	Carrello aggiungiProdottoAlCarrello(Integer carrelloId, Integer prodottoId, Integer quantita);
+	Carrello aggiungiProdottoAlCarrello(Integer userId, Integer prodottoId, Integer quantita);
 
 	void eliminaCarrello(Integer carrelloId) throws Exception;
 

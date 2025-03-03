@@ -69,8 +69,8 @@
                 <!-- FORM D'ORDINE - VISIBILE SOLO DOPO IL SUCCESSO DEL PAGAMENTO -->
                 <div th:if="${successMessage}">
                     <form th:action="@{/saveOrdine}" method="post" th:object="${ordine}" style="margin-top:10px">
-                        <input type="text" name="carrelloId" th:value="${carrelloId}" />
-                         <input type="text" name="userId" th:value="${utenteId}" />
+                        <input type="hidden" name="carrelloId" th:value="${carrelloId}" />
+                         <input type="hidden" name="userId" th:value="${utenteId}" />
 							
                         
 

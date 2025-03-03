@@ -58,11 +58,11 @@ public class OrdineImpl implements OrdineServices{
 	@Transactional
 	public void create(OrdineReq req) throws Exception {
 	    if (req.getIndirizzoDiSpedizione() == null || req.getIndirizzoDiSpedizione().isEmpty())
-	        throw new Exception(msgS.getMessaggio("no-spedizione"));
+	        throw new Exception(msgS.getMessaggio("Indirizzo di spedizione obbligatorio!"));
 	    if (req.getCap() == null || req.getCap().isEmpty())
-	        throw new Exception(msgS.getMessaggio("no-cap"));
+	        throw new Exception(msgS.getMessaggio("Cap obbligatorio!"));
 	    if (req.getCitta() == null || req.getCitta().isEmpty())
-	        throw new Exception(msgS.getMessaggio("no-citta"));
+	        throw new Exception(msgS.getMessaggio("Citta obbligatoria!"));
 
 	    Ordine ordine = new Ordine();
 	    ordine.setIndirizzoDiSpedizione(req.getIndirizzoDiSpedizione());

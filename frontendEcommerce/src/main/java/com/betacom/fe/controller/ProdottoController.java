@@ -17,7 +17,9 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import com.betacom.fe.dto.ProdottoDTO;
 import com.betacom.fe.request.ProdottoReq;
+import com.betacom.fe.request.RecensioneReq;
 import com.betacom.fe.response.ResponseBase;
+import com.betacom.fe.response.ResponseList;
 import com.betacom.fe.response.ResponseObject;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -34,8 +36,11 @@ public class ProdottoController {
     Logger log;
 
     @GetMapping("/listById")
-    public ModelAndView dettaglioProdotto(@RequestParam Integer id) {
+    public ModelAndView dettaglioProdotto(@RequestParam Integer id, @RequestParam(required = false) String errorMessage) {
         ModelAndView mav = new ModelAndView("dettagliprodotto");
+        mav.addObject("recensioneReq", new RecensioneReq());
+        mav.addObject("errorMessage", errorMessage);
+
 
         URI uri = UriComponentsBuilder
                 .fromUriString(backend + "prodotto/listById")
@@ -51,6 +56,18 @@ public class ProdottoController {
             mav.addObject("prodotto", responseObject.getDati());
         } else {
             mav.addObject("prodotto", null);
+        }
+        
+        // Recupero le recensioni del prodotto
+        URI recensioniUri = UriComponentsBuilder.fromUriString(backend + "recensione/listByProdotto")
+                .queryParam("id", id)
+                .build().toUri();
+
+        ResponseEntity<ResponseList> recensioniResponse = rest.getForEntity(recensioniUri, ResponseList.class);
+        ResponseList<?> recensioniList = recensioniResponse.getBody();
+
+        if (recensioniList != null && recensioniList.getDati() != null) {
+            mav.addObject("recensioni", recensioniList.getDati());
         }
 
         return mav;

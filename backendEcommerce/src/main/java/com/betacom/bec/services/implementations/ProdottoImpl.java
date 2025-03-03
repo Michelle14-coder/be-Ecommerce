@@ -47,26 +47,26 @@ public class ProdottoImpl implements ProdottoServices {
         Optional<Prodotto> c = proR.findByNome(req.getNome().trim());
 
         if (c.isPresent())
-            throw new Exception(msgS.getMessaggio("find-prodotto"));
+            throw new Exception(msgS.getMessaggio("Prodotto esistente"));
 
         if (req.getMarca() == null)
-            throw new Exception(msgS.getMessaggio("no-marca"));
+            throw new Exception(msgS.getMessaggio("Marca obbligatoria!"));
         if (req.getNome() == null)
-            throw new Exception(msgS.getMessaggio("no-nome"));
+            throw new Exception(msgS.getMessaggio("Nome obbligatorio!"));
         if (req.getCategoria() == null)
-            throw new Exception(msgS.getMessaggio("no-categoria"));
+            throw new Exception(msgS.getMessaggio("Categoria obbligatoria!"));
         if (req.getDescrizione() == null)
-            throw new Exception(msgS.getMessaggio("no-desc"));
+            throw new Exception(msgS.getMessaggio("Descrizione obbligatoria!"));
         if (req.getPrezzo() == null)
-            throw new Exception(msgS.getMessaggio("no-prezzo"));
+            throw new Exception(msgS.getMessaggio("Prezzo obbligatorio!"));
         if (req.getquantitaDisponibile() == null)
-            throw new Exception(msgS.getMessaggio("no-quantita"));
+            throw new Exception(msgS.getMessaggio("Quantita obbligatoria!"));
         if (req.getUrlImg() == null)
-            throw new Exception(msgS.getMessaggio("no-img"));
+            throw new Exception(msgS.getMessaggio("Immagine obbligatoria!"));
         if (req.getSize() == null)
-            throw new Exception(msgS.getMessaggio("no-size"));
+            throw new Exception(msgS.getMessaggio("Taglia obbligatoria!"));
         if (req.getColore() == null)
-            throw new Exception(msgS.getMessaggio("no-colore"));
+            throw new Exception(msgS.getMessaggio("Colore obbligatorio!"));
 
         Prodotto prodotto = new Prodotto();
 
@@ -95,13 +95,13 @@ public class ProdottoImpl implements ProdottoServices {
                         !s.getId().equals(req.getId()));
 
         if (nameExists) {
-            throw new Exception(msgS.getMessaggio("find-prodotto"));
+            throw new Exception(msgS.getMessaggio("Prodotto esistente"));
         }
 
         // Cerca il prodotto esistente tramite ID
         Optional<Prodotto> optProdotto = proR.findById(req.getId());
         if (optProdotto.isEmpty()) {
-            throw new Exception(msgS.getMessaggio("no-prodotto"));
+            throw new Exception(msgS.getMessaggio("Prodotto non trovato"));
         }
 
         Prodotto p = optProdotto.get();
@@ -138,7 +138,7 @@ public class ProdottoImpl implements ProdottoServices {
         Optional<Prodotto> pr = proR.findById(req.getId());
 
         if (pr.isEmpty())
-            throw new Exception(msgS.getMessaggio("no-prodotto"));
+            throw new Exception(msgS.getMessaggio("Prodotto non trovato"));
 
         Optional<CarrelloProdotto> cp = cpR.findById(req.getId());
 
@@ -158,20 +158,6 @@ public class ProdottoImpl implements ProdottoServices {
 
         Prodotto prodotto = optionalProdotto.get();
 
-        // Se le recensioni sono null, inizializziamo una lista vuota per evitare errori
-        List<RecensioneDTO> recensioniDTO = (prodotto.getRecensioni() != null) ?
-                prodotto.getRecensioni().stream()
-                        .map(recensione -> new RecensioneDTO(
-                                recensione.getId(),
-                                recensione.getValutazione(),
-                                recensione.getCommento(),
-                                recensione.getDataRecensione(),
-                                new UtenteDTO(recensione.getUtente().getId(), recensione.getUtente().getNome(), recensione.getUtente().getCognome()),
-                                null // Evitiamo la ricorsione infinita (ProdottoDTO all'interno di RecensioneDTO)
-                        ))
-                        .collect(Collectors.toList())
-                : new ArrayList<>();
-
         return new ProdottoDTO(
                 prodotto.getId(),
                 prodotto.getMarca(),
@@ -183,9 +169,10 @@ public class ProdottoImpl implements ProdottoServices {
                 prodotto.getUrlImg(),
                 prodotto.getSize(),
                 prodotto.getColore(),
-                recensioniDTO
+                null 
         );
     }
+
 
     @Override
     public List<ProdottoDTO> list() {

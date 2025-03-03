@@ -42,7 +42,6 @@ public class CarrelloController {
 	    ModelAndView carrelloPage = new ModelAndView("carrello"); 
 
 	    try {
-	        // Se l'ID non è passato come parametro, recuperalo dal nome utente
 	        if (utenteId == null) {
 	            utenteId = principal.getName();
 	        }
@@ -57,7 +56,7 @@ public class CarrelloController {
 
 	        URI uri = UriComponentsBuilder
 	                .fromUriString(backend + "carrello/lista")
-	                .queryParam("utenteId", userId)  // Usa l'ID recuperato
+	                .queryParam("utenteId", userId) 
 	                .build().toUri();
 
 	        log.debug("URI: " + uri);
@@ -149,19 +148,16 @@ public class CarrelloController {
 	            return mav;
 	        }
 
-	        // Usa direttamente l'ID utente come ID carrello
-	        Integer carrelloId = userId;
 
 	        URI uri = UriComponentsBuilder
 	                .fromUriString(backend + "carrello/aggiungi")
-	                .queryParam("carrelloId", carrelloId)
+	                .queryParam("userId", userId)
 	                .queryParam("prodottoId", prodottoId)
 	                .queryParam("quantita", quantita)
 	                .build()
 	                .toUri();
 
 	        CarrelloReq req = new CarrelloReq();
-	        req.setId(carrelloId);
 	        req.setIdProdotto(prodottoId);
 	        req.setQuantita(quantita);
 

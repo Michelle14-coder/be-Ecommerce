@@ -71,7 +71,7 @@ public class UtenteController {
 	
 	@GetMapping("/listByUsername")
 	public ResponseObject<UtenteDTO> listByUsername(@RequestParam("userName") String userName) {
-		log.debug("List " + userName);
+		log.debug("username: " + userName);
 		ResponseObject<UtenteDTO> r = new ResponseObject<UtenteDTO>();
 		r.setRc(true);
 		List<UtenteDTO> resp = null;
@@ -140,7 +140,6 @@ public class UtenteController {
 	public ResponseObject<Carrello> getCarrelloByUsername(@RequestParam("userName") String userName) {
 	    ResponseObject<Carrello> response = new ResponseObject<>();
 	    try {
-	        // Cerca il carrello per il nome utente
 	        Optional<Carrello> carrelloOpt = utenteS.findCarrelloByUserName(userName);
 	        
 	        // Controlla se è presente un carrello

@@ -20,6 +20,7 @@ import com.betacom.bec.services.interfaces.MessaggioServices;
 import com.betacom.bec.services.interfaces.RecensioneServices;
 
 import static com.betacom.bec.utils.Utilities.convertStringToDate;
+import static com.betacom.bec.utils.Utilities.convertDateToString;
 
 @Service
 public class RecensioneImpl implements RecensioneServices {
@@ -39,47 +40,41 @@ public class RecensioneImpl implements RecensioneServices {
 
     @Override
     public void create(RecensioneReq req) throws Exception {
-
         System.out.println("Create : " + req);
 
+        // Validazione input
         if (req.getValutazione() == null)
-            throw new Exception(msgS.getMessaggio("no-valutazione"));
+            throw new Exception(msgS.getMessaggio("Valutazione obbligatoria!"));
         if (req.getCommento() == null)
-            throw new Exception(msgS.getMessaggio("no-commento"));
+            throw new Exception(msgS.getMessaggio("Commento obbligatorio!"));
         if (req.getUtente() == null)
-            throw new Exception(msgS.getMessaggio("no-utente"));
+            throw new Exception(msgS.getMessaggio("Utente non trovato"));
         if (req.getProdotto() == null)
-            throw new Exception(msgS.getMessaggio("no-prodotto"));
+            throw new Exception(msgS.getMessaggio("Prodotto non trovato"));
 
         // Verifica se l'utente ha acquistato il prodotto
         boolean haAcquistato = ordineR.existsByUtenteAndProdotto(req.getUtente(), req.getProdotto());
         if (!haAcquistato) {
-            throw new Exception(msgS.getMessaggio("no-acquisto"));
+            throw new Exception(msgS.getMessaggio("Effettuare prima l'acquisto del prodotto!"));
         }
+
 
         // Verifica se l'utente ha già recensito il prodotto
         boolean haGiaRecensito = recR.existsByUtenteAndProdotto(req.getUtente(), req.getProdotto());
         if (haGiaRecensito) {
-            throw new Exception(msgS.getMessaggio("recensione-gia-presente"));
+            throw new Exception(msgS.getMessaggio("Recensione presente!"));
         }
 
+        // Creazione e salvataggio della recensione
         Recensione rec = new Recensione();
         rec.setValutazione(req.getValutazione());
         rec.setCommento(req.getCommento());
-
-        // Imposta la data di recensione (se non presente, usa la data corrente)
-        if (req.getDataRecensione() == null || req.getDataRecensione().isEmpty()) {
-            rec.setDataRecensione(new Date());
-        } else {
-            rec.setDataRecensione(convertStringToDate(req.getDataRecensione()));
-        }
-
+        rec.setDataRecensione(req.getDataRecensione() == null || req.getDataRecensione().isEmpty() ? new Date() : convertStringToDate(req.getDataRecensione()));
         rec.setUtente(req.getUtente());
         rec.setProdotto(req.getProdotto());
-
-        // Salva la recensione
         recR.save(rec);
     }
+
 
 
     
@@ -108,7 +103,7 @@ public class RecensioneImpl implements RecensioneServices {
                 u.getId(),
                 u.getValutazione(),
                 u.getCommento(),
-                u.getDataRecensione(),
+                convertDateToString(u.getDataRecensione()),
                 (u.getUtente() == null) ? null : new UtenteDTO(
                         u.getUtente().getId(),
                         u.getUtente().getNome(),
@@ -143,7 +138,7 @@ public class RecensioneImpl implements RecensioneServices {
                 u.getId(),
                 u.getValutazione(),
                 u.getCommento(),
-                u.getDataRecensione(),
+                convertDateToString(u.getDataRecensione()),
                 (u.getUtente() == null) ? null : new UtenteDTO(
                         u.getUtente().getId(),
                         u.getUtente().getNome(),
@@ -160,4 +155,6 @@ public class RecensioneImpl implements RecensioneServices {
                 )
         )).collect(Collectors.toList());
     }
+
+
 }

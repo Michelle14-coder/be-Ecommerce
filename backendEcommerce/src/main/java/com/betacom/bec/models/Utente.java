@@ -54,10 +54,6 @@ public class Utente {
     @JsonManagedReference  // Gestisce la relazione con Ordine
     private List<Ordine> ordini;
 
-    @OneToMany(mappedBy = "utente", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
-    @JsonManagedReference  // Gestisce la relazione con Recensione
-    private List<Recensione> recensioni;
-
 
     public Integer getId() {
         return id;
@@ -139,13 +135,6 @@ public class Utente {
         this.ordini = ordini;
     }
 
-    public List<Recensione> getRecensioni() {
-        return recensioni;
-    }
-
-    public void setRecensioni(List<Recensione> recensioni) {
-        this.recensioni = recensioni;
-    }
 
     public Roles getRuolo() {
         return ruolo;
