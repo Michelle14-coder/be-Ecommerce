@@ -3348,3 +3348,631 @@ java.lang.Exception: Effettuare prima l'acquisto del prodotto!
 2025-03-03T12:49:41.968+01:00  INFO 4768 --- [backendEcommerce] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-03-03T12:49:41.968+01:00  INFO 4768 --- [backendEcommerce] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2025-03-03T12:49:41.969+01:00  INFO 4768 --- [backendEcommerce] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-03T15:36:28.873+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Starting BackendEcommerceApplication using Java 23.0.1 with PID 7512 (C:\Backend-ecommerce\backendEcommerce\target\classes started by Betacom in C:\Backend-ecommerce\backendEcommerce)
+2025-03-03T15:36:28.875+01:00 DEBUG 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-03-03T15:36:28.878+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : The following 1 profile is active: "sviluppo"
+2025-03-03T15:36:28.962+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-03T15:36:28.962+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-03T15:36:30.371+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-03T15:36:30.474+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 8 JPA repository interfaces.
+2025-03-03T15:36:31.554+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2025-03-03T15:36:31.586+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T15:36:31.586+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-03T15:36:31.665+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T15:36:31.666+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2702 ms
+2025-03-03T15:36:31.862+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-03T15:36:32.468+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e612763
+2025-03-03T15:36:32.470+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-03T15:36:32.573+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-03T15:36:32.691+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-03-03T15:36:32.751+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-03T15:36:33.226+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-03T15:36:33.410+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-03T15:36:33.860+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.betacom.bec.models.MessageID
+2025-03-03T15:36:33.861+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.betacom.bec.models.MessageID
+2025-03-03T15:36:34.738+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-03T15:36:34.770+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-03T15:36:35.187+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-03T15:36:36.589+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-03T15:36:36.967+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-03T15:36:37.146+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-03T15:36:37.214+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2025-03-03T15:36:37.234+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Started BackendEcommerceApplication in 9.005 seconds (process running for 9.733)
+2025-03-03T15:36:41.802+01:00  INFO 7512 --- [backendEcommerce] [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T15:36:41.803+01:00  INFO 7512 --- [backendEcommerce] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T15:36:41.806+01:00  INFO 7512 --- [backendEcommerce] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-03-03T15:36:52.392+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T15:39:15.579+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.UtenteController      : listSecurity 
+2025-03-03T15:39:22.103+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T15:39:22.172+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-5] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T15:40:12.537+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:40:22.174+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:40:26.585+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-03-03T15:40:32.852+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:40:38.831+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.ProdottoController    : List 9
+2025-03-03T15:40:38.857+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.RecensioneController  : List 9
+2025-03-03T15:41:40.968+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-5] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:41:43.743+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:42:13.696+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-03-03T15:42:17.255+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:43:17.419+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:43:28.797+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:43:31.164+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.ProdottoController    : List 9
+2025-03-03T15:43:31.188+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-5] c.b.bec.controller.RecensioneController  : List 9
+2025-03-03T15:43:39.562+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:44:41.943+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:44:54.768+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.UtenteController      : listSecurity 
+2025-03-03T15:45:00.107+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:45:05.105+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-03-03T15:45:09.102+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:46:07.621+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:47:02.628+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-03-03T15:47:08.735+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: accessori
+2025-03-03T15:47:13.508+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:47:55.581+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-03-03T15:48:04.191+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-5] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-03-03T15:48:29.728+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:48:29.730+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:48:31.913+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:48:31.913+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:48:34.384+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:48:34.384+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:48:36.637+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:48:51.295+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:48:54.150+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: accessori
+2025-03-03T15:48:59.781+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.ProdottoController    : List 17
+2025-03-03T15:48:59.799+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.RecensioneController  : List 17
+2025-03-03T15:49:03.583+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:49:03.583+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:49:03.690+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:49:03.691+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:49:03.735+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:49:03.736+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:49:07.760+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:49:07.760+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:49:09.677+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:52:36.532+01:00  INFO 7512 --- [backendEcommerce] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-03-03T15:52:36.537+01:00  INFO 7512 --- [backendEcommerce] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T15:52:36.557+01:00  INFO 7512 --- [backendEcommerce] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-03T15:52:36.560+01:00  INFO 7512 --- [backendEcommerce] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-03T15:52:36.564+01:00  INFO 7512 --- [backendEcommerce] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-03T15:52:36.578+01:00  INFO 7512 --- [backendEcommerce] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-03T15:52:36.688+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Starting BackendEcommerceApplication using Java 23.0.1 with PID 7512 (C:\Backend-ecommerce\backendEcommerce\target\classes started by Betacom in C:\Backend-ecommerce\backendEcommerce)
+2025-03-03T15:52:36.690+01:00 DEBUG 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-03-03T15:52:36.690+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : The following 1 profile is active: "sviluppo"
+2025-03-03T15:52:37.012+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-03T15:52:37.100+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 8 JPA repository interfaces.
+2025-03-03T15:52:37.288+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2025-03-03T15:52:37.288+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T15:52:37.288+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-03T15:52:37.323+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T15:52:37.323+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 631 ms
+2025-03-03T15:52:37.374+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-03-03T15:52:37.493+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e252b44
+2025-03-03T15:52:37.493+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-03-03T15:52:37.504+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-03T15:52:37.508+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-03T15:52:37.523+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-03T15:52:37.528+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-03T15:52:37.657+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.betacom.bec.models.MessageID
+2025-03-03T15:52:37.658+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.betacom.bec.models.MessageID
+2025-03-03T15:52:38.021+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-03T15:52:38.032+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-03T15:52:38.628+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-03T15:52:38.756+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-03T15:52:38.849+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-03T15:52:38.874+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2025-03-03T15:52:38.883+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Started BackendEcommerceApplication in 2.235 seconds (process running for 971.381)
+2025-03-03T15:52:38.890+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-03T15:53:30.886+01:00  INFO 7512 --- [backendEcommerce] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-03-03T15:53:30.888+01:00  INFO 7512 --- [backendEcommerce] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T15:53:30.904+01:00  INFO 7512 --- [backendEcommerce] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-03T15:53:30.909+01:00  INFO 7512 --- [backendEcommerce] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-03T15:53:30.910+01:00  INFO 7512 --- [backendEcommerce] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-03-03T15:53:30.920+01:00  INFO 7512 --- [backendEcommerce] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-03-03T15:53:31.034+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Starting BackendEcommerceApplication using Java 23.0.1 with PID 7512 (C:\Backend-ecommerce\backendEcommerce\target\classes started by Betacom in C:\Backend-ecommerce\backendEcommerce)
+2025-03-03T15:53:31.036+01:00 DEBUG 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-03-03T15:53:31.037+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : The following 1 profile is active: "sviluppo"
+2025-03-03T15:53:31.387+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-03T15:53:31.440+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 8 JPA repository interfaces.
+2025-03-03T15:53:31.608+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2025-03-03T15:53:31.609+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T15:53:31.609+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-03T15:53:31.637+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T15:53:31.637+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 595 ms
+2025-03-03T15:53:31.682+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-03-03T15:53:31.704+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3dfe9ce9
+2025-03-03T15:53:31.704+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-03-03T15:53:31.715+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-03T15:53:31.718+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-03T15:53:31.734+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-03T15:53:31.739+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-03T15:53:31.844+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.betacom.bec.models.MessageID
+2025-03-03T15:53:31.844+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.betacom.bec.models.MessageID
+2025-03-03T15:53:32.111+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-03T15:53:32.122+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-03T15:53:32.553+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-03T15:53:32.699+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-03T15:53:32.758+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-03T15:53:32.776+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2025-03-03T15:53:32.782+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Started BackendEcommerceApplication in 1.787 seconds (process running for 1025.28)
+2025-03-03T15:53:32.784+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-03T15:53:54.918+01:00  INFO 7512 --- [backendEcommerce] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-03-03T15:53:54.919+01:00  INFO 7512 --- [backendEcommerce] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T15:53:54.941+01:00  INFO 7512 --- [backendEcommerce] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-03T15:53:54.943+01:00  INFO 7512 --- [backendEcommerce] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-03T15:53:54.945+01:00  INFO 7512 --- [backendEcommerce] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-03-03T15:53:54.952+01:00  INFO 7512 --- [backendEcommerce] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-03-03T15:53:55.033+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Starting BackendEcommerceApplication using Java 23.0.1 with PID 7512 (C:\Backend-ecommerce\backendEcommerce\target\classes started by Betacom in C:\Backend-ecommerce\backendEcommerce)
+2025-03-03T15:53:55.034+01:00 DEBUG 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-03-03T15:53:55.034+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : The following 1 profile is active: "sviluppo"
+2025-03-03T15:53:55.287+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-03T15:53:55.328+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 8 JPA repository interfaces.
+2025-03-03T15:53:55.465+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2025-03-03T15:53:55.467+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T15:53:55.469+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-03T15:53:55.499+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T15:53:55.500+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 463 ms
+2025-03-03T15:53:55.556+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-03-03T15:53:55.592+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f0792dc
+2025-03-03T15:53:55.594+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-03-03T15:53:55.607+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-03T15:53:55.612+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-03T15:53:55.628+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-03T15:53:55.632+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-03T15:53:55.704+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.betacom.bec.models.MessageID
+2025-03-03T15:53:55.706+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.betacom.bec.models.MessageID
+2025-03-03T15:53:55.877+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-03T15:53:55.884+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-03T15:53:56.163+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-03T15:53:56.242+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-03T15:53:56.277+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-03T15:53:56.288+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2025-03-03T15:53:56.293+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Started BackendEcommerceApplication in 1.285 seconds (process running for 1048.791)
+2025-03-03T15:53:56.294+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-03T15:54:14.653+01:00  INFO 7512 --- [backendEcommerce] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T15:54:14.653+01:00  INFO 7512 --- [backendEcommerce] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T15:54:14.656+01:00  INFO 7512 --- [backendEcommerce] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-03-03T15:54:14.664+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:54:18.008+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:54:18.009+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:54:18.099+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:54:18.099+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:54:18.155+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:54:18.156+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:54:25.279+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-03-03T15:54:27.750+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:54:31.664+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-03-03T15:54:36.983+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: accessori
+2025-03-03T15:54:40.229+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:54:45.364+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:54:45.365+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:54:45.446+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:54:45.447+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:54:45.483+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:54:45.483+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:54:49.567+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-5] c.b.bec.controller.ProdottoController    : List 9
+2025-03-03T15:54:49.584+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.RecensioneController  : List 9
+2025-03-03T15:54:59.569+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : List 9
+2025-03-03T15:54:59.590+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.RecensioneController  : List 9
+2025-03-03T15:55:01.444+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:55:01.444+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:55:15.189+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.PagamentoController   : create: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=1111111111111, dataScadenza=02/29, cvv=111, userId=4]
+2025-03-03T15:55:20.424+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.OrdineController      : create: OrdineReq [id=null, indirizzoDiSpedizione=via roma 1, cap=04011, citta=Aprilia, dataOrdine=null, carrelloId=3, utenteId=4, quantitaTotale=null, prezzoTotale=null]
+2025-03-03T15:55:23.271+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-5] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:55:44.145+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:55:59.781+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : List 9
+2025-03-03T15:55:59.797+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.RecensioneController  : List 9
+2025-03-03T15:56:02.648+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:56:02.648+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:56:02.726+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:56:02.726+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:56:02.750+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:56:02.754+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:56:12.891+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.PagamentoController   : create: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=1111111111111, dataScadenza=02/29, cvv=111, userId=4]
+2025-03-03T15:56:19.240+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.OrdineController      : create: OrdineReq [id=null, indirizzoDiSpedizione=via roma 1, cap=04011, citta=Aprilia, dataOrdine=null, carrelloId=3, utenteId=4, quantitaTotale=null, prezzoTotale=null]
+2025-03-03T15:56:21.479+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:56:33.152+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-03-03T15:56:36.917+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:58:32.684+01:00  INFO 7512 --- [backendEcommerce] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-03-03T15:58:32.685+01:00  INFO 7512 --- [backendEcommerce] [Thread-15] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T15:58:32.703+01:00  INFO 7512 --- [backendEcommerce] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-03T15:58:32.705+01:00  INFO 7512 --- [backendEcommerce] [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-03T15:58:32.707+01:00  INFO 7512 --- [backendEcommerce] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-03-03T15:58:32.716+01:00  INFO 7512 --- [backendEcommerce] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-03-03T15:58:32.829+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Starting BackendEcommerceApplication using Java 23.0.1 with PID 7512 (C:\Backend-ecommerce\backendEcommerce\target\classes started by Betacom in C:\Backend-ecommerce\backendEcommerce)
+2025-03-03T15:58:32.830+01:00 DEBUG 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-03-03T15:58:32.830+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : The following 1 profile is active: "sviluppo"
+2025-03-03T15:58:33.002+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-03T15:58:33.045+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 8 JPA repository interfaces.
+2025-03-03T15:58:33.147+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2025-03-03T15:58:33.148+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T15:58:33.148+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-03T15:58:33.172+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T15:58:33.172+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 340 ms
+2025-03-03T15:58:33.222+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-03-03T15:58:33.248+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e10ab65
+2025-03-03T15:58:33.253+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-03-03T15:58:33.268+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-03T15:58:33.271+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-03T15:58:33.289+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-03T15:58:33.293+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-03T15:58:33.351+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.betacom.bec.models.MessageID
+2025-03-03T15:58:33.352+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.betacom.bec.models.MessageID
+2025-03-03T15:58:33.468+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-03T15:58:33.472+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-03T15:58:33.657+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ordineController': Unsatisfied dependency expressed through field 'ordineS': Error creating bean with name 'ordineImpl' defined in file [C:\Backend-ecommerce\backendEcommerce\target\classes\com\betacom\bec\services\implementations\OrdineImpl.class]: Failed to instantiate [com.betacom.bec.services.implementations.OrdineImpl]: Constructor threw exception
+2025-03-03T15:58:33.658+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-03T15:58:33.659+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2025-03-03T15:58:33.711+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2025-03-03T15:58:33.714+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-03-03T15:58:33.727+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-03T15:58:33.761+01:00 ERROR 7512 --- [backendEcommerce] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ordineController': Unsatisfied dependency expressed through field 'ordineS': Error creating bean with name 'ordineImpl' defined in file [C:\Backend-ecommerce\backendEcommerce\target\classes\com\betacom\bec\services\implementations\OrdineImpl.class]: Failed to instantiate [com.betacom.bec.services.implementations.OrdineImpl]: Constructor threw exception
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1445) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.2.jar:3.4.2]
+	at com.betacom.bec.BackendEcommerceApplication.main(BackendEcommerceApplication.java:15) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.2.jar:3.4.2]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ordineImpl' defined in file [C:\Backend-ecommerce\backendEcommerce\target\classes\com\betacom\bec\services\implementations\OrdineImpl.class]: Failed to instantiate [com.betacom.bec.services.implementations.OrdineImpl]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1343) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1228) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.2.jar:6.2.2]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.betacom.bec.services.implementations.OrdineImpl]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:122) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337) ~[spring-beans-6.2.2.jar:6.2.2]
+	... 36 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Prodotto cannot be resolved to a type
+	prodottoR cannot be resolved
+
+	at com.betacom.bec.services.implementations.OrdineImpl.<init>(OrdineImpl.java:94) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:196) ~[spring-beans-6.2.2.jar:6.2.2]
+	... 38 common frames omitted
+
+2025-03-03T15:58:37.307+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Starting BackendEcommerceApplication using Java 23.0.1 with PID 7512 (C:\Backend-ecommerce\backendEcommerce\target\classes started by Betacom in C:\Backend-ecommerce\backendEcommerce)
+2025-03-03T15:58:37.308+01:00 DEBUG 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-03-03T15:58:37.308+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : The following 1 profile is active: "sviluppo"
+2025-03-03T15:58:37.506+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-03T15:58:37.540+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 8 JPA repository interfaces.
+2025-03-03T15:58:37.635+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2025-03-03T15:58:37.637+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T15:58:37.637+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-03T15:58:37.661+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-03-03T15:58:37.661+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 350 ms
+2025-03-03T15:58:37.697+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2025-03-03T15:58:37.719+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24cc9ed5
+2025-03-03T15:58:37.719+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2025-03-03T15:58:37.729+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-03T15:58:37.732+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-03T15:58:37.751+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-03T15:58:37.755+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-03T15:58:37.827+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.betacom.bec.models.MessageID
+2025-03-03T15:58:37.828+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.betacom.bec.models.MessageID
+2025-03-03T15:58:37.992+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-03T15:58:37.998+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-03T15:58:38.138+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ordineController': Unsatisfied dependency expressed through field 'ordineS': Error creating bean with name 'ordineImpl' defined in file [C:\Backend-ecommerce\backendEcommerce\target\classes\com\betacom\bec\services\implementations\OrdineImpl.class]: Failed to instantiate [com.betacom.bec.services.implementations.OrdineImpl]: Constructor threw exception
+2025-03-03T15:58:38.138+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-03T15:58:38.138+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2025-03-03T15:58:38.158+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2025-03-03T15:58:38.158+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-03-03T15:58:38.164+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-03T15:58:38.172+01:00 ERROR 7512 --- [backendEcommerce] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ordineController': Unsatisfied dependency expressed through field 'ordineS': Error creating bean with name 'ordineImpl' defined in file [C:\Backend-ecommerce\backendEcommerce\target\classes\com\betacom\bec\services\implementations\OrdineImpl.class]: Failed to instantiate [com.betacom.bec.services.implementations.OrdineImpl]: Constructor threw exception
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1445) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.2.jar:3.4.2]
+	at com.betacom.bec.BackendEcommerceApplication.main(BackendEcommerceApplication.java:15) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.2.jar:3.4.2]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ordineImpl' defined in file [C:\Backend-ecommerce\backendEcommerce\target\classes\com\betacom\bec\services\implementations\OrdineImpl.class]: Failed to instantiate [com.betacom.bec.services.implementations.OrdineImpl]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1343) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1228) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.2.jar:6.2.2]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.betacom.bec.services.implementations.OrdineImpl]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:122) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337) ~[spring-beans-6.2.2.jar:6.2.2]
+	... 36 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	prodottoR cannot be resolved
+
+	at com.betacom.bec.services.implementations.OrdineImpl.<init>(OrdineImpl.java:122) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:196) ~[spring-beans-6.2.2.jar:6.2.2]
+	... 38 common frames omitted
+
+2025-03-03T15:59:10.739+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Starting BackendEcommerceApplication using Java 23.0.1 with PID 7512 (C:\Backend-ecommerce\backendEcommerce\target\classes started by Betacom in C:\Backend-ecommerce\backendEcommerce)
+2025-03-03T15:59:10.739+01:00 DEBUG 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-03-03T15:59:10.740+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : The following 1 profile is active: "sviluppo"
+2025-03-03T15:59:10.920+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-03T15:59:10.948+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 8 JPA repository interfaces.
+2025-03-03T15:59:11.026+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2025-03-03T15:59:11.027+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T15:59:11.028+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-03T15:59:11.049+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-03-03T15:59:11.049+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 307 ms
+2025-03-03T15:59:11.079+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2025-03-03T15:59:11.095+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4beb248e
+2025-03-03T15:59:11.095+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2025-03-03T15:59:11.103+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-03T15:59:11.107+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-03T15:59:11.119+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-03T15:59:11.122+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-7)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-03T15:59:11.196+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.betacom.bec.models.MessageID
+2025-03-03T15:59:11.196+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.betacom.bec.models.MessageID
+2025-03-03T15:59:11.297+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-03T15:59:11.303+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-03T15:59:11.532+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-03T15:59:11.604+01:00  WARN 7512 --- [backendEcommerce] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-03T15:59:11.646+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-03T15:59:11.659+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2025-03-03T15:59:11.662+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] c.b.bec.BackendEcommerceApplication      : Started BackendEcommerceApplication in 0.948 seconds (process running for 1364.161)
+2025-03-03T15:59:11.666+01:00  INFO 7512 --- [backendEcommerce] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-03T15:59:16.715+01:00  INFO 7512 --- [backendEcommerce] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T15:59:16.715+01:00  INFO 7512 --- [backendEcommerce] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T15:59:16.716+01:00  INFO 7512 --- [backendEcommerce] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-03T15:59:16.723+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:59:19.479+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:59:19.479+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:59:19.580+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:59:19.580+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:59:19.620+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T15:59:19.621+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T15:59:29.189+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.PagamentoController   : create: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=1111111111111, dataScadenza=02/29, cvv=111, userId=4]
+2025-03-03T15:59:35.731+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.OrdineController      : create: OrdineReq [id=null, indirizzoDiSpedizione=via roma 1, cap=00144, citta=Aprilia, dataOrdine=null, carrelloId=3, utenteId=4, quantitaTotale=null, prezzoTotale=null]
+2025-03-03T15:59:38.918+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T15:59:41.223+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.ProdottoController    : List 9
+2025-03-03T15:59:41.241+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.RecensioneController  : List 9
+2025-03-03T16:00:22.081+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T16:00:25.624+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-5] c.b.bec.controller.ProdottoController    : List 9
+2025-03-03T16:00:25.639+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.RecensioneController  : List 9
+2025-03-03T16:00:27.786+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T16:00:27.786+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T16:00:27.845+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T16:00:27.845+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T16:00:27.870+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T16:00:27.870+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T16:01:12.497+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.ProdottoController    : List 9
+2025-03-03T16:01:12.508+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.RecensioneController  : List 9
+2025-03-03T16:01:18.517+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: donna
+2025-03-03T16:01:24.263+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-5] c.b.bec.controller.UtenteController      : username: mic
+2025-03-03T16:01:24.306+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 4
+2025-03-03T16:01:58.265+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.UtenteController      : username: mic
+2025-03-03T16:01:58.297+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 4
+2025-03-03T16:02:02.822+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.UtenteController      : create: UtenteReq [id=null, nome=Michellev, cognome=Verillo, email=michellegiac@gmail.com, userName=mic, password=null, ruolo=null, numeroTelefono=null, indirizzoDiSpedizione=via roma 1, indirizzoDiFatturazione=via roma 1]
+2025-03-03T16:02:12.875+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.UtenteController      : create: UtenteReq [id=null, nome=Michelle, cognome=Verillo, email=michellegiac@gmail.com, userName=mic, password=null, ruolo=null, numeroTelefono=null, indirizzoDiSpedizione=via roma 1, indirizzoDiFatturazione=via roma 1]
+2025-03-03T16:02:20.413+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-5] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:02:20.457+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:02:41.582+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:02:41.617+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:03:38.369+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T16:03:48.965+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.ProdottoController    : List 10
+2025-03-03T16:03:48.999+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-5] c.b.bec.controller.RecensioneController  : List 10
+2025-03-03T16:03:54.679+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:03:54.828+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.RecensioneController  : create: RecensioneReq [id=null, valutazione=1, commento=bb, dataRecensione=null, utente=com.betacom.bec.models.Utente@2a9c0ed7, prodotto=com.betacom.bec.models.Prodotto@3e81dc8f]
+2025-03-03T16:03:54.911+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.ProdottoController    : List 10
+2025-03-03T16:03:54.936+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.RecensioneController  : List 10
+2025-03-03T16:04:16.031+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:04:16.105+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:05:01.465+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-5] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:05:01.510+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:05:27.040+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.PagamentoController   : create: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=1111111111111, dataScadenza=02/29, cvv=111, userId=1]
+2025-03-03T16:05:27.100+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.PagamentoController   : Recupero della lista completa dei pagamenti
+2025-03-03T16:05:27.107+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.b.s.implementations.PagamentoImpl    : Pagamento ID: 1, User ID: 1
+2025-03-03T16:05:27.108+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.b.s.implementations.PagamentoImpl    : Pagamento ID: 2, User ID: 1
+2025-03-03T16:05:27.108+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.b.s.implementations.PagamentoImpl    : Pagamento ID: 3, User ID: 1
+2025-03-03T16:05:27.108+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.b.s.implementations.PagamentoImpl    : Pagamento ID: 4, User ID: 4
+2025-03-03T16:05:27.108+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.b.s.implementations.PagamentoImpl    : Pagamento ID: 5, User ID: 4
+2025-03-03T16:05:27.108+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.b.s.implementations.PagamentoImpl    : Pagamento ID: 6, User ID: 4
+2025-03-03T16:05:27.108+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.b.s.implementations.PagamentoImpl    : Pagamento ID: 7, User ID: 4
+2025-03-03T16:05:27.108+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.b.s.implementations.PagamentoImpl    : Pagamento ID: 8, User ID: 1
+2025-03-03T16:05:33.723+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:05:33.879+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:06:31.676+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T16:06:34.068+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T16:06:34.070+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T16:06:34.160+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T16:06:34.160+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T16:06:34.179+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T16:06:34.179+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T16:06:45.171+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.PagamentoController   : create: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=111111111111, dataScadenza=02/29, cvv=111, userId=1]
+2025-03-03T16:06:56.937+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.PagamentoController   : create: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=11111111111111, dataScadenza=02/29, cvv=111, userId=1]
+2025-03-03T16:07:03.838+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.OrdineController      : create: OrdineReq [id=null, indirizzoDiSpedizione=via roma 1, cap=04011, citta=Aprilia, dataOrdine=null, carrelloId=1, utenteId=1, quantitaTotale=null, prezzoTotale=null]
+2025-03-03T16:07:09.443+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:07:09.500+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:08:43.339+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.UtenteController      : listSecurity 
+2025-03-03T16:10:40.498+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.UtenteController      : listSecurity 
+2025-03-03T16:10:59.765+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.PagamentoController   : create: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=11111111111111, dataScadenza=02/29, cvv=111, userId=1]
+2025-03-03T16:10:59.861+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.UtenteController      : username: 1
+2025-03-03T16:10:59.864+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.UtenteController      : Utente inesistente
+2025-03-03T16:13:28.969+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T16:13:31.628+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T16:13:31.628+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T16:13:33.184+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T16:13:35.260+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T16:13:35.260+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T16:13:35.340+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T16:13:35.342+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T16:13:35.367+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T16:13:35.368+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T16:13:45.801+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.PagamentoController   : create: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=111111111111111, dataScadenza=02/29, cvv=444, userId=1]
+2025-03-03T16:21:18.099+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.PagamentoController   : create: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=111111111111111, dataScadenza=02/29, cvv=444, userId=1]
+2025-03-03T16:21:24.230+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T16:21:24.230+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T16:21:34.786+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.PagamentoController   : create: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=111111111111111, dataScadenza=02/29, cvv=111, userId=1]
+2025-03-03T16:21:43.601+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.OrdineController      : create: OrdineReq [id=null, indirizzoDiSpedizione=via roma 1, cap=04011, citta=Aprilia, dataOrdine=null, carrelloId=1, utenteId=1, quantitaTotale=null, prezzoTotale=null]
+2025-03-03T16:22:10.561+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T16:22:10.561+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T16:22:11.607+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.ProdottoController    : Lista prodotti per categoria: uomo
+2025-03-03T16:22:20.337+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T16:22:20.337+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T16:22:20.379+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T16:22:20.380+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T16:22:20.398+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T16:22:20.399+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T16:22:32.635+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.PagamentoController   : create: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=11111111111111, dataScadenza=02/29, cvv=111, userId=1]
+2025-03-03T16:22:58.655+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.PagamentoController   : create: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=11111111111111, dataScadenza=02/29, cvv=111, userId=1]
+2025-03-03T16:23:10.864+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:23:10.898+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:25:50.237+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:25:50.265+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:26:07.282+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.PagamentoController   : create: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=11111111111111, dataScadenza=02/29, cvv=111, userId=null]
+2025-03-03T16:26:24.532+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:26:24.559+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:27:43.820+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:27:43.845+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:28:28.955+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-9] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:28:28.979+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:28:55.462+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:28:55.493+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:29:11.302+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.PagamentoController   : create: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=11111111111111, dataScadenza=02/29, cvv=111, userId=null]
+2025-03-03T16:29:15.380+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:29:15.411+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-5] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:30:05.347+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:30:05.370+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:30:33.356+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.PagamentoController   : create: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=111111111111113, dataScadenza=02/29, cvv=111, userId=null]
+2025-03-03T16:30:36.027+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-1] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:30:36.054+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:31:35.579+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-5] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:31:35.602+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:33:07.707+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.UtenteController      : listSecurity 
+2025-03-03T16:33:10.439+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:33:10.463+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:33:28.458+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-4] c.b.bec.controller.PagamentoController   : create: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=111111111111113, dataScadenza=02/29, cvv=111, userId=1]
+2025-03-03T16:33:28.488+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.UtenteController      : username: 1
+2025-03-03T16:33:28.490+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-3] c.b.bec.controller.UtenteController      : Utente inesistente
+2025-03-03T16:33:39.039+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-5] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:33:39.062+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:37:51.363+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-6] c.b.bec.controller.UtenteController      : listSecurity 
+2025-03-03T16:38:01.743+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:38:01.775+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:38:14.772+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-03-03T16:38:14.772+01:00  WARN 7512 --- [backendEcommerce] [http-nio-9090-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-03-03T16:38:17.317+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-5] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:38:17.348+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-7] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1
+2025-03-03T16:38:44.727+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-8] c.b.bec.controller.PagamentoController   : create: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=222222222222222, dataScadenza=02/29, cvv=111, userId=1]
+2025-03-03T16:38:47.731+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-10] c.b.bec.controller.UtenteController      : username: user
+2025-03-03T16:38:47.759+01:00 DEBUG 7512 --- [backendEcommerce] [http-nio-9090-exec-2] c.b.bec.controller.PagamentoController   : Lista dei pagamenti per l'utente con ID: 1

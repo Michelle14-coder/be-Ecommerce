@@ -105,10 +105,11 @@ public class PagamentoController {
 
     // Form per creare un nuovo pagamento
     @GetMapping("/createPagamento")
-    public ModelAndView createPagamento() {
+    public ModelAndView createPagamento(@RequestParam(required = false) Integer userId) {
         ModelAndView mav = new ModelAndView("createPagamento");
         mav.addObject("req", new PagamentoReq());
         mav.addObject("errorMsg", null);
+        mav.addObject("userId", userId);
         return mav;
     }
 
@@ -200,7 +201,7 @@ public class PagamentoController {
             return mav;
         }
 
-        return "redirect:/admin/listPagamenti";
+        return "redirect:/home";
     }
 
     // Form per aggiornare un pagamento

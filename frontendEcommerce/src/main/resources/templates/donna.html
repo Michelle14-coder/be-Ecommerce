@@ -17,40 +17,46 @@
     
      <div style="background-color:#dbccff;">
     
-	<img th:src="@{/img/clothesforher.png}">
+<img th:src="@{/img/clothesforher.png}">
     
     </div>
     
     <div class="fashion-section" >
 
         <div class="row" style="margin-top:-40px">
-
             <div th:each="prodotto, iterStat : ${listProdotti.dati}" th:if="${iterStat.index % 4 == 0 and iterStat.index != 0}" class="w-100"></div>
 
             <div th:each="prodotto : ${listProdotti.dati}" class="col-3 mb-10">
-            <p style="margin-bottom:50px"></p>
-            <a th:href="@{/listById(id=${prodotto.id})}" style="text-decoration:none;color:black">
-                <div class="card">
-                    <img th:src="@{${prodotto.urlImg}}" class="card-img-top" alt="Immagine prodotto">
-                    <div class="card-body">
-                        <h5 class="card-title" th:text="${prodotto.nome}">Nome prodotto</h5>
-                        <p class="card-text" th:text="${prodotto.descrizione}">Descrizione prodotto</p>
-                        <p class="card-text"><strong th:text="${#numbers.formatDecimal(prodotto.prezzo, 1, 2)}">0.00</strong> €</p>
-                    	<form th:action="@{/aggiungi}" method="get">
-						    <input type="hidden" name="prodottoId" th:value="${prodotto.id}">
-						    <input type="hidden" name="quantita" th:value="1"> 
+                <p style="margin-bottom:50px"></p>
+                <a th:href="@{/listById(id=${prodotto.id})}" style="text-decoration:none;color:black">
+                    <div class="card">
+                        <img th:src="@{${prodotto.urlImg}}" class="card-img-top" alt="Immagine prodotto">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="${prodotto.nome}">Nome prodotto</h5>
+                            <p class="card-text" th:text="${prodotto.descrizione}">Descrizione prodotto</p>
+                            <p class="card-text"><strong th:text="${#numbers.formatDecimal(prodotto.prezzo, 1, 2)}">0.00</strong> €</p>
+                            <form th:action="@{/aggiungi}" method="get">
+                                <input type="hidden" name="prodottoId" th:value="${prodotto.id}">
+                                <input type="hidden" name="quantita" th:value="1"> 
+
+                                <!-- Se l'utente non è loggato -->
                                 <a th:href="@{/login}" class="btn btn-primary" sec:authorize="!isAuthenticated()">
                                     <i class="bi bi-cart4"></i> Aggiungi al carrello
                                 </a>
 
-                                <!-- Se l'utente è loggato e non è admin -->
-                                <button type="submit" class="btn btn-primary" sec:authorize="hasRole('ROLE_USER')">
+                                <!-- Se l'utente è loggato e la quantità disponibile è maggiore di 0 -->
+                                <button type="submit" class="btn btn-primary" sec:authorize="hasRole('ROLE_USER')" th:if="${prodotto.quantitaDisponibile > 0}">
                                     <i class="bi bi-cart4"></i> Aggiungi al carrello
                                 </button>
-						</form>
+
+                                <!-- Se la quantità disponibile è 0, mostra "Prodotto esaurito" -->
+                                <button type="button" class="btn btn-secondary" th:if="${prodotto.quantitaDisponibile == 0}" disabled>
+                                    <i class="bi bi-cart4"></i> Prodotto esaurito
+                                </button>
+                            </form>
+                        </div>
                     </div>
-                </div>
-              </a>
+                </a>
             </div>
         </div>
 

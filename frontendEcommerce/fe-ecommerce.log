@@ -5365,3 +5365,970 @@ java.lang.Error: Unresolved compilation problem:
 2025-03-03T12:50:39.198+01:00 DEBUG 10112 --- [frontendEcommerce] [http-nio-8080-exec-8] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
 2025-03-03T12:51:39.347+01:00 DEBUG 10112 --- [frontendEcommerce] [http-nio-8080-exec-3] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
 2025-03-03T12:53:12.402+01:00 DEBUG 10112 --- [frontendEcommerce] [http-nio-8080-exec-3] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T15:33:42.192+01:00 DEBUG 10112 --- [frontendEcommerce] [http-nio-8080-exec-3] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T15:33:42.220+01:00 ERROR 10112 --- [frontendEcommerce] [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:9090/rest/recensione/listAll": null] with root cause
+
+java.nio.channels.ClosedChannelException: null
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:958) ~[na:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210) ~[java.net.http:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571) ~[na:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238) ~[java.net.http:na]
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:978) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:955) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:554) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1817) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-03-03T15:36:03.018+01:00 DEBUG 10112 --- [frontendEcommerce] [http-nio-8080-exec-8] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T15:36:03.036+01:00 ERROR 10112 --- [frontendEcommerce] [http-nio-8080-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:9090/rest/recensione/listAll": null] with root cause
+
+java.nio.channels.ClosedChannelException: null
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:958) ~[na:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210) ~[java.net.http:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571) ~[na:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238) ~[java.net.http:na]
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:978) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:955) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:554) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1817) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-03-03T15:36:41.724+01:00 DEBUG 10112 --- [frontendEcommerce] [http-nio-8080-exec-7] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T15:36:52.582+01:00 ERROR 10112 --- [frontendEcommerce] [http-nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class com.betacom.fe.dto.CarrelloProdottoDTO]] with root cause
+
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.betacom.fe.dto.CarrelloProdottoDTO` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 769] (through reference chain: com.betacom.fe.response.ResponseObject["dati"]->java.util.ArrayList[0]->com.betacom.fe.dto.OrdineDTO["carrello"]->com.betacom.fe.dto.CarrelloDTO["carrelloProdotti"]->java.util.ArrayList[0])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:67) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:1888) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:414) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1375) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1512) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:348) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:361) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:246) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:30) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:399) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:399) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:361) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:246) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:30) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:399) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2125) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1501) ~[jackson-databind-2.18.2.jar:2.18.2]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:398) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:357) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:105) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.client.RestTemplate$ResponseEntityResponseExtractor.extractData(RestTemplate.java:1183) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.client.RestTemplate$ResponseEntityResponseExtractor.extractData(RestTemplate.java:1166) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:903) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:732) ~[spring-web-6.2.2.jar:6.2.2]
+	at com.betacom.fe.controller.UtenteController.mostraProfilo(UtenteController.java:76) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-03-03T15:39:14.371+01:00  INFO 10112 --- [frontendEcommerce] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-03-03T15:39:14.376+01:00  INFO 10112 --- [frontendEcommerce] [Thread-85] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T15:39:14.395+01:00  INFO 10112 --- [frontendEcommerce] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-03T15:39:14.568+01:00  INFO 10112 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : Starting FrontendEcommerceApplication using Java 23.0.1 with PID 10112 (C:\Backend-ecommerce\frontendEcommerce\target\classes started by Betacom in C:\Backend-ecommerce\frontendEcommerce)
+2025-03-03T15:39:14.568+01:00 DEBUG 10112 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-03-03T15:39:14.569+01:00  INFO 10112 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-03-03T15:39:15.478+01:00  INFO 10112 --- [frontendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-03T15:39:15.482+01:00  INFO 10112 --- [frontendEcommerce] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T15:39:15.484+01:00  INFO 10112 --- [frontendEcommerce] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-03T15:39:15.513+01:00  INFO 10112 --- [frontendEcommerce] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T15:39:15.515+01:00  INFO 10112 --- [frontendEcommerce] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 940 ms
+2025-03-03T15:39:15.568+01:00 DEBUG 10112 --- [frontendEcommerce] [restartedMain] c.b.f.c.CustomUserDetailsService         : uri: http://localhost:9090/rest/utente/listSecurity
+2025-03-03T15:39:15.624+01:00 DEBUG 10112 --- [frontendEcommerce] [restartedMain] c.b.f.c.CustomUserDetailsService         : loadUsers.....user
+2025-03-03T15:39:15.704+01:00 DEBUG 10112 --- [frontendEcommerce] [restartedMain] c.b.f.c.CustomUserDetailsService         : loadUsers.....mic
+2025-03-03T15:39:15.844+01:00  INFO 10112 --- [frontendEcommerce] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-03-03T15:39:16.033+01:00  WARN 10112 --- [frontendEcommerce] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-03-03T15:39:16.052+01:00  INFO 10112 --- [frontendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-03T15:39:16.059+01:00  INFO 10112 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : Started FrontendEcommerceApplication in 1.559 seconds (process running for 21090.411)
+2025-03-03T15:39:16.061+01:00  INFO 10112 --- [frontendEcommerce] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-03T15:39:22.054+01:00  INFO 10112 --- [frontendEcommerce] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T15:39:22.056+01:00  INFO 10112 --- [frontendEcommerce] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T15:39:22.062+01:00  INFO 10112 --- [frontendEcommerce] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2025-03-03T15:40:20.794+01:00 DEBUG 10112 --- [frontendEcommerce] [http-nio-8080-exec-5] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T15:40:38.823+01:00 DEBUG 10112 --- [frontendEcommerce] [http-nio-8080-exec-9] c.b.fe.controller.ProdottoController     : URI: http://localhost:9090/rest/prodotto/listById?id=9
+2025-03-03T15:41:45.967+01:00 DEBUG 10112 --- [frontendEcommerce] [http-nio-8080-exec-3] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T15:43:26.407+01:00 DEBUG 10112 --- [frontendEcommerce] [http-nio-8080-exec-1] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T15:43:31.161+01:00 DEBUG 10112 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.ProdottoController     : URI: http://localhost:9090/rest/prodotto/listById?id=9
+2025-03-03T15:43:38.436+01:00 DEBUG 10112 --- [frontendEcommerce] [http-nio-8080-exec-2] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T15:44:52.659+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : Starting FrontendEcommerceApplication using Java 23.0.1 with PID 5156 (C:\Backend-ecommerce\frontendEcommerce\target\classes started by Betacom in C:\Backend-ecommerce\frontendEcommerce)
+2025-03-03T15:44:52.662+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-03-03T15:44:52.663+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-03-03T15:44:52.757+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-03T15:44:52.758+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-03T15:44:54.279+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-03T15:44:54.299+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T15:44:54.299+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-03T15:44:54.351+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T15:44:54.352+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1593 ms
+2025-03-03T15:44:54.679+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.f.c.CustomUserDetailsService         : uri: http://localhost:9090/rest/utente/listSecurity
+2025-03-03T15:44:54.848+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.f.c.CustomUserDetailsService         : loadUsers.....user
+2025-03-03T15:44:54.933+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.f.c.CustomUserDetailsService         : loadUsers.....mic
+2025-03-03T15:44:55.139+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-03-03T15:44:55.746+01:00  WARN 5156 --- [frontendEcommerce] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-03-03T15:44:55.785+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-03T15:44:55.799+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : Started FrontendEcommerceApplication in 3.762 seconds (process running for 4.326)
+2025-03-03T15:44:59.972+01:00  INFO 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T15:44:59.972+01:00  INFO 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T15:44:59.975+01:00  INFO 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-03-03T15:46:06.140+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-8] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T15:48:03.064+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-8] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T15:48:29.661+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-9] c.b.fe.controller.CarrelloController     : Recupero ID per utente: user
+2025-03-03T15:48:29.733+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-9] c.b.fe.controller.CarrelloController     : URI: http://localhost:9090/rest/carrello/lista?utenteId=1
+2025-03-03T15:48:29.750+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-9] c.b.fe.controller.CarrelloController     : Carrelli: [{id=1, quantita=3, prezzo=90.0, utente=1, carrelloProdottiDTO=[{id=4, carrello=null, prodotto={id=1, marca=BetaSport, nome=Set Sportivo Dynamic, categoria=donna, descrizione=Top e leggins sportivi, prezzo=40.0, quantitaDisponibile=1, urlImg=img/completo_donna.png, size=S, colore=grigio}, quantita=1}, {id=5, carrello=null, prodotto={id=6, marca=BetaSport, nome=Top Training, categoria=donna, descrizione=Top sportiva, prezzo=25.0, quantitaDisponibile=1, urlImg=img/top_donna.png, size=S, colore=nero}, quantita=2}], carrelloProdotti=[{id=4, carrello=null, prodotto={id=1, marca=BetaSport, nome=Set Sportivo Dynamic, categoria=donna, descrizione=Top e leggins sportivi, prezzo=40.0, quantitaDisponibile=1, urlImg=img/completo_donna.png, size=S, colore=grigio}, quantita=1}, {id=5, carrello=null, prodotto={id=6, marca=BetaSport, nome=Top Training, categoria=donna, descrizione=Top sportiva, prezzo=25.0, quantitaDisponibile=1, urlImg=img/top_donna.png, size=S, colore=nero}, quantita=2}]}]
+2025-03-03T15:48:31.890+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.CarrelloController     : Recupero ID per utente: user
+2025-03-03T15:48:31.923+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.CarrelloController     : URI: http://localhost:9090/rest/carrello/lista?utenteId=1
+2025-03-03T15:48:31.952+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.CarrelloController     : Carrelli: [{id=1, quantita=2, prezzo=65.0, utente=1, carrelloProdottiDTO=[{id=4, carrello=null, prodotto={id=1, marca=BetaSport, nome=Set Sportivo Dynamic, categoria=donna, descrizione=Top e leggins sportivi, prezzo=40.0, quantitaDisponibile=1, urlImg=img/completo_donna.png, size=S, colore=grigio}, quantita=1}, {id=5, carrello=null, prodotto={id=6, marca=BetaSport, nome=Top Training, categoria=donna, descrizione=Top sportiva, prezzo=25.0, quantitaDisponibile=1, urlImg=img/top_donna.png, size=S, colore=nero}, quantita=1}], carrelloProdotti=[{id=4, carrello=null, prodotto={id=1, marca=BetaSport, nome=Set Sportivo Dynamic, categoria=donna, descrizione=Top e leggins sportivi, prezzo=40.0, quantitaDisponibile=1, urlImg=img/completo_donna.png, size=S, colore=grigio}, quantita=1}, {id=5, carrello=null, prodotto={id=6, marca=BetaSport, nome=Top Training, categoria=donna, descrizione=Top sportiva, prezzo=25.0, quantitaDisponibile=1, urlImg=img/top_donna.png, size=S, colore=nero}, quantita=1}]}]
+2025-03-03T15:48:34.359+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-6] c.b.fe.controller.CarrelloController     : Recupero ID per utente: user
+2025-03-03T15:48:34.387+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-6] c.b.fe.controller.CarrelloController     : URI: http://localhost:9090/rest/carrello/lista?utenteId=1
+2025-03-03T15:48:34.407+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-6] c.b.fe.controller.CarrelloController     : Carrelli: [{id=1, quantita=1, prezzo=40.0, utente=1, carrelloProdottiDTO=[{id=4, carrello=null, prodotto={id=1, marca=BetaSport, nome=Set Sportivo Dynamic, categoria=donna, descrizione=Top e leggins sportivi, prezzo=40.0, quantitaDisponibile=1, urlImg=img/completo_donna.png, size=S, colore=grigio}, quantita=1}], carrelloProdotti=[{id=4, carrello=null, prodotto={id=1, marca=BetaSport, nome=Set Sportivo Dynamic, categoria=donna, descrizione=Top e leggins sportivi, prezzo=40.0, quantitaDisponibile=1, urlImg=img/completo_donna.png, size=S, colore=grigio}, quantita=1}]}]
+2025-03-03T15:48:44.680+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-10] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T15:48:59.775+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.ProdottoController     : URI: http://localhost:9090/rest/prodotto/listById?id=17
+2025-03-03T15:49:03.562+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-8] c.b.fe.controller.CarrelloController     : Recupero ID per utente: mic
+2025-03-03T15:49:03.705+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-6] c.b.fe.controller.CarrelloController     : Recupero ID per utente: mic
+2025-03-03T15:49:03.742+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-6] c.b.fe.controller.CarrelloController     : URI: http://localhost:9090/rest/carrello/lista?utenteId=4
+2025-03-03T15:49:03.766+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-6] c.b.fe.controller.CarrelloController     : Carrelli: [{id=3, quantita=2, prezzo=64.99, utente=4, carrelloProdottiDTO=[{id=7, carrello=null, prodotto={id=9, marca=BetaSport, nome=Completo Tech Utility, categoria=uomo, descrizione=Completo sportivo, prezzo=50.0, quantitaDisponibile=1, urlImg=img/completo_uomo.png, size=M, colore=giallo}, quantita=1}, {id=8, carrello=null, prodotto={id=17, marca=BetaSport, nome=Big Mouth Water Borraccia, categoria=accessori, descrizione=Borraccia, prezzo=14.99, quantitaDisponibile=1, urlImg=img/borraccia.png, size=Medium, colore=nero}, quantita=1}], carrelloProdotti=[{id=7, carrello=null, prodotto={id=9, marca=BetaSport, nome=Completo Tech Utility, categoria=uomo, descrizione=Completo sportivo, prezzo=50.0, quantitaDisponibile=1, urlImg=img/completo_uomo.png, size=M, colore=giallo}, quantita=1}, {id=8, carrello=null, prodotto={id=17, marca=BetaSport, nome=Big Mouth Water Borraccia, categoria=accessori, descrizione=Borraccia, prezzo=14.99, quantitaDisponibile=1, urlImg=img/borraccia.png, size=Medium, colore=nero}, quantita=1}]}]
+2025-03-03T15:49:07.742+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-2] c.b.fe.controller.CarrelloController     : Recupero ID per utente: mic
+2025-03-03T15:49:07.764+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-2] c.b.fe.controller.CarrelloController     : URI: http://localhost:9090/rest/carrello/lista?utenteId=4
+2025-03-03T15:49:07.781+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-2] c.b.fe.controller.CarrelloController     : Carrelli: [{id=3, quantita=1, prezzo=50.0, utente=4, carrelloProdottiDTO=[{id=7, carrello=null, prodotto={id=9, marca=BetaSport, nome=Completo Tech Utility, categoria=uomo, descrizione=Completo sportivo, prezzo=50.0, quantitaDisponibile=1, urlImg=img/completo_uomo.png, size=M, colore=giallo}, quantita=1}], carrelloProdotti=[{id=7, carrello=null, prodotto={id=9, marca=BetaSport, nome=Completo Tech Utility, categoria=uomo, descrizione=Completo sportivo, prezzo=50.0, quantitaDisponibile=1, urlImg=img/completo_uomo.png, size=M, colore=giallo}, quantita=1}]}]
+2025-03-03T15:54:17.948+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] c.b.fe.controller.CarrelloController     : Recupero ID per utente: mic
+2025-03-03T15:54:18.109+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-3] c.b.fe.controller.CarrelloController     : Recupero ID per utente: mic
+2025-03-03T15:54:18.162+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-3] c.b.fe.controller.CarrelloController     : URI: http://localhost:9090/rest/carrello/lista?utenteId=4
+2025-03-03T15:54:18.210+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-3] c.b.fe.controller.CarrelloController     : Carrelli: [{id=3, quantita=2, prezzo=100.0, utente=4, carrelloProdottiDTO=[{id=7, carrello=null, prodotto={id=9, marca=BetaSport, nome=Completo Tech Utility, categoria=uomo, descrizione=Completo sportivo, prezzo=50.0, quantitaDisponibile=1, urlImg=img/completo_uomo.png, size=M, colore=giallo}, quantita=2}], carrelloProdotti=[{id=7, carrello=null, prodotto={id=9, marca=BetaSport, nome=Completo Tech Utility, categoria=uomo, descrizione=Completo sportivo, prezzo=50.0, quantitaDisponibile=1, urlImg=img/completo_uomo.png, size=M, colore=giallo}, quantita=2}]}]
+2025-03-03T15:54:45.331+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-4] c.b.fe.controller.CarrelloController     : Recupero ID per utente: mic
+2025-03-03T15:54:45.458+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.CarrelloController     : Recupero ID per utente: mic
+2025-03-03T15:54:45.486+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.CarrelloController     : URI: http://localhost:9090/rest/carrello/lista?utenteId=4
+2025-03-03T15:54:45.508+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.CarrelloController     : Carrelli: [{id=3, quantita=3, prezzo=150.0, utente=4, carrelloProdottiDTO=[{id=7, carrello=null, prodotto={id=9, marca=BetaSport, nome=Completo Tech Utility, categoria=uomo, descrizione=Completo sportivo, prezzo=50.0, quantitaDisponibile=1, urlImg=img/completo_uomo.png, size=M, colore=giallo}, quantita=3}], carrelloProdotti=[{id=7, carrello=null, prodotto={id=9, marca=BetaSport, nome=Completo Tech Utility, categoria=uomo, descrizione=Completo sportivo, prezzo=50.0, quantitaDisponibile=1, urlImg=img/completo_uomo.png, size=M, colore=giallo}, quantita=3}]}]
+2025-03-03T15:54:49.564+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-6] c.b.fe.controller.ProdottoController     : URI: http://localhost:9090/rest/prodotto/listById?id=9
+2025-03-03T15:54:59.564+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.ProdottoController     : URI: http://localhost:9090/rest/prodotto/listById?id=9
+2025-03-03T15:55:01.418+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] c.b.fe.controller.CarrelloController     : Recupero ID per utente: mic
+2025-03-03T15:55:01.446+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] c.b.fe.controller.CarrelloController     : URI: http://localhost:9090/rest/carrello/lista?utenteId=4
+2025-03-03T15:55:01.461+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] c.b.fe.controller.CarrelloController     : Carrelli: [{id=3, quantita=3, prezzo=150.0, utente=4, carrelloProdottiDTO=[{id=7, carrello=null, prodotto={id=9, marca=BetaSport, nome=Completo Tech Utility, categoria=uomo, descrizione=Completo sportivo, prezzo=50.0, quantitaDisponibile=1, urlImg=img/completo_uomo.png, size=M, colore=giallo}, quantita=3}], carrelloProdotti=[{id=7, carrello=null, prodotto={id=9, marca=BetaSport, nome=Completo Tech Utility, categoria=uomo, descrizione=Completo sportivo, prezzo=50.0, quantitaDisponibile=1, urlImg=img/completo_uomo.png, size=M, colore=giallo}, quantita=3}]}]
+2025-03-03T15:55:20.492+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] c.b.fe.controller.OrdineController       : Risposta dal backend: rc=true
+2025-03-03T15:55:21.991+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T15:55:59.778+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-5] c.b.fe.controller.ProdottoController     : URI: http://localhost:9090/rest/prodotto/listById?id=9
+2025-03-03T15:56:02.634+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-4] c.b.fe.controller.CarrelloController     : Recupero ID per utente: mic
+2025-03-03T15:56:02.733+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-2] c.b.fe.controller.CarrelloController     : Recupero ID per utente: mic
+2025-03-03T15:56:02.758+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-2] c.b.fe.controller.CarrelloController     : URI: http://localhost:9090/rest/carrello/lista?utenteId=4
+2025-03-03T15:56:02.775+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-2] c.b.fe.controller.CarrelloController     : Carrelli: [{id=3, quantita=1, prezzo=50.0, utente=4, carrelloProdottiDTO=[{id=9, carrello=null, prodotto={id=9, marca=BetaSport, nome=Completo Tech Utility, categoria=uomo, descrizione=Completo sportivo, prezzo=50.0, quantitaDisponibile=1, urlImg=img/completo_uomo.png, size=M, colore=giallo}, quantita=1}], carrelloProdotti=[{id=9, carrello=null, prodotto={id=9, marca=BetaSport, nome=Completo Tech Utility, categoria=uomo, descrizione=Completo sportivo, prezzo=50.0, quantitaDisponibile=1, urlImg=img/completo_uomo.png, size=M, colore=giallo}, quantita=1}]}]
+2025-03-03T15:56:19.284+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-2] c.b.fe.controller.OrdineController       : Risposta dal backend: rc=true
+2025-03-03T15:56:20.506+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-9] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T15:59:19.410+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-6] c.b.fe.controller.CarrelloController     : Recupero ID per utente: mic
+2025-03-03T15:59:19.591+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-2] c.b.fe.controller.CarrelloController     : Recupero ID per utente: mic
+2025-03-03T15:59:19.625+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-2] c.b.fe.controller.CarrelloController     : URI: http://localhost:9090/rest/carrello/lista?utenteId=4
+2025-03-03T15:59:19.659+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-2] c.b.fe.controller.CarrelloController     : Carrelli: [{id=3, quantita=1, prezzo=50.0, utente=4, carrelloProdottiDTO=[{id=10, carrello=null, prodotto={id=9, marca=BetaSport, nome=Completo Tech Utility, categoria=uomo, descrizione=Completo sportivo, prezzo=50.0, quantitaDisponibile=1, urlImg=img/completo_uomo.png, size=M, colore=giallo}, quantita=1}], carrelloProdotti=[{id=10, carrello=null, prodotto={id=9, marca=BetaSport, nome=Completo Tech Utility, categoria=uomo, descrizione=Completo sportivo, prezzo=50.0, quantitaDisponibile=1, urlImg=img/completo_uomo.png, size=M, colore=giallo}, quantita=1}]}]
+2025-03-03T15:59:35.789+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-2] c.b.fe.controller.OrdineController       : Risposta dal backend: rc=true
+2025-03-03T15:59:37.393+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-5] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T15:59:41.218+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.ProdottoController     : URI: http://localhost:9090/rest/prodotto/listById?id=9
+2025-03-03T16:00:25.621+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-6] c.b.fe.controller.ProdottoController     : URI: http://localhost:9090/rest/prodotto/listById?id=9
+2025-03-03T16:00:27.768+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-9] c.b.fe.controller.CarrelloController     : Recupero ID per utente: mic
+2025-03-03T16:00:27.852+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-3] c.b.fe.controller.CarrelloController     : Recupero ID per utente: mic
+2025-03-03T16:00:27.872+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-3] c.b.fe.controller.CarrelloController     : URI: http://localhost:9090/rest/carrello/lista?utenteId=4
+2025-03-03T16:00:27.887+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-3] c.b.fe.controller.CarrelloController     : Carrelli: [{id=3, quantita=1, prezzo=50.0, utente=4, carrelloProdottiDTO=[{id=11, carrello=null, prodotto={id=9, marca=BetaSport, nome=Completo Tech Utility, categoria=uomo, descrizione=Completo sportivo, prezzo=50.0, quantitaDisponibile=0, urlImg=img/completo_uomo.png, size=M, colore=giallo}, quantita=1}], carrelloProdotti=[{id=11, carrello=null, prodotto={id=9, marca=BetaSport, nome=Completo Tech Utility, categoria=uomo, descrizione=Completo sportivo, prezzo=50.0, quantitaDisponibile=0, urlImg=img/completo_uomo.png, size=M, colore=giallo}, quantita=1}]}]
+2025-03-03T16:01:12.492+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-10] c.b.fe.controller.ProdottoController     : URI: http://localhost:9090/rest/prodotto/listById?id=9
+2025-03-03T16:02:02.804+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] c.b.fe.controller.UtenteController       : saveUtente UtenteReq [id=null, nome=Michellev, cognome=Verillo, email=michellegiac@gmail.com, userName=mic, password=null, ruolo=null, numeroTelefono=null, indirizzoDiSpedizione=via roma 1, indirizzoDiFatturazione=via roma 1]
+2025-03-03T16:02:02.807+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] c.b.fe.controller.UtenteController       : URI: http://localhost:9090/rest/utente/create
+2025-03-03T16:02:02.842+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] c.b.fe.controller.UtenteController       : rc: false
+2025-03-03T16:02:12.869+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.UtenteController       : saveUtente UtenteReq [id=null, nome=Michelle, cognome=Verillo, email=michellegiac@gmail.com, userName=mic, password=null, ruolo=null, numeroTelefono=null, indirizzoDiSpedizione=via roma 1, indirizzoDiFatturazione=via roma 1]
+2025-03-03T16:02:12.869+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.UtenteController       : URI: http://localhost:9090/rest/utente/create
+2025-03-03T16:02:12.898+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.UtenteController       : rc: false
+2025-03-03T16:02:18.549+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-10] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T16:02:37.451+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T16:03:48.962+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-3] c.b.fe.controller.ProdottoController     : URI: http://localhost:9090/rest/prodotto/listById?id=10
+2025-03-03T16:03:54.671+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-8] c.b.fe.controller.RecensioneController   : createRecensione RecensioneReq [id=null, valutazione=1, commento=bb, dataRecensione=null, utente=null, prodotto=null]
+2025-03-03T16:03:54.672+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-8] c.b.fe.controller.RecensioneController   : Recupero ID per utente: user
+2025-03-03T16:03:54.901+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-8] c.b.fe.controller.RecensioneController   : rc true
+2025-03-03T16:03:54.909+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.ProdottoController     : URI: http://localhost:9090/rest/prodotto/listById?id=10
+2025-03-03T16:04:04.607+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-5] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T16:05:27.037+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-9] c.b.fe.controller.PagamentoController    : savePagamento: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=1111111111111, dataScadenza=02/29, cvv=111, userId=1]
+2025-03-03T16:05:27.097+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-4] c.betacom.fe.controller.AdminController  : URI: http://localhost:9090/rest/pagamento/listAll
+2025-03-03T16:06:34.042+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-6] c.b.fe.controller.CarrelloController     : Recupero ID per utente: user
+2025-03-03T16:06:34.165+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.CarrelloController     : Recupero ID per utente: user
+2025-03-03T16:06:34.185+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.CarrelloController     : URI: http://localhost:9090/rest/carrello/lista?utenteId=1
+2025-03-03T16:06:34.203+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.CarrelloController     : Carrelli: [{id=1, quantita=2, prezzo=100.0, utente=1, carrelloProdottiDTO=[{id=4, carrello=null, prodotto={id=1, marca=BetaSport, nome=Set Sportivo Dynamic, categoria=donna, descrizione=Top e leggins sportivi, prezzo=40.0, quantitaDisponibile=1, urlImg=img/completo_donna.png, size=S, colore=grigio}, quantita=1}, {id=12, carrello=null, prodotto={id=10, marca=BetaSport, nome=Completo Running Essential, categoria=uomo, descrizione=T-shirt e pantaloncini sportivi, prezzo=60.0, quantitaDisponibile=1, urlImg=img/completo_uomo_1.png, size=M, colore=rosso}, quantita=1}], carrelloProdotti=[{id=4, carrello=null, prodotto={id=1, marca=BetaSport, nome=Set Sportivo Dynamic, categoria=donna, descrizione=Top e leggins sportivi, prezzo=40.0, quantitaDisponibile=1, urlImg=img/completo_donna.png, size=S, colore=grigio}, quantita=1}, {id=12, carrello=null, prodotto={id=10, marca=BetaSport, nome=Completo Running Essential, categoria=uomo, descrizione=T-shirt e pantaloncini sportivi, prezzo=60.0, quantitaDisponibile=1, urlImg=img/completo_uomo_1.png, size=M, colore=rosso}, quantita=1}]}]
+2025-03-03T16:07:03.920+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-9] c.b.fe.controller.OrdineController       : Risposta dal backend: rc=true
+2025-03-03T16:07:05.564+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-2] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T16:08:42.056+01:00  INFO 5156 --- [frontendEcommerce] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-03-03T16:08:42.079+01:00  INFO 5156 --- [frontendEcommerce] [Thread-1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T16:08:42.110+01:00  INFO 5156 --- [frontendEcommerce] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-03T16:08:42.379+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : Starting FrontendEcommerceApplication using Java 23.0.1 with PID 5156 (C:\Backend-ecommerce\frontendEcommerce\target\classes started by Betacom in C:\Backend-ecommerce\frontendEcommerce)
+2025-03-03T16:08:42.379+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-03-03T16:08:42.380+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-03-03T16:08:43.179+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-03T16:08:43.190+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T16:08:43.191+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-03T16:08:43.241+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T16:08:43.241+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 851 ms
+2025-03-03T16:08:43.330+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.f.c.CustomUserDetailsService         : uri: http://localhost:9090/rest/utente/listSecurity
+2025-03-03T16:08:43.371+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.f.c.CustomUserDetailsService         : loadUsers.....user
+2025-03-03T16:08:43.460+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.f.c.CustomUserDetailsService         : loadUsers.....mic
+2025-03-03T16:08:43.643+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-03-03T16:08:43.856+01:00  WARN 5156 --- [frontendEcommerce] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-03-03T16:08:43.870+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-03T16:08:43.883+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : Started FrontendEcommerceApplication in 1.613 seconds (process running for 1432.409)
+2025-03-03T16:08:43.890+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-03T16:08:46.752+01:00  INFO 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T16:08:46.752+01:00  INFO 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T16:08:46.757+01:00  INFO 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-03-03T16:10:39.846+01:00  INFO 5156 --- [frontendEcommerce] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-03-03T16:10:39.847+01:00  INFO 5156 --- [frontendEcommerce] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T16:10:39.867+01:00  INFO 5156 --- [frontendEcommerce] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-03T16:10:39.995+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : Starting FrontendEcommerceApplication using Java 23.0.1 with PID 5156 (C:\Backend-ecommerce\frontendEcommerce\target\classes started by Betacom in C:\Backend-ecommerce\frontendEcommerce)
+2025-03-03T16:10:39.995+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-03-03T16:10:39.995+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-03-03T16:10:40.396+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-03T16:10:40.398+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T16:10:40.398+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-03T16:10:40.431+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T16:10:40.432+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 433 ms
+2025-03-03T16:10:40.491+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.f.c.CustomUserDetailsService         : uri: http://localhost:9090/rest/utente/listSecurity
+2025-03-03T16:10:40.526+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.f.c.CustomUserDetailsService         : loadUsers.....user
+2025-03-03T16:10:40.605+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.f.c.CustomUserDetailsService         : loadUsers.....mic
+2025-03-03T16:10:40.725+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-03-03T16:10:40.836+01:00  WARN 5156 --- [frontendEcommerce] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-03-03T16:10:40.852+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-03T16:10:40.857+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : Started FrontendEcommerceApplication in 0.926 seconds (process running for 1549.384)
+2025-03-03T16:10:40.860+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-03T16:10:45.489+01:00  INFO 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T16:10:45.490+01:00  INFO 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T16:10:45.492+01:00  INFO 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-03T16:10:59.734+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-10] c.b.fe.controller.PagamentoController    : savePagamento: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=11111111111111, dataScadenza=02/29, cvv=111, userId=1]
+2025-03-03T16:10:59.886+01:00 ERROR 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-1] Exception processing template "profilo": An error happened during template parsing (template: "class path resource [templates/profilo.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/profilo.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1435) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1105) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "utente.nome" (template: "profilo" - line 49, col 34)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 95 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "utente.nome" (template: "profilo" - line 49, col 34)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.AdditionExpression.executeAddition(AdditionExpression.java:89) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:62) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.AdditionExpression.executeAddition(AdditionExpression.java:89) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:62) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	... 97 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'nome' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:225) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:112) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorValueRef.getValue(PropertyOrFieldReference.java:376) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:116) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 122 common frames omitted
+
+2025-03-03T16:10:59.915+01:00 ERROR 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/profilo.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'nome' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:225) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:112) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorValueRef.getValue(PropertyOrFieldReference.java:376) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:116) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.AdditionExpression.executeAddition(AdditionExpression.java:89) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:62) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.AdditionExpression.executeAddition(AdditionExpression.java:89) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:62) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1435) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1105) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-03-03T16:13:31.593+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-4] c.b.fe.controller.CarrelloController     : Recupero ID per utente: user
+2025-03-03T16:13:31.630+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-4] c.b.fe.controller.CarrelloController     : URI: http://localhost:9090/rest/carrello/lista?utenteId=1
+2025-03-03T16:13:31.661+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-4] c.b.fe.controller.CarrelloController     : Carrelli: [{id=1, quantita=0, prezzo=0.0, utente=1, carrelloProdottiDTO=[], carrelloProdotti=[]}]
+2025-03-03T16:13:35.230+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-10] c.b.fe.controller.CarrelloController     : Recupero ID per utente: user
+2025-03-03T16:13:35.351+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-2] c.b.fe.controller.CarrelloController     : Recupero ID per utente: user
+2025-03-03T16:13:35.370+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-2] c.b.fe.controller.CarrelloController     : URI: http://localhost:9090/rest/carrello/lista?utenteId=1
+2025-03-03T16:13:35.392+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-2] c.b.fe.controller.CarrelloController     : Carrelli: [{id=1, quantita=1, prezzo=30.0, utente=1, carrelloProdottiDTO=[{id=13, carrello=null, prodotto={id=11, marca=BetaSport, nome=Training Essential T-Shirt, categoria=uomo, descrizione=T-shirt sportiva, prezzo=30.0, quantitaDisponibile=1, urlImg=img/maglia_uomo.png, size=M, colore=grigio}, quantita=1}], carrelloProdotti=[{id=13, carrello=null, prodotto={id=11, marca=BetaSport, nome=Training Essential T-Shirt, categoria=uomo, descrizione=T-shirt sportiva, prezzo=30.0, quantitaDisponibile=1, urlImg=img/maglia_uomo.png, size=M, colore=grigio}, quantita=1}]}]
+2025-03-03T16:21:24.212+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.CarrelloController     : Recupero ID per utente: user
+2025-03-03T16:21:24.231+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.CarrelloController     : URI: http://localhost:9090/rest/carrello/lista?utenteId=1
+2025-03-03T16:21:24.247+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.CarrelloController     : Carrelli: [{id=1, quantita=1, prezzo=30.0, utente=1, carrelloProdottiDTO=[{id=13, carrello=null, prodotto={id=11, marca=BetaSport, nome=Training Essential T-Shirt, categoria=uomo, descrizione=T-shirt sportiva, prezzo=30.0, quantitaDisponibile=1, urlImg=img/maglia_uomo.png, size=M, colore=grigio}, quantita=1}], carrelloProdotti=[{id=13, carrello=null, prodotto={id=11, marca=BetaSport, nome=Training Essential T-Shirt, categoria=uomo, descrizione=T-shirt sportiva, prezzo=30.0, quantitaDisponibile=1, urlImg=img/maglia_uomo.png, size=M, colore=grigio}, quantita=1}]}]
+2025-03-03T16:21:43.637+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.OrdineController       : Risposta dal backend: rc=true
+2025-03-03T16:21:44.724+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll
+2025-03-03T16:22:10.547+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-6] c.b.fe.controller.CarrelloController     : Recupero ID per utente: user
+2025-03-03T16:22:10.565+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-6] c.b.fe.controller.CarrelloController     : URI: http://localhost:9090/rest/carrello/lista?utenteId=1
+2025-03-03T16:22:10.579+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-6] c.b.fe.controller.CarrelloController     : Carrelli: [{id=1, quantita=0, prezzo=0.0, utente=1, carrelloProdottiDTO=[], carrelloProdotti=[]}]
+2025-03-03T16:22:20.319+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-7] c.b.fe.controller.CarrelloController     : Recupero ID per utente: user
+2025-03-03T16:22:20.385+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-9] c.b.fe.controller.CarrelloController     : Recupero ID per utente: user
+2025-03-03T16:22:20.400+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-9] c.b.fe.controller.CarrelloController     : URI: http://localhost:9090/rest/carrello/lista?utenteId=1
+2025-03-03T16:22:20.418+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-9] c.b.fe.controller.CarrelloController     : Carrelli: [{id=1, quantita=1, prezzo=45.0, utente=1, carrelloProdottiDTO=[{id=14, carrello=null, prodotto={id=12, marca=BetaSport, nome=Polo Foundation, categoria=uomo, descrizione=T-shirt sportiva, prezzo=45.0, quantitaDisponibile=1, urlImg=img/polo_uomo.png, size=M, colore=bianco}, quantita=1}], carrelloProdotti=[{id=14, carrello=null, prodotto={id=12, marca=BetaSport, nome=Polo Foundation, categoria=uomo, descrizione=T-shirt sportiva, prezzo=45.0, quantitaDisponibile=1, urlImg=img/polo_uomo.png, size=M, colore=bianco}, quantita=1}]}]
+2025-03-03T16:26:07.278+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-6] c.b.fe.controller.PagamentoController    : savePagamento: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=11111111111111, dataScadenza=02/29, cvv=111, userId=null]
+2025-03-03T16:27:45.641+01:00  WARN 5156 --- [frontendEcommerce] [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2025-03-03T16:28:24.748+01:00  WARN 5156 --- [frontendEcommerce] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2025-03-03T16:29:11.297+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] c.b.fe.controller.PagamentoController    : savePagamento: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=11111111111111, dataScadenza=02/29, cvv=111, userId=null]
+2025-03-03T16:30:33.351+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-2] c.b.fe.controller.PagamentoController    : savePagamento: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=111111111111113, dataScadenza=02/29, cvv=111, userId=null]
+2025-03-03T16:33:07.043+01:00  INFO 5156 --- [frontendEcommerce] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-03-03T16:33:07.047+01:00  INFO 5156 --- [frontendEcommerce] [Thread-9] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T16:33:07.065+01:00  INFO 5156 --- [frontendEcommerce] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-03T16:33:07.152+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : Starting FrontendEcommerceApplication using Java 23.0.1 with PID 5156 (C:\Backend-ecommerce\frontendEcommerce\target\classes started by Betacom in C:\Backend-ecommerce\frontendEcommerce)
+2025-03-03T16:33:07.152+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-03-03T16:33:07.152+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-03-03T16:33:07.616+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-03T16:33:07.621+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T16:33:07.621+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-03T16:33:07.648+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T16:33:07.648+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 492 ms
+2025-03-03T16:33:07.701+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.f.c.CustomUserDetailsService         : uri: http://localhost:9090/rest/utente/listSecurity
+2025-03-03T16:33:07.719+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.f.c.CustomUserDetailsService         : loadUsers.....user
+2025-03-03T16:33:07.825+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.f.c.CustomUserDetailsService         : loadUsers.....mic
+2025-03-03T16:33:07.930+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-03-03T16:33:08.040+01:00  WARN 5156 --- [frontendEcommerce] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-03-03T16:33:08.054+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-03T16:33:08.062+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : Started FrontendEcommerceApplication in 0.95 seconds (process running for 2896.589)
+2025-03-03T16:33:08.064+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-03T16:33:10.405+01:00  INFO 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T16:33:10.406+01:00  INFO 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T16:33:10.407+01:00  INFO 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-03T16:33:28.451+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-10] c.b.fe.controller.PagamentoController    : savePagamento: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=111111111111113, dataScadenza=02/29, cvv=111, userId=1]
+2025-03-03T16:33:28.496+01:00 ERROR 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-1] Exception processing template "profilo": An error happened during template parsing (template: "class path resource [templates/profilo.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/profilo.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1435) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1105) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "utente.nome" (template: "profilo" - line 49, col 34)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 95 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "utente.nome" (template: "profilo" - line 49, col 34)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.AdditionExpression.executeAddition(AdditionExpression.java:89) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:62) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.AdditionExpression.executeAddition(AdditionExpression.java:89) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:62) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	... 97 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'nome' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:225) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:112) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorValueRef.getValue(PropertyOrFieldReference.java:376) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:116) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 122 common frames omitted
+
+2025-03-03T16:33:28.505+01:00 ERROR 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/profilo.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'nome' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:225) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:112) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorValueRef.getValue(PropertyOrFieldReference.java:376) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:116) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338) ~[spring-expression-6.2.2.jar:6.2.2]
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.AdditionExpression.executeAddition(AdditionExpression.java:89) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:62) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.AdditionExpression.executeAddition(AdditionExpression.java:89) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:62) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1435) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1105) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243) ~[spring-webmvc-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.2.jar:6.2.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-03-03T16:37:50.819+01:00  INFO 5156 --- [frontendEcommerce] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-03-03T16:37:50.821+01:00  INFO 5156 --- [frontendEcommerce] [Thread-13] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T16:37:50.839+01:00  INFO 5156 --- [frontendEcommerce] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-03T16:37:50.915+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : Starting FrontendEcommerceApplication using Java 23.0.1 with PID 5156 (C:\Backend-ecommerce\frontendEcommerce\target\classes started by Betacom in C:\Backend-ecommerce\frontendEcommerce)
+2025-03-03T16:37:50.915+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-03-03T16:37:50.915+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-03-03T16:37:51.298+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-03T16:37:51.300+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T16:37:51.300+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-03T16:37:51.319+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T16:37:51.319+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 400 ms
+2025-03-03T16:37:51.356+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.f.c.CustomUserDetailsService         : uri: http://localhost:9090/rest/utente/listSecurity
+2025-03-03T16:37:51.384+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.f.c.CustomUserDetailsService         : loadUsers.....user
+2025-03-03T16:37:51.458+01:00 DEBUG 5156 --- [frontendEcommerce] [restartedMain] c.b.f.c.CustomUserDetailsService         : loadUsers.....mic
+2025-03-03T16:37:51.588+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-03-03T16:37:51.697+01:00  WARN 5156 --- [frontendEcommerce] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-03-03T16:37:51.711+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-03T16:37:51.715+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] c.b.fe.FrontendEcommerceApplication      : Started FrontendEcommerceApplication in 0.831 seconds (process running for 3180.242)
+2025-03-03T16:37:51.718+01:00  INFO 5156 --- [frontendEcommerce] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-03T16:37:59.873+01:00  INFO 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T16:37:59.873+01:00  INFO 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T16:37:59.874+01:00  INFO 5156 --- [frontendEcommerce] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-03T16:38:14.756+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-9] c.b.fe.controller.CarrelloController     : Recupero ID per utente: user
+2025-03-03T16:38:14.774+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-9] c.b.fe.controller.CarrelloController     : URI: http://localhost:9090/rest/carrello/lista?utenteId=1
+2025-03-03T16:38:14.791+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-9] c.b.fe.controller.CarrelloController     : Carrelli: [{id=1, quantita=1, prezzo=45.0, utente=1, carrelloProdottiDTO=[{id=14, carrello=null, prodotto={id=12, marca=BetaSport, nome=Polo Foundation, categoria=uomo, descrizione=T-shirt sportiva, prezzo=45.0, quantitaDisponibile=1, urlImg=img/polo_uomo.png, size=M, colore=bianco}, quantita=1}], carrelloProdotti=[{id=14, carrello=null, prodotto={id=12, marca=BetaSport, nome=Polo Foundation, categoria=uomo, descrizione=T-shirt sportiva, prezzo=45.0, quantitaDisponibile=1, urlImg=img/polo_uomo.png, size=M, colore=bianco}, quantita=1}]}]
+2025-03-03T16:38:44.715+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-10] c.b.fe.controller.PagamentoController    : savePagamento: PagamentoReq [id=null, metodoDiPagamento=Carta di Credito, numeroCarta=222222222222222, dataScadenza=02/29, cvv=111, userId=1]
+2025-03-03T16:38:44.765+01:00 DEBUG 5156 --- [frontendEcommerce] [http-nio-8080-exec-4] c.betacom.fe.controller.ControllerHome   : URI: http://localhost:9090/rest/recensione/listAll

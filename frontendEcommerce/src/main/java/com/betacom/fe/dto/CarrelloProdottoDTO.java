@@ -8,9 +8,14 @@
 		   private CarrelloDTO carrello;
 		   private ProdottoDTO prodotto;
 		   private Integer quantita;
-		
+	
+		   
 		   
 		
+		public CarrelloProdottoDTO() {
+			super();
+			// TODO Auto-generated constructor stub
+		}
 		public Integer getId() {
 			return id;
 		}
